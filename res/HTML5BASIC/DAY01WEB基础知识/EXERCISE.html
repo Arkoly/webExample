@@ -1,0 +1,93 @@
+
+<!-- saved from url=(0097)http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY01/EXERCISE/01/index_answer.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <title>EXERCISE</title> 
+   
+  <script type="text/javascript" src="./EXERCISE_files/jquery.min.js">
+    </script> 
+  <script type="text/javascript" src="./EXERCISE_files/jquery.snippet.js">
+    </script> 
+  <script type="text/javascript" src="./EXERCISE_files/main.js">
+    </script> 
+  <link type="text/css" href="./EXERCISE_files/index.css" rel="Stylesheet"> 
+  <link type="text/css" href="./EXERCISE_files/jquery.snippet.css" rel="Stylesheet"> 
+ </head> 
+ <body> 
+  <div class="source_style_exercise"> 
+   <div> 
+    <h3>1 简要描述标准 HTML 文档的结构。</h3> 
+    <p class="answerTitle">参考答案：</p> 
+    <p>HTML 文档的开始需要文档类型声明，剩下的页面内容需要包含在开始标记 &lt;html&gt; 和结束标记 &lt;/html&gt; 之间。在 &lt;html&gt; 元素中，包含两个主要的部分，文件头部分（&lt;head&gt;元素）和主体部分（&lt;body&gt;元素）。标准HTML文档的结构如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY01/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY01/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY01/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html xmlns<span class="sh_symbol">=</span><span class="sh_string">"http://www.w3.org/1999/xhtml"</span><span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div> 
+   </div> 
+   <div> 
+    <h3>2 如何定义页面的编码？</h3> 
+    <p class="answerTitle">参考答案</p> 
+    <p>&lt;meta&gt; 元素可提供有关页面的元信息，比如页面编码、针对搜索引擎的描述和关键词等。它位于文档的头部，是空标记，使用属性来定义与文档相关联的名称/值对。</p> 
+    <p>在页面的头部分中，使用 &lt;meta&gt; 元素声明字符编码，代码如下：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY01/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY01/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY01/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+</pre></div></div> 
+    <p>上述代码用于设置页面的编码格式，这样，在具有不同的默认编码的系统上，浏览器就可以根据编码的声明正确的选择，从而更容易正确查看页面中的字符。</p> 
+   </div> 
+   <div> 
+    <h3>3 编写一个标准格式的 HTML 文档，并定义页面的标题和编码。</h3> 
+    <p class="answerTitle">参考答案</p> 
+    <p>此案例主要练习 HTML 文档的结构定义。实现此案例需要按照如下步骤进行。</p> 
+    <p class="number">步骤一：创建文件</p> 
+    <p>首先创建一个纯文本文件，并修改名称为 01_exercise.html；</p> 
+    <p class="number">步骤二：创建 html 文档的结构</p> 
+    <p>使用文本编辑工具，打开上一步中所创建的文件。</p> 
+    <p>在此文件中，添加 HTML 代码，以创建一个标准结构的 HTML 文档（使用 HTML5 的文档类型声明）。代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY01/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY01/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY01/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div> 
+    <p class="number">步骤三：设置头部内容</p> 
+    <p>为 &lt;head&gt; 元素添加内容，为创建的 HTML 文档添加文档标题，并设置文档的编码格式。代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY01/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY01/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY01/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"Content-Type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html; charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>练习<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+#cold_bold        &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+#cold_bold        &lt;title&gt;练习&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div> 
+   </div> 
+   <div> 
+    <h3>4 简要描述行内元素和块级元素的区别。</h3> 
+    <p class="answerTitle">参考答案</p> 
+    <p>块级元素的前后都会自动换行，如同存在换行符一样。默认情况下，块级元素会独占一行。例如，&lt;p&gt;、&lt;hn&gt;、&lt;div&gt; 都是块级元素。在显示这些元素中间的文本时，都将从新行中开始显示，其后的内容也将在新行中显示。</p> 
+    <p>行内元素可以和其他行内元素位于同一行，在浏览器中显示时不会换行。例如，&lt;a&gt;、&lt;span&gt; 等。</p> 
+    <p>我们可以这样理解：如果元素是块级的，则总是在新行上显示，好比是书中的一个新段落；而元素如果是行内的，那么只能在当前行中显示，就像是段落中的一个单词。</p> 
+    <p>因此，块级元素常用来构建网页上比较大的结构，用于包含其他块级元素、行内元素和文本；而行内元素一般只能包含其他行内元素和文本。</p> 
+   </div> 
+   <div> 
+    <h3>5 列举常用的文本标记，并简要描述其作用。</h3> 
+    <p class="answerTitle">参考答案</p> 
+    <p>常用的文本标记有：</p> 
+    <ul class="list"> 
+     <li>文本样式标记：如 &lt;b&gt;、&lt;i&gt;、&lt;u&gt;、&lt;s&gt;、&lt;sup&gt;、&lt;sub&gt;等，这些元素用来指定文本的外观，分别为：粗体、斜体、下划线、删除线、上标和下标。一般不太建议使用这些元素来定制文档的外观，而建议使用CSS样式来实现外观的定义。 </li> 
+     <li>标题元素&lt;hn&gt;：标题元素让文字以醒目的方式显示，往往用于文章的标题，有6级标题，&lt;h1&gt;、&lt;h2&gt;、&lt;h3&gt;、&lt;h4&gt;、&lt;h5&gt;和 &lt;h6&gt;。 </li> 
+     <li>段落元素&lt;p&gt;：用于表示一段文本，自成一个段落。 </li> 
+     <li>换行元素&lt;br&gt;：当使用 &lt;br&gt; 元素时，它后面跟随的内容将从下一行开始显示。 </li> 
+     <li>分区元素&lt;span&gt;和&lt;div&gt;：分区元素用于为元素分组，常用于页面布局。 </li> 
+     <li>分隔线元素 &lt;hr&gt;：&lt;hr&gt; 元素用于在页面上创建一条水平线，常用于将页面的不同部分隔开。 </li> 
+     <li>预格式化&lt;pre&gt;：保留源文档中的格式，即保留原来的换行和文本中的空白。 </li> 
+    </ul> 
+   </div> 
+  </div>  
+ 
+</body></html>

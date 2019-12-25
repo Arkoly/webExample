@@ -1,0 +1,87 @@
+body{
+    background: #101012 url('../images/chalkboard.jpg') no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+span{
+    font-size: 32px;
+    font-weight: normal;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 1px;
+}
+p{
+    font-weight: normal;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 1px;
+}
+a{
+    text-decoration:none;
+    color:#3d7e9a;
+    font-size: 40px;
+}
+#myLink li{
+    margin: 10px auto;
+}
+/*#myLink ul a{*/
+    /*margin:5px;*/
+    /*border:solid 1px #ffffff;*/
+    /*border-radius: 5px;*/
+/*}*/
+a:hover{
+ text-decoration: underline;
+}
+#holder {
+    width: 960px;
+    margin: 0 auto;
+    /* overflow: auto; */
+}
+#title h1{
+    margin: 30px 0 23px 30px;
+    font-size: 32px;
+    font-weight: normal;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 1px;
+}
+#myFont{
+    font-weight: normal;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 1px;
+}
+/* #header{
+    position:absolute;
+    top:20px;
+    left:80px;
+} */
+#j_lrcWrap{
+    width: 250px;
+    padding-right: 20px;
+    height: 100%;
+    /* position: absolute;
+    right: 10px;
+    top: 35px; */
+}
+.ui-lrc-line{
+    font-weight: normal;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 1px;
+}
+
+#webRes a{
+    font-size: 25px;
+    margin-left: 30px;
+}
+
+

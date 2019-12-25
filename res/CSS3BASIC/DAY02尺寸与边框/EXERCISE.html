@@ -1,0 +1,369 @@
+
+<!-- saved from url=(0096)http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <title>EXERCISE</title> 
+   
+  <script type="text/javascript" src="./EXERCISE_files/jquery.min.js">
+    </script> 
+  <script type="text/javascript" src="./EXERCISE_files/jquery.snippet.js">
+    </script> 
+  <script type="text/javascript" src="./EXERCISE_files/main.js">
+    </script> 
+  <link type="text/css" href="./EXERCISE_files/index.css" rel="Stylesheet"> 
+  <link type="text/css" href="./EXERCISE_files/jquery.snippet.css" rel="Stylesheet"> 
+ </head> 
+ <body> 
+  <div class="source_style_exercise"> 
+   <div> 
+    <h3>1 简要描述CSS 中的框模型。</h3> 
+    <p class="answerTitle">参考答案：</p> 
+    <p>在CSS中，每一个元素都被视为一个框，而每个框都有三个属性：</p> 
+    <ul class="list"> 
+     <li>border: 元素的边框（可能不可见），用于将框的边缘与其他框分开； </li> 
+     <li>margin：外边距，表示框的边缘与相邻框之间的距离，也称为页边空白； </li> 
+     <li>padding: 内边距，表示框内容和边框之间的空间。 </li> 
+    </ul> 
+    <p>它们的效果如图－1所示：</p> 
+    <div class="image"> 
+     <img src="./EXERCISE_files/image001.png"> 
+     <p>图－1</p> 
+    </div> 
+    <p>由图－1可以看出，width 和 height 指的是内容区域的宽度和高度。增加内边距、边框和外边距不会影响内容区域的尺寸，但是会增加元素框的总尺寸。</p> 
+    <p>因此，如果在一个具有边框的元素中放置文本，往往需要设置一些内边距，以便文本的边缘不要接触边框，这样更便于阅读。而外边距则可以在多个元素框之间创建空白，避免这些框都挤在一起。因此，在设计页面时，经常会使用padding属性和margin属性来设置页面的布局。但是，必须注意的是，一旦用了padding属性或者margin属性设置了元素的边距以后，会增加元素在页面布局中所占的面积。</p> 
+   </div> 
+   <div> 
+    <h3>2 为什么建议设置背景图像的同时还设置背景颜色？</h3> 
+    <p class="answerTitle">参考答案</p> 
+    <p>一般建议在使用背景图像的同时提供background-color属性，并且将其设置为和图像主要颜色类似的颜色。这样，如果正在加载页面，或者因为各种原因无法显示背景图像时，页面可以使用这种颜色作为背景色。</p> 
+   </div> 
+   <div> 
+    <h3>3 完成如下图所示的页面。</h3> 
+    <p>完成淘宝网的登录页面，该页面的效果如图－2所示。</p> 
+    <div class="image"> 
+     <img src="./EXERCISE_files/image002.png"> 
+     <p>图－2</p> 
+    </div> 
+    <p>完成如图－2所示的页面时，先分析一下页面的布局，可以看出，页面主要分为页头部分（放置logo图片）和页面主体部分（放置图片和登录框）。页面的布局如图－3所示：</p> 
+    <div class="image"> 
+     <img src="./EXERCISE_files/image003.png"> 
+     <p>图－3</p> 
+    </div> 
+    <p>其中，登录框：宽 295px，上边框颜色：#ff4200，其他边框颜色：#dedede；文本框的边框颜色为#dedede；“登录”按钮的背景颜色为#ff4700，鼠标悬停时的背景颜色为 #f73500。</p> 
+    <p class="answerTitle">参考答案</p> 
+    <p>题目中的页面布局示意如图－4所示：</p> 
+    <div class="image"> 
+     <img src="./EXERCISE_files/image004.png"> 
+     <p>图－4</p> 
+    </div> 
+    <p>由图－4可以看出，图上的主要构成元素如下：</p> 
+    <p>1、需要一个 &lt;header&gt; 元素，构成图－4中的页头部分，并包含一个 &lt;img&gt; 元素，用于显示logo图片；</p> 
+    <p>2、再定义一个 &lt;section&gt; 元素，构成图－4中的页面主体，该元素需要使用图片作为背景，并包含一个 &lt;div&gt; 元素以表示登录框；</p> 
+    <p>3、登录框中，首先可以使用标题元素（如&lt;h1&gt;）定义文本“登录”，再使用两个 &lt;div&gt; 元素包含图片信息以及录入框；然后定义其他元素。</p> 
+    <p>定义完毕页面元素后，再为各组成元素定义样式。</p> 
+    <p>实现此案例需要按照如下步骤进行。</p> 
+    <p class="number">步骤一：创建页面</p> 
+    <p>首先创建一个纯文本文件，并修改名称为 taobao_login.html，然后在文本编辑工具中打开此文件，为其添加 HTML 代码，以创建一个标准结构的 HTML 文档，并设置文档的标题以及编码格式。</p> 
+    <p>然后为页面添加&lt;div&gt;和&lt;img&gt;元素。HTML代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>动画<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/cic.png"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>img id<span class="sh_symbol">=</span><span class="sh_string">"step_2"</span> src<span class="sh_symbol">=</span><span class="sh_string">"images/sf.png"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>img id<span class="sh_symbol">=</span><span class="sh_string">"step_3"</span> src<span class="sh_symbol">=</span><span class="sh_string">"images/red.png"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;动画&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div&gt;
+&lt;img src="images/cic.png" /&gt;
+&lt;img id="step_2" src="images/sf.png" /&gt;
+&lt;img id="step_3" src="images/red.png" /&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div> 
+    <p class="number">步骤二：为页面创建 CSS 文件</p> 
+    <p>创建名为 taobao_login.css 的文件，用于为页面定义样式，然后修改上一步中所创建的 HTML 文件，为其引入此 CSS 文件。</p> 
+    <p>修改后的 html 代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>淘宝_登录<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"taobao_login.css"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;淘宝_登录&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+#cold_bold&lt;link type="text/css" rel="Stylesheet" href="taobao_login.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div> 
+    <p class="number">步骤三：创建页头部分</p> 
+    <p>为页面定义元素以创建页头部分。修改后的 html 代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>淘宝_登录<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"taobao_login.css"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>header<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/taobao_logo.png"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;淘宝_登录&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;link type="text/css" rel="Stylesheet" href="taobao_login.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+#cold_bold&lt;header&gt;
+#cold_bold&lt;img src="images/taobao_logo.png" /&gt;
+#cold_bold&lt;/header&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div> 
+    <p class="number">步骤四：创建页面的登录框</p> 
+    <p>为页面定义登录框。修改后的 html 代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>淘宝_登录<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"taobao_login.css"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/taobao_logo.png"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>header<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>section<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"login_box"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>h1<span class="sh_symbol">&gt;</span>登录<span class="sh_symbol">&lt;/</span>h1<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"info_username"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span><span class="sh_normal">input </span><span class="sh_symbol">/&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"info_pwd"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span><span class="sh_normal">input </span><span class="sh_symbol">/&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>p<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkSafe"</span> <span class="sh_regexp">/&gt;&lt;label for="chkSafe"&gt;安全控件登录&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span>忘记登录密码？<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>input <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"btn_login"</span> type<span class="sh_symbol">=</span><span class="sh_string">"button"</span> value<span class="sh_symbol">=</span><span class="sh_string">"登录"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"other_login"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"weibo"</span><span class="sh_symbol">&gt;</span>微博登录<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"zhifu"</span><span class="sh_symbol">&gt;</span>支付宝登录<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"register"</span><span class="sh_symbol">&gt;</span>免费注册<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;淘宝_登录&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;link type="text/css" rel="Stylesheet" href="taobao_login.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;
+&lt;img src="images/taobao_logo.png" /&gt;
+&lt;/header&gt;
+#cold_bold&lt;section&gt;
+#cold_bold&lt;div id="login_box"&gt;
+#cold_bold&lt;h1&gt;登录&lt;/h1&gt;
+#cold_bold&lt;div class="info_username"&gt;
+#cold_bold&lt;input /&gt;
+#cold_bold&lt;/div&gt;
+#cold_bold&lt;div class="info_pwd"&gt;
+#cold_bold&lt;input /&gt;
+#cold_bold&lt;/div&gt;
+#cold_bold&lt;p&gt;
+#cold_bold&lt;input type="checkbox" id="chkSafe" /&gt;&lt;label for="chkSafe"&gt;安全控件登录&lt;/label&gt;
+#cold_bold&lt;a href="#"&gt;忘记登录密码？&lt;/a&gt;
+#cold_bold&lt;/p&gt;
+#cold_bold&lt;input class="btn_login" type="button" value="登录" /&gt;
+#cold_bold&lt;div class="other_login"&gt;
+#cold_bold&lt;a href="#" class="weibo"&gt;微博登录&lt;/a&gt;
+#cold_bold&lt;a href="#" class="zhifu"&gt;支付宝登录&lt;/a&gt;
+#cold_bold&lt;a href="#" class="register"&gt;免费注册&lt;/a&gt;
+#cold_bold&lt;/div&gt;
+#cold_bold&lt;/div&gt;
+#cold_bold&lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div> 
+    <p class="number">步骤五：为页面定义 CSS 样式</p> 
+    <p>打开文件taobao_login.css，首先定义整体的布局样式。添加的 CSS 代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/* 布局样式 */</span></li><li>body</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">:</span> 0px auto<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span> 0px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> <span class="sh_number">0</span><span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #fff<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 12px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #<span class="sh_number">404040</span><span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>header<span class="sh_symbol">,</span>section</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 1190px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span>10px auto<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>header</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span>30px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>section</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span><span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>taobao_show<span class="sh_symbol">.</span>jpg<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat <span class="sh_number">20</span><span class="sh_symbol">%</span> center<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/* 布局样式 */
+body
+{
+    margin: 0px auto;
+    padding: 0px;
+    border: 0;
+    background-color: #fff;
+    font-size: 12px;
+    color: #404040;
+}
+header,section
+{
+    width: 1190px;
+    margin:10px auto;
+}
+header
+{
+    padding-top:30px;
+}
+section
+{
+    background:url(images/taobao_show.jpg) no-repeat 20% center;
+}
+</pre></div></div> 
+    <p class="number">步骤六：为登录框定义 CSS 样式</p> 
+    <p>继续为登录框定义样式。添加的 CSS 代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*登录框*/</span></li><li>#login_box</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 295px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span> 60px <span class="sh_number">0</span> 48px 720px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 2px solid #dedede<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span> 2px solid #ff4200<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">:</span><span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>login_box_icon<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat right top<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">-</span>bottom<span class="sh_symbol">:</span>30px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*登录框*/
+#login_box
+{
+    width: 295px;
+    margin: 60px 0 48px 720px;
+    border: 2px solid #dedede;
+    border-top: 2px solid #ff4200;
+    background:url(images/login_box_icon.png) no-repeat right top;
+    padding-left:40px;
+    padding-bottom:30px;
+}
+</pre></div></div> 
+    <p class="number">步骤七：为输入框定义 CSS 样式</p> 
+    <p>继续为输入框定义样式。添加的 CSS 代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*输入框*/</span></li><li>div<span class="sh_symbol">.</span>info_username<span class="sh_symbol">,</span>div<span class="sh_symbol">.</span>info_pwd</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>20px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span>20px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #<span class="sh_number">666</span><span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span>#ccc<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>233px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>div<span class="sh_symbol">.</span>info_username</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span>#ccc <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>user<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat 5px center<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>div<span class="sh_symbol">.</span>info_pwd</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span>#ccc <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>pwd<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat 5px center<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>div<span class="sh_symbol">.</span>info_username input<span class="sh_symbol">,</span>div<span class="sh_symbol">.</span>info_pwd input</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 220px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 19px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span> 3px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span> 5px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #dedede<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*输入框*/
+div.info_username,div.info_pwd
+{
+    padding-left:20px;
+    margin-top:20px;
+    color: #666;
+    background-color:#ccc;
+    width:233px;
+}
+div.info_username
+{
+    background:#ccc url(images/user.png) no-repeat 5px center;
+}
+div.info_pwd
+{
+    background:#ccc url(images/pwd.png) no-repeat 5px center;
+}
+div.info_username input,div.info_pwd input
+{
+    width: 220px;
+    height: 19px;
+    padding: 3px;
+    margin-left: 5px;
+    border: 1px solid #dedede;
+}
+</pre></div></div> 
+    <p class="number">步骤八：为登录按钮定义 CSS 样式</p> 
+    <p>为登录按钮定义样式。添加的 CSS 代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*登录按钮*/</span></li><li>input<span class="sh_symbol">.</span>btn_login</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 255px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 38px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> <span class="sh_number">0</span><span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 16px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #FFF<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #ff4700<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>radius<span class="sh_symbol">:</span> 3px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>btn_login<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #f73500<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*登录按钮*/
+input.btn_login
+{
+    width: 255px;
+    height: 38px;
+    border: 0;
+    font-size: 16px;
+    color: #FFF;
+    background-color: #ff4700;
+    border-radius: 3px;
+    margin-top:15px;
+}
+input.btn_login:hover
+{
+    background-color: #f73500;
+}
+</pre></div></div> 
+    <p class="number">步骤九：为超级链接定义 CSS 样式</p> 
+    <p>为各超级链接定义样式。添加的 CSS 代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*链接*/</span></li><li>div<span class="sh_symbol">.</span>other_login</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span>20px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>a<span class="sh_symbol">.</span>weibo<span class="sh_symbol">,</span>a<span class="sh_symbol">.</span>zhifu</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span> 5px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>20px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">:</span> <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>icons<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat <span class="sh_number">0</span> <span class="sh_symbol">-</span>213px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #6d6d6d<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>a<span class="sh_symbol">.</span>zhifu</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span> <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>icons<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat <span class="sh_number">0</span> <span class="sh_symbol">-</span>143px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>a<span class="sh_symbol">.</span>register</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>30px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #6d6d6d<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>a<span class="sh_symbol">.</span>weibo<span class="sh_symbol">:</span>hover<span class="sh_symbol">,</span>a<span class="sh_symbol">.</span>zhifu<span class="sh_symbol">:</span>hover<span class="sh_symbol">,</span>a<span class="sh_symbol">.</span>register<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    color<span class="sh_symbol">:</span> #ff4200<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*链接*/
+div.other_login
+{
+    margin-top:20px;
+}
+a.weibo,a.zhifu
+{
+    padding: 5px;
+    padding-left:20px;
+    background: url(images/icons.png) no-repeat 0 -213px;
+    color: #6d6d6d;
+}
+a.zhifu
+{
+    background: url(images/icons.png) no-repeat 0 -143px;
+}
+a.register
+{
+    margin-left:30px;
+    color: #6d6d6d;
+}
+a.weibo:hover,a.zhifu:hover,a.register:hover
+{
+    color: #ff4200;
+}
+</pre></div></div> 
+    <p>完成后，taobao_login.css 文件中的完整代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: block;"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/* 布局样式 */</span></li><li>body</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">:</span> 0px auto<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span> 0px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> <span class="sh_number">0</span><span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #fff<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 12px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #<span class="sh_number">404040</span><span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>header<span class="sh_symbol">,</span>section</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 1190px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span>10px auto<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>header</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span>30px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>section</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span><span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>taobao_show<span class="sh_symbol">.</span>jpg<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat <span class="sh_number">20</span><span class="sh_symbol">%</span> center<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*登录框*/</span></li><li>#login_box</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 295px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span> 60px <span class="sh_number">0</span> 48px 720px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 2px solid #dedede<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span> 2px solid #ff4200<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">:</span><span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>login_box_icon<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat right top<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">-</span>bottom<span class="sh_symbol">:</span>30px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*输入框*/</span></li><li>div<span class="sh_symbol">.</span>info_username<span class="sh_symbol">,</span>div<span class="sh_symbol">.</span>info_pwd</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>20px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span>20px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #<span class="sh_number">666</span><span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span>#ccc<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>233px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>div<span class="sh_symbol">.</span>info_username</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span>#ccc <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>user<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat 5px center<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>div<span class="sh_symbol">.</span>info_pwd</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span>#ccc <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>pwd<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat 5px center<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>div<span class="sh_symbol">.</span>info_username input<span class="sh_symbol">,</span>div<span class="sh_symbol">.</span>info_pwd input</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 220px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 19px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span> 3px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span> 5px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #dedede<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*登录按钮*/</span></li><li>input<span class="sh_symbol">.</span>btn_login</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 255px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 38px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> <span class="sh_number">0</span><span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 16px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #FFF<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #ff4700<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>radius<span class="sh_symbol">:</span> 3px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>btn_login<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #f73500<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*链接*/</span></li><li>div<span class="sh_symbol">.</span>other_login</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span>20px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>a<span class="sh_symbol">.</span>weibo<span class="sh_symbol">,</span>a<span class="sh_symbol">.</span>zhifu</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span> 5px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>20px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">:</span> <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>icons<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat <span class="sh_number">0</span> <span class="sh_symbol">-</span>213px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #6d6d6d<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>a<span class="sh_symbol">.</span>zhifu</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span> <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>icons<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat <span class="sh_number">0</span> <span class="sh_symbol">-</span>143px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>a<span class="sh_symbol">.</span>register</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>30px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #6d6d6d<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>a<span class="sh_symbol">.</span>weibo<span class="sh_symbol">:</span>hover<span class="sh_symbol">,</span>a<span class="sh_symbol">.</span>zhifu<span class="sh_symbol">:</span>hover<span class="sh_symbol">,</span>a<span class="sh_symbol">.</span>register<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    color<span class="sh_symbol">:</span> #ff4200<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/* 布局样式 */
+body
+{
+    margin: 0px auto;
+    padding: 0px;
+    border: 0;
+    background-color: #fff;
+    font-size: 12px;
+    color: #404040;
+}
+header,section
+{
+    width: 1190px;
+    margin:10px auto;
+}
+header
+{
+    padding-top:30px;
+}
+section
+{
+    background:url(images/taobao_show.jpg) no-repeat 20% center;
+}
+/*登录框*/
+#login_box
+{
+    width: 295px;
+    margin: 60px 0 48px 720px;
+    border: 2px solid #dedede;
+    border-top: 2px solid #ff4200;
+    background:url(images/login_box_icon.png) no-repeat right top;
+    padding-left:40px;
+    padding-bottom:30px;
+}
+/*输入框*/
+div.info_username,div.info_pwd
+{
+    padding-left:20px;
+    margin-top:20px;
+    color: #666;
+    background-color:#ccc;
+    width:233px;
+}
+div.info_username
+{
+    background:#ccc url(images/user.png) no-repeat 5px center;
+}
+div.info_pwd
+{
+    background:#ccc url(images/pwd.png) no-repeat 5px center;
+}
+div.info_username input,div.info_pwd input
+{
+    width: 220px;
+    height: 19px;
+    padding: 3px;
+    margin-left: 5px;
+    border: 1px solid #dedede;
+}
+/*登录按钮*/
+input.btn_login
+{
+    width: 255px;
+    height: 38px;
+    border: 0;
+    font-size: 16px;
+    color: #FFF;
+    background-color: #ff4700;
+    border-radius: 3px;
+    margin-top:15px;
+}
+input.btn_login:hover
+{
+    background-color: #f73500;
+}
+/*链接*/
+div.other_login
+{
+    margin-top:20px;
+}
+a.weibo,a.zhifu
+{
+    padding: 5px;
+    padding-left:20px;
+    background: url(images/icons.png) no-repeat 0 -213px;
+    color: #6d6d6d;
+}
+a.zhifu
+{
+    background: url(images/icons.png) no-repeat 0 -143px;
+}
+a.register
+{
+    margin-left:30px;
+    color: #6d6d6d;
+}
+a.weibo:hover,a.zhifu:hover,a.register:hover
+{
+    color: #ff4200;
+}
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap" style="display: none;"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/EXERCISE/01/index_answer.html#" class="snippet-toggle sh_url">代码</a></pre></div></div> 
+   </div> 
+  </div>  
+ 
+</body></html>

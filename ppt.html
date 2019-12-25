@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PPT</title>
+    <link rel="bookmark" type="image/x-icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/bitbug_favicon.ico"><!--add web page tab-->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="example">
+</div>
+<div id="app">
+    <h1>{{value}}</h1>
+    <div id="webRes">
+        <ul v-for="(items,key) in pptFiles">
+            <span>{{key}}</span>
+            <li v-for="(item,index) in items">
+                <a :href="'res/'+key+'/'+item+'/PPT.html'">{{item}}</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            value:"WEB资料",
+            // pptFiles:["AJAX\/DAY01AJAX的使用","AJAX\/DAY03AJAX发送JSON",]
+            pptFiles:{
+                "AJAX":["DAY01AJAX的使用","DAY03AJAX发送JSON","DAY03AJXA实现局部页面更新","DAY04AJAX跨域"],
+                "BOOTSTRAP":["DAY01","DAY02BOOTSTRAP起步","DAY03BOOTSTRAP组件","DAY04","DAY05定制项目"],
+                "CSS3BASIC":["DAY01CSS概述","DAY02尺寸与边框","DAY03渐变、文本","DAY04浮动、定位"],
+                "CSS3CORE":["DAT02CSSHACK","DAY01复杂选择器、内容生成器after、before","DAY03动画、优化"],
+                "DOM":["DAY01DOM概述、Html元素查找","DAY02元素属性、节点修改","DAY03HTML中的对象、BOM定时器等","DAY04Windows常用对象"],
+                "HTML5BASIC":["DAY01WEB基础知识","DAY02图像和链接","DAY03结构标记"],
+                "HTML5CORE":["DAY01增强的表单","DAY02视频音频处理","DAY03Canvas","DAY04SVG、TWOjs","DAY05WebWorkers"],
+                "JAVASCRIPTBASIC":["DAY01javascript概念、变量","DAY02数据类型转换","DAY03函数定义、变量作用域","DAY04循环结构、数组","DAY05数组常用方法、二维数组","DAY06String、正则表达式","DAY07RegExp、Math"],
+                "JAVASCRIPTCORE":["DAY01Function、闭包","DAY02对象、原型、继承、封装","DAY03ECMAScript5、6"],
+                "JQUERY":["jquery操作DOM","jquery插件","jquery数组操作","jquery选择器"],
+                "JSFRAMWORK":["DAY01Reactjs","DAY02Reactjs应用","DAY03Vuejs","DAY04Vuejs应用"],
+                "NODEJS":["DAY01NODE概述","DAY02NODEJS自定义模块","DAY03MYSQL","DAY04Express","DAY05Express中间件"],
+                "SERVER&HTTP":["DAY01服务端技术","DAY02PHP基础","DAY03CRUDMYSQL语言","DAY04URL、HTTP"],
+                "WEBAPP":["DAY01移动app开发","DAY02IONIC","DAY03IONIC2","DAY06Zepto.js","DAY07Zepto.js应用","DAY08PhoneGap"],
+                "WEIXIN":["DAY01微信扩展概述","DAY02微信小程序","DAY03组件"]
+
+
+            }
+        }
+    });
+</script>
+</body>
+</html>

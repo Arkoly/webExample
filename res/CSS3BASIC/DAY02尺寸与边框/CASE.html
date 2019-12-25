@@ -1,0 +1,1143 @@
+
+<!-- saved from url=(0085)http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CASE</title>
+    
+    <script type="text/javascript" src="./CASE_files/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="./CASE_files/jquery.snippet.js">
+    </script>
+    <script type="text/javascript" src="./CASE_files/main.js">
+    </script>
+    <link type="text/css" href="./CASE_files/index.css" rel="Stylesheet">
+    <link type="text/css" href="./CASE_files/jquery.snippet.css" rel="Stylesheet">
+  </head>
+  <body>
+    <div class="source_style_case">
+      <a name="page_top_case" id="top_anchor">
+      </a><a id="link_top" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#page_top_case">Top</a>
+      <h1>WEB CSS3BASIC DAY02</h1>
+      <ol class="index">
+        <li>
+          <a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#case1">边距属性的应用</a>
+        </li>
+        <li>
+          <a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#case2">背景属性的应用</a>
+        </li>
+        <li>
+          <a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#case3">渐变属性的应用</a>
+        </li>
+        <li>
+          <a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#case4">京东登录页（提高，选做）</a>
+        </li>
+      </ol>
+      <a name="case1">
+      </a>
+      <h2>1 边距属性的应用</h2>
+      <h3>1.1 问题</h3>
+      <p>创建页面并定义样式，实现如图－1所示的效果。</p>
+      <div class="image">
+        <img src="./CASE_files/image001.png">
+        <p>图－1</p>
+      </div>
+      <p>图－1中的样式描述如下：</p>
+      <ul class="list">
+        <li>页面上方的包含框宽 838px，其最小高度为 50px，且上下内边距为10px，左右内边距为15px；
+</li>
+        <li>包含框的边框颜色为#d0e4c2；
+</li>
+        <li>页码的包含框宽，距离上方的元素框10px；
+</li>
+        <li>每个页码的上下内边距为3px，左右内边距为10px；
+</li>
+        <li>页码的边框颜色为#ccc，边框倒圆角，且当前页码没有边框；
+</li>
+        <li>页码之间的间隔为 2px。
+</li>
+      </ul>
+      <h3>1.2 方案</h3>
+      <p>图－1所示的页面由上下两个元素框组成，因此，首先可以使用两个 &lt;div&gt; 元素表示两个包含框，并为其定义样式；然后再定义页码。每个页码是一个超级链接 &lt;a&gt; 元素。</p>
+      <h3>1.3 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：创建 HTML 文件</p>
+      <p>创建文件 01_demo.html，并为其定义外部样式表 demo.css，HTML页面的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>框模型<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span>   </li><li>        <span class="sh_symbol">&lt;</span>link href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"stylesheet"</span> <span class="sh_symbol">/&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;框模型&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;   
+        &lt;link href="demo.css" type="text/css" rel="stylesheet" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤二：定义页面元素</p>
+      <p>为页面添加代码，添加页面元素。</p>
+      <p>为两个包含框定义 id 属性，并为当前页码定义样式类。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>框模型<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span>   </li><li>        <span class="sh_symbol">&lt;</span>link href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"stylesheet"</span> <span class="sh_symbol">/&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"comment"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"pages"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>a <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"current"</span><span class="sh_symbol">&gt;</span><span class="sh_number">1</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">2</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">3</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">4</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">5</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">6</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;框模型&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;   
+        &lt;link href="demo.css" type="text/css" rel="stylesheet" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+#cold_bold        &lt;div id="comment"&gt;
+#cold_bold        &lt;/div&gt;
+#cold_bold        &lt;div id="pages"&gt;
+#cold_bold            &lt;a class="current"&gt;1&lt;/a&gt;
+#cold_bold            &lt;a href="#"&gt;2&lt;/a&gt;
+#cold_bold            &lt;a href="#"&gt;3&lt;/a&gt;
+#cold_bold            &lt;a href="#"&gt;4&lt;/a&gt;
+#cold_bold            &lt;a href="#"&gt;5&lt;/a&gt;
+#cold_bold            &lt;a href="#"&gt;6&lt;/a&gt;
+#cold_bold        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤三：为页面上方的元素框定义样式</p>
+      <p>打开文件 demo.css，为页面上方的包含框定义样式。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li>#comment</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span> 10px 15px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #d0e4c2<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>838px<span class="sh_symbol">;</span></li><li>    min<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span>50px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">#comment
+{
+    padding: 10px 15px;
+    border: 1px solid #d0e4c2;
+    width:838px;
+    min-height:50px;
+}
+</pre></div></div>
+      <p class="number">步骤四：为页面下方的元素框及链接元素定义样式</p>
+      <p>为页面下方的包含框及链接元素定义样式。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li>#pages</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span>10px<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>838px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#pages a</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span> 3px 10px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #ccc<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span> 2px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>radius<span class="sh_symbol">:</span> 5px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#pages a<span class="sh_symbol">.</span>current</li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">:</span> <span class="sh_number">0</span><span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span> 4px 11px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">#pages
+{
+    margin-top:10px;
+    width:838px;
+}
+#pages a
+{
+    padding: 3px 10px;
+    border: 1px solid #ccc;
+    margin-left: 2px;
+    border-radius: 5px;
+}
+#pages a.current
+{
+    border: 0;
+    padding: 4px 11px;
+}
+</pre></div></div>
+      <h3>1.4 完整代码</h3>
+      <p>01_demo.html 文件的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>框模型<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span>   </li><li>        <span class="sh_symbol">&lt;</span>link href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"stylesheet"</span> <span class="sh_symbol">/&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"comment"</span><span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"pages"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"current"</span><span class="sh_symbol">&gt;</span><span class="sh_number">1</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">2</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">3</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">4</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">5</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">6</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;框模型&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;   
+        &lt;link href="demo.css" type="text/css" rel="stylesheet" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="comment"&gt;
+        &lt;/div&gt;
+        &lt;div id="pages"&gt;
+            &lt;a class="current"&gt;1&lt;/a&gt;
+            &lt;a href="#"&gt;2&lt;/a&gt;
+            &lt;a href="#"&gt;3&lt;/a&gt;
+            &lt;a href="#"&gt;4&lt;/a&gt;
+            &lt;a href="#"&gt;5&lt;/a&gt;
+            &lt;a href="#"&gt;6&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <p>demo.css 文件的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li>#comment</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span> 10px 15px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #d0e4c2<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>838px<span class="sh_symbol">;</span></li><li>    min<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span>50px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#pages</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>838px<span class="sh_symbol">;</span></li><li>   margin<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span>10px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#pages a</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span> 3px 10px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #ccc<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span> 2px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>radius<span class="sh_symbol">:</span> 5px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#pages a<span class="sh_symbol">.</span>current</li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">:</span> <span class="sh_number">0</span><span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span> 4px 11px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">#comment
+{
+    padding: 10px 15px;
+    border: 1px solid #d0e4c2;
+    width:838px;
+    min-height:50px;
+}
+#pages
+{
+    width:838px;
+   margin-top:10px;
+}
+#pages a
+{
+    padding: 3px 10px;
+    border: 1px solid #ccc;
+    margin-left: 2px;
+    border-radius: 5px;
+}
+#pages a.current
+{
+    border: 0;
+    padding: 4px 11px;
+}
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <a name="case2">
+      </a>
+      <h2>2 背景属性的应用</h2>
+      <h3>2.1 问题</h3>
+      <p>继续修改上一个案例中所创建的 html 文档，为页面元素添加背景图像和背景色。页面效果如图－2所示。</p>
+      <div class="image">
+        <img src="./CASE_files/image002.png">
+        <p>图－2</p>
+      </div>
+      <p>图－2中的样式描述如下：</p>
+      <ul class="list">
+        <li>元素框的背景色为#fcfffa；
+</li>
+        <li>五星包含框的下边框颜色为#d0e4c2；
+</li>
+        <li>五星图片的宽度为75px，高14px；
+</li>
+        <li>五星图片在大背景图中的位置为109px（水平方向），239px（垂直方向）；
+</li>
+        <li>鼠标悬停页码时，背景色为 #005aa0，文本颜色为 #fff。
+</li>
+      </ul>
+      <h3>2.2 方案</h3>
+      <p>图－2中所需要的五星图片所在文件如图－3所示：</p>
+      <div class="image">
+        <img src="./CASE_files/image003.png">
+        <p>图－3</p>
+      </div>
+      <p>由图－3可以看出，五星图片为一个大图中的一部分，因此，需要构建合适大小的元素框来显示为背景图片（如图－4中的红色框所示）。另外，为了显示图片所在框的下边框，还需要定义一个包含框（如图－4中的黑色框所示）。结构如图－4所示。</p>
+      <div class="image">
+        <img src="./CASE_files/image004.png">
+        <p>图－4</p>
+      </div>
+      <h3>2.3 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：添加元素</p>
+      <p>使用文本编辑器打开上一个案例中的 html文件，为上方的包含框添加元素，定义图－4中所示的结构。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>背景<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span>   </li><li>        <span class="sh_symbol">&lt;</span>link href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"stylesheet"</span> <span class="sh_symbol">/&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"comment"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"topic"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code">                <span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"star"</span><span class="sh_symbol">&gt;&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span>     </li><li>        <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"pages"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"current"</span><span class="sh_symbol">&gt;</span><span class="sh_number">1</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">2</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">3</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">4</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">5</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">6</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;背景&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;   
+        &lt;link href="demo.css" type="text/css" rel="stylesheet" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="comment"&gt;
+#cold_bold            &lt;div class="topic"&gt;
+#cold_bold                &lt;div class="star"&gt;&lt;/div&gt;
+#cold_bold            &lt;/div&gt;     
+        &lt;/div&gt;
+        &lt;div id="pages"&gt;
+            &lt;a class="current"&gt;1&lt;/a&gt;
+            &lt;a href="#"&gt;2&lt;/a&gt;
+            &lt;a href="#"&gt;3&lt;/a&gt;
+            &lt;a href="#"&gt;4&lt;/a&gt;
+            &lt;a href="#"&gt;5&lt;/a&gt;
+            &lt;a href="#"&gt;6&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤二：为包含框定义背景色</p>
+      <p>打开 demo.css 文件，为外层包含框定义背景色。添加的 CSS 代码如下：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li>#comment</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span> 10px 15px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #d0e4c2<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>838px<span class="sh_symbol">;</span></li><li class="bold_code">    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #fcfffa<span class="sh_symbol">;</span></li><li>    min<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span>50px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">#comment
+{
+    padding: 10px 15px;
+    border: 1px solid #d0e4c2;
+    width:838px;
+#cold_bold    background-color: #fcfffa;
+    min-height:50px;
+}
+</pre></div></div>
+      <p class="number">步骤三：为新添加的元素定义样式</p>
+      <p>打开 demo.css 文件，定义图－4中黑色框的样式。添加的 CSS 代码如下：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!--</span>其他部分代码，略<span class="sh_symbol">--&gt;</span></li><li>div<span class="sh_symbol">.</span>topic</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span> <span class="sh_number">0</span> <span class="sh_number">0</span> 2px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>bottom<span class="sh_symbol">:</span> 10px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>bottom<span class="sh_symbol">:</span> 1px solid #d0e4c2<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!--其他部分代码，略--&gt;
+div.topic
+{
+    padding: 0 0 2px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #d0e4c2;
+}
+</pre></div></div>
+      <p>继续添加代码，定义五星图片所在框的样式。添加的 CSS 代码如下：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li>div<span class="sh_symbol">.</span>star</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">:</span> 1px <span class="sh_number">0</span> 3px 5px<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span> 75px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 14px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>image<span class="sh_symbol">:</span> <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>iconlist_1<span class="sh_symbol">.</span>png<span class="sh_symbol">);</span></li><li>    background<span class="sh_symbol">-</span>repeat<span class="sh_symbol">:</span> no<span class="sh_symbol">-</span>repeat<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>position<span class="sh_symbol">:</span> <span class="sh_symbol">-</span>109px <span class="sh_symbol">-</span>239px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">div.star
+{
+    margin: 1px 0 3px 5px;
+    width: 75px;
+    height: 14px;
+    background-image: url(images/iconlist_1.png);
+    background-repeat: no-repeat;
+    background-position: -109px -239px;
+}
+</pre></div></div>
+      <p class="number">步骤四：为超级链接定义背景</p>
+      <p>当鼠标悬停超级链接元素时，会显示背景色。因此，需要使用伪类选择器为超级链接元素定义背景。添加的 CSS 代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!--</span>其他部分代码，略<span class="sh_symbol">--&gt;</span></li><li>#pages a<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #005aa0<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span>#fff<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#pages a<span class="sh_symbol">.</span>current<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span>#fff<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;   color<span class="sh_symbol">:</span>#<span class="sh_number">000</span><span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span>  </li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!--其他部分代码，略--&gt;
+#pages a:hover
+{
+    background-color: #005aa0;
+    color:#fff;
+}
+#pages a.current:hover
+{
+    background-color:#fff;
+	   color:#000;
+}  
+</pre></div></div>
+      <h3>2.4 完整代码</h3>
+      <p>01_demo.html 文件的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>背景<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>link href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"stylesheet"</span> <span class="sh_symbol">/&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"comment"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"topic"</span><span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"star"</span><span class="sh_symbol">&gt;&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"pages"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"current"</span><span class="sh_symbol">&gt;</span><span class="sh_number">1</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">2</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">3</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">4</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">5</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">6</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;背景&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+        &lt;link href="demo.css" type="text/css" rel="stylesheet" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="comment"&gt;
+            &lt;div class="topic"&gt;
+                &lt;div class="star"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="pages"&gt;
+            &lt;a class="current"&gt;1&lt;/a&gt;
+            &lt;a href="#"&gt;2&lt;/a&gt;
+            &lt;a href="#"&gt;3&lt;/a&gt;
+            &lt;a href="#"&gt;4&lt;/a&gt;
+            &lt;a href="#"&gt;5&lt;/a&gt;
+            &lt;a href="#"&gt;6&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <p>demo.css 文件的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li>#comment</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span> 10px 15px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #d0e4c2<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>838px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #fcfffa<span class="sh_symbol">;</span></li><li>    min<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span>50px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>div<span class="sh_symbol">.</span>topic</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span> <span class="sh_number">0</span> <span class="sh_number">0</span> 2px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>bottom<span class="sh_symbol">:</span> 10px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>bottom<span class="sh_symbol">:</span> 1px solid #d0e4c2<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>div<span class="sh_symbol">.</span>star</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">:</span> 1px <span class="sh_number">0</span> 3px 5px<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span> 75px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 14px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>image<span class="sh_symbol">:</span> <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>iconlist_1<span class="sh_symbol">.</span>png<span class="sh_symbol">);</span></li><li>    background<span class="sh_symbol">-</span>repeat<span class="sh_symbol">:</span> no<span class="sh_symbol">-</span>repeat<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>position<span class="sh_symbol">:</span> <span class="sh_symbol">-</span>109px <span class="sh_symbol">-</span>239px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#pages</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>838px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span>10px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#pages a</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span> 3px 10px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #ccc<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span> 2px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>radius<span class="sh_symbol">:</span> 5px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#pages a<span class="sh_symbol">.</span>current</li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">:</span> <span class="sh_number">0</span><span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span> 4px 11px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#pages a<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #005aa0<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span>#fff<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#pages a<span class="sh_symbol">.</span>current<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span>#fff<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;   color<span class="sh_symbol">:</span>#<span class="sh_number">000</span><span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">#comment
+{
+    padding: 10px 15px;
+    border: 1px solid #d0e4c2;
+    width:838px;
+    background-color: #fcfffa;
+    min-height:50px;
+}
+div.topic
+{
+    padding: 0 0 2px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #d0e4c2;
+}
+div.star
+{
+    margin: 1px 0 3px 5px;
+    width: 75px;
+    height: 14px;
+    background-image: url(images/iconlist_1.png);
+    background-repeat: no-repeat;
+    background-position: -109px -239px;
+}
+#pages
+{
+    width:838px;
+    margin-top:10px;
+}
+#pages a
+{
+    padding: 3px 10px;
+    border: 1px solid #ccc;
+    margin-left: 2px;
+    border-radius: 5px;
+}
+#pages a.current
+{
+    border: 0;
+    padding: 4px 11px;
+}
+#pages a:hover
+{
+    background-color: #005aa0;
+    color:#fff;
+}
+#pages a.current:hover
+{
+    background-color:#fff;
+	   color:#000;
+}
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <a name="case3">
+      </a>
+      <h2>3 渐变属性的应用</h2>
+      <h3>3.1 问题</h3>
+      <p>继续修改上一个案例中的 html 文档，为页面添加元素和样式定义，页面效果如图－5所示。</p>
+      <div class="image">
+        <img src="./CASE_files/image005.png">
+        <p>图－5</p>
+      </div>
+      <p>由图－5可以看出，页面上添加了文本，且需要为一些元素定义样式。图－5中新添加内容的样式描述如下：</p>
+      <ul class="list">
+        <li>标签（比如“比洗衣粉好”）：高21px，左右内边距为 5px，上下内边距为 7px，标签之间的间隔为 5px，背景色为 #fdedd2；
+</li>
+        <li>按钮（比如“有用”和“回复”）：宽 80px，内边距为 10px，边框颜色为 #d5d5d5， 边框倒角为 3px，文本颜色为 #333；
+</li>
+        <li>按钮之间间隔 10px，按钮顶端背景色为 #fafafa，底端背景色为 #ccc，背景色由顶端到底端均匀过渡。
+</li>
+      </ul>
+      <h3>3.2 方案</h3>
+      <p>图－5中新添加内容的结构如图－6所示。</p>
+      <div class="image">
+        <img src="./CASE_files/image006.png">
+        <p>图－6</p>
+      </div>
+      <p>图－6中，每行内容用黑色框线表示，可以使用 &lt;p&gt; 元素来定义；红色边框部分可以用 &lt;b&gt; 元素定义；按钮使用 &lt;input&gt; 元素定义即可。</p>
+      <h3>3.3 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：添加元素</p>
+      <p>使用文本编辑器打开上一个案例中的 html文件，为上方的包含框添加元素，定义图－6中所示的结构。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>渐变<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span>   </li><li>        <span class="sh_symbol">&lt;</span>link href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"stylesheet"</span> <span class="sh_symbol">/&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"comment"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"topic"</span><span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"star"</span><span class="sh_symbol">&gt;&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>p<span class="sh_symbol">&gt;</span></li><li class="bold_code">                标<span class="sh_symbol">&amp;</span>nbsp<span class="sh_symbol">;&amp;</span>nbsp<span class="sh_symbol">;&amp;</span>nbsp<span class="sh_symbol">;&amp;</span>nbsp<span class="sh_symbol">;</span>签：</li><li class="bold_code">                <span class="sh_symbol">&lt;</span>b<span class="sh_symbol">&gt;</span>比洗衣粉好<span class="sh_symbol">&lt;/</span>b<span class="sh_symbol">&gt;</span></li><li class="bold_code">                <span class="sh_symbol">&lt;</span>b<span class="sh_symbol">&gt;</span>去污能力强<span class="sh_symbol">&lt;/</span>b<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>p<span class="sh_symbol">&gt;</span></li><li class="bold_code">                心<span class="sh_symbol">&amp;</span>nbsp<span class="sh_symbol">;&amp;</span>nbsp<span class="sh_symbol">;&amp;</span>nbsp<span class="sh_symbol">;&amp;</span>nbsp<span class="sh_symbol">;</span>得：</li><li class="bold_code">                <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>买了几次了，挺好用的，洗的衣服很干净，以后就它了！<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>p<span class="sh_symbol">&gt;</span></li><li class="bold_code">                购买日期：</li><li class="bold_code">                <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span><span class="sh_number">2014-12-01</span><span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>p <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"btns"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code">                <span class="sh_symbol">&lt;</span>input value<span class="sh_symbol">=</span><span class="sh_string">"有用(3)"</span> type<span class="sh_symbol">=</span><span class="sh_string">"button"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">                <span class="sh_symbol">&lt;</span>input value<span class="sh_symbol">=</span><span class="sh_string">"回复(3)"</span> type<span class="sh_symbol">=</span><span class="sh_string">"button"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"pages"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"current"</span><span class="sh_symbol">&gt;</span><span class="sh_number">1</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">2</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">3</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">4</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">5</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">6</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;渐变&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;   
+        &lt;link href="demo.css" type="text/css" rel="stylesheet" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="comment"&gt;
+            &lt;div class="topic"&gt;
+                &lt;div class="star"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+#cold_bold            &lt;p&gt;
+#cold_bold                标&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;签：
+#cold_bold                &lt;b&gt;比洗衣粉好&lt;/b&gt;
+#cold_bold                &lt;b&gt;去污能力强&lt;/b&gt;
+#cold_bold            &lt;/p&gt;
+#cold_bold            &lt;p&gt;
+#cold_bold                心&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;得：
+#cold_bold                &lt;span&gt;买了几次了，挺好用的，洗的衣服很干净，以后就它了！&lt;/span&gt;
+#cold_bold            &lt;/p&gt;
+#cold_bold            &lt;p&gt;
+#cold_bold                购买日期：
+#cold_bold                &lt;span&gt;2014-12-01&lt;/span&gt;
+#cold_bold            &lt;/p&gt;
+#cold_bold            &lt;p class="btns"&gt;
+#cold_bold                &lt;input value="有用(3)" type="button" /&gt;
+#cold_bold                &lt;input value="回复(3)" type="button" /&gt;
+#cold_bold            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div id="pages"&gt;
+            &lt;a class="current"&gt;1&lt;/a&gt;
+            &lt;a href="#"&gt;2&lt;/a&gt;
+            &lt;a href="#"&gt;3&lt;/a&gt;
+            &lt;a href="#"&gt;4&lt;/a&gt;
+            &lt;a href="#"&gt;5&lt;/a&gt;
+            &lt;a href="#"&gt;6&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤二：为新添加的元素定义样式</p>
+      <p>打开 demo.css 文件，定义图－6中红色框的样式。添加的 CSS 代码如下：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!--</span>其他部分代码，略<span class="sh_symbol">--&gt;</span></li><li>#comment p b</li><li><span class="sh_cbracket">{</span></li><li>    height<span class="sh_symbol">:</span> 21px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span> 5px 7px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>right<span class="sh_symbol">:</span> 5px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #fdedd2<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span>1px solid red<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!--其他部分代码，略--&gt;
+#comment p b
+{
+    height: 21px;
+    padding: 5px 7px;
+    margin-right: 5px;
+    background-color: #fdedd2;
+    border:1px solid red;
+}
+</pre></div></div>
+      <p class="number">步骤三：为超级链接定义背景</p>
+      <p>继续为图－6中的按钮定义样式。添加的 CSS 代码如下：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!--</span>其他部分代码，略<span class="sh_symbol">--&gt;</span></li><li>p<span class="sh_symbol">.</span>btns input</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">-</span>right<span class="sh_symbol">:</span> 10px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span> 10px 10px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #d5d5d5<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>radius<span class="sh_symbol">:</span> 3px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #<span class="sh_number">333</span><span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>80px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>image <span class="sh_symbol">:</span> linear<span class="sh_symbol">-</span><span class="sh_function">gradient</span><span class="sh_symbol">(</span>to bottom<span class="sh_symbol">,</span>#fafafa<span class="sh_symbol">,</span>#ccc<span class="sh_symbol">);</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!--其他部分代码，略--&gt;
+p.btns input
+{
+    margin-right: 10px;
+    padding: 10px 10px;
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    color: #333;
+    width:80px;
+    background-image : linear-gradient(to bottom,#fafafa,#ccc);
+}
+</pre></div></div>
+      <h3>3.4 完整代码</h3>
+      <p>01_demo.html 的文件的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>渐变<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>link href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"stylesheet"</span> <span class="sh_symbol">/&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"comment"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"topic"</span><span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"star"</span><span class="sh_symbol">&gt;&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>p<span class="sh_symbol">&gt;</span></li><li>                标<span class="sh_symbol">&amp;</span>nbsp<span class="sh_symbol">;&amp;</span>nbsp<span class="sh_symbol">;&amp;</span>nbsp<span class="sh_symbol">;&amp;</span>nbsp<span class="sh_symbol">;</span>签：</li><li>                <span class="sh_symbol">&lt;</span>b<span class="sh_symbol">&gt;</span>比洗衣粉好<span class="sh_symbol">&lt;/</span>b<span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>b<span class="sh_symbol">&gt;</span>去污能力强<span class="sh_symbol">&lt;/</span>b<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>p<span class="sh_symbol">&gt;</span></li><li>                心<span class="sh_symbol">&amp;</span>nbsp<span class="sh_symbol">;&amp;</span>nbsp<span class="sh_symbol">;&amp;</span>nbsp<span class="sh_symbol">;&amp;</span>nbsp<span class="sh_symbol">;</span>得：</li><li>                <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>买了几次了，挺好用的，洗的衣服很干净，以后就它了！<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>p<span class="sh_symbol">&gt;</span></li><li>                购买日期：</li><li>                <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span><span class="sh_number">2014-12-01</span><span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>p <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"btns"</span><span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>input value<span class="sh_symbol">=</span><span class="sh_string">"有用(3)"</span> type<span class="sh_symbol">=</span><span class="sh_string">"button"</span> <span class="sh_symbol">/&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>input value<span class="sh_symbol">=</span><span class="sh_string">"回复(3)"</span> type<span class="sh_symbol">=</span><span class="sh_string">"button"</span> <span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"pages"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"current"</span><span class="sh_symbol">&gt;</span><span class="sh_number">1</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">2</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">3</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">4</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">5</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span><span class="sh_number">6</span><span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;渐变&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+        &lt;link href="demo.css" type="text/css" rel="stylesheet" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="comment"&gt;
+            &lt;div class="topic"&gt;
+                &lt;div class="star"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;p&gt;
+                标&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;签：
+                &lt;b&gt;比洗衣粉好&lt;/b&gt;
+                &lt;b&gt;去污能力强&lt;/b&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+                心&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;得：
+                &lt;span&gt;买了几次了，挺好用的，洗的衣服很干净，以后就它了！&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+                购买日期：
+                &lt;span&gt;2014-12-01&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p class="btns"&gt;
+                &lt;input value="有用(3)" type="button" /&gt;
+                &lt;input value="回复(3)" type="button" /&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div id="pages"&gt;
+            &lt;a class="current"&gt;1&lt;/a&gt;
+            &lt;a href="#"&gt;2&lt;/a&gt;
+            &lt;a href="#"&gt;3&lt;/a&gt;
+            &lt;a href="#"&gt;4&lt;/a&gt;
+            &lt;a href="#"&gt;5&lt;/a&gt;
+            &lt;a href="#"&gt;6&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <p>demo.css 文件的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li>#comment</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span> 10px 15px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #d0e4c2<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #fcfffa<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>838px<span class="sh_symbol">;</span></li><li>    min<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span>50px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>div<span class="sh_symbol">.</span>topic</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span> <span class="sh_number">0</span> <span class="sh_number">0</span> 2px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>bottom<span class="sh_symbol">:</span> 10px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>bottom<span class="sh_symbol">:</span> 1px solid #d0e4c2<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>div<span class="sh_symbol">.</span>star</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">:</span> 1px <span class="sh_number">0</span> 3px 5px<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span> 75px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 14px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>image<span class="sh_symbol">:</span> <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>iconlist_1<span class="sh_symbol">.</span>png<span class="sh_symbol">);</span></li><li>    background<span class="sh_symbol">-</span>repeat<span class="sh_symbol">:</span> no<span class="sh_symbol">-</span>repeat<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>position<span class="sh_symbol">:</span> <span class="sh_symbol">-</span>109px <span class="sh_symbol">-</span>239px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#pages</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>838px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span>10px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#pages a</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span> 3px 10px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #ccc<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span> 2px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>radius<span class="sh_symbol">:</span> 5px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#pages a<span class="sh_symbol">.</span>current</li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">:</span> <span class="sh_number">0</span><span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span> 4px 11px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#pages a<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #005aa0<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span>#fff<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#pages a<span class="sh_symbol">.</span>current<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span>#fff<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;   color<span class="sh_symbol">:</span>#<span class="sh_number">000</span><span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#comment p b</li><li><span class="sh_cbracket">{</span></li><li>    height<span class="sh_symbol">:</span> 21px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span> 5px 7px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>right<span class="sh_symbol">:</span> 5px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #fdedd2<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>p<span class="sh_symbol">.</span>btns input</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">-</span>right<span class="sh_symbol">:</span> 10px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span> 10px 10px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #d5d5d5<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>radius<span class="sh_symbol">:</span> 3px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #<span class="sh_number">333</span><span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>80px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>image <span class="sh_symbol">:</span> linear<span class="sh_symbol">-</span><span class="sh_function">gradient</span><span class="sh_symbol">(</span>to bottom<span class="sh_symbol">,</span>#fafafa<span class="sh_symbol">,</span>#ccc<span class="sh_symbol">);</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">#comment
+{
+    padding: 10px 15px;
+    border: 1px solid #d0e4c2;
+    background-color: #fcfffa;
+    width:838px;
+    min-height:50px;
+}
+div.topic
+{
+    padding: 0 0 2px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #d0e4c2;
+}
+div.star
+{
+    margin: 1px 0 3px 5px;
+    width: 75px;
+    height: 14px;
+    background-image: url(images/iconlist_1.png);
+    background-repeat: no-repeat;
+    background-position: -109px -239px;
+}
+#pages
+{
+    width:838px;
+    margin-top:10px;
+}
+#pages a
+{
+    padding: 3px 10px;
+    border: 1px solid #ccc;
+    margin-left: 2px;
+    border-radius: 5px;
+}
+#pages a.current
+{
+    border: 0;
+    padding: 4px 11px;
+}
+#pages a:hover
+{
+    background-color: #005aa0;
+    color:#fff;
+}
+#pages a.current:hover
+{
+    background-color:#fff;
+	   color:#000;
+}
+#comment p b
+{
+    height: 21px;
+    padding: 5px 7px;
+    margin-right: 5px;
+    background-color: #fdedd2;
+}
+p.btns input
+{
+    margin-right: 10px;
+    padding: 10px 10px;
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    color: #333;
+    width:80px;
+    background-image : linear-gradient(to bottom,#fafafa,#ccc);
+}
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <a name="case4">
+      </a>
+      <h2>4 京东登录页（提高，选做）</h2>
+      <h3>4.1 问题</h3>
+      <p>创建京东登录页，实现如图－7所示的效果。</p>
+      <div class="image">
+        <img src="./CASE_files/image007.png">
+        <p>图－7</p>
+      </div>
+      <h3>4.2 方案</h3>
+      <p>图－7所示页面的布局如图－8所示。</p>
+      <div class="image">
+        <img src="./CASE_files/image008.png">
+        <p>图－8</p>
+      </div>
+      <p>由图－8可以看出，页面分为上下两个部分：页头部分和主体部分。页头部分为上方灰色框区域；主体部分为下方红色框区域。主体部分中的内容使用表格进行布局，见图中黑色框表示的内容。</p>
+      <p>其中，各个部分的样式描述如下：</p>
+      <ul class="list">
+        <li>body的整体设置：背景色为 #f2f2f2;，字体颜色为 #333，字号为 12px；
+</li>
+        <li>页头部分：宽 990px，上下内边距 10px，图片与文字之间分隔线的颜色为 #ccc；
+</li>
+        <li>内容区域（下方外层黑色元素框）：背景色 #e8e8e8，边框倒圆角 3px，内边距 5px， 上下外边距 60px， 宽 860px；
+</li>
+        <li>表格：外边框颜色 #e1e1e1，背景色#ffffff，单元格高22px，文本颜色 #999；
+</li>
+        <li>"邮箱"、"密码" 行：高 64px，宽320px；
+</li>
+        <li>"忘记密码" 行：高 75px；
+</li>
+        <li>按钮行：高 52px；
+</li>
+        <li>文本框：宽 282px，高 24px，边框颜色 #ccc，字体 14px，上边距 7px，内边距为4px 20px 4px 3px；
+</li>
+        <li>登录按钮：宽 307px，高 34px，使用login_all_bg.png作为背景图像，且背景图像的位置为 0 -61px，鼠标悬停时，背景图像位置为 0 -95px；
+</li>
+        <li>注册按钮：字体 14px，背景色 #7cbe56，宽 115px，高 32px，鼠标悬停时，背景色为 #89c964。
+</li>
+      </ul>
+      <h3>4.3 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：创建 HTML 文件</p>
+      <p>创建文件 04_jd_login.html，并为其定义外部样式表 login.css，HTML页面的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>登录<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span>   </li><li>        <span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"login.css"</span> <span class="sh_symbol">/&gt;</span> </li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;登录&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;   
+        &lt;link type="text/css" rel="Stylesheet" href="login.css" /&gt; 
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤二：定义页面结构</p>
+      <p>为页面添加代码，定义页面结构：页头和主体，并为页头添加内容。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>登录<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span>   </li><li>        <span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"login.css"</span> <span class="sh_symbol">/&gt;</span> </li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>header<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/jd_logo.png"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>img  src<span class="sh_symbol">=</span><span class="sh_string">"images/welcome.png"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"welcome"</span><span class="sh_symbol">/&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;/</span>header<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>section<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;/</span>section<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;登录&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;   
+        &lt;link type="text/css" rel="Stylesheet" href="login.css" /&gt; 
+    &lt;/head&gt;
+    &lt;body&gt;
+#cold_bold        &lt;header&gt;
+#cold_bold            &lt;img src="images/jd_logo.png" /&gt;
+#cold_bold            &lt;img  src="images/welcome.png" class="welcome"/&gt;
+#cold_bold        &lt;/header&gt;
+#cold_bold        &lt;section&gt;
+#cold_bold        &lt;/section&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤三：定义主体部分的表格</p>
+      <p>为页面 &lt;section&gt; 元素添加代码，定义表格。该表格为七行两列的表格，且第一列中的所有单元格合并，用于显示图片。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>登录<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span>   </li><li>        <span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"login.css"</span> <span class="sh_symbol">/&gt;</span> </li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>header<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/jd_logo.png"</span> <span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>img  src<span class="sh_symbol">=</span><span class="sh_string">"images/welcome.png"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"welcome"</span><span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>header<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>section<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>table<span class="sh_symbol">&gt;</span></li><li class="bold_code">                <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code">                    <span class="sh_symbol">&lt;</span>td rowspan<span class="sh_symbol">=</span><span class="sh_string">"7"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code">                        <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"Images/jd_show.png"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">                    <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code">                    <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"info"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code">                        <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>邮箱<span class="sh_regexp">/用户名/</span>已验证手机<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li class="bold_code">                        <span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li class="bold_code">                        <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"txt_username"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">                    <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code">                <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>section<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;登录&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;   
+        &lt;link type="text/css" rel="Stylesheet" href="login.css" /&gt; 
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;header&gt;
+            &lt;img src="images/jd_logo.png" /&gt;
+            &lt;img  src="images/welcome.png" class="welcome"/&gt;
+        &lt;/header&gt;
+        &lt;section&gt;
+#cold_bold            &lt;table&gt;
+#cold_bold                &lt;tr&gt;
+#cold_bold                    &lt;td rowspan="7"&gt;
+#cold_bold                        &lt;img src="Images/jd_show.png" /&gt;
+#cold_bold                    &lt;/td&gt;
+#cold_bold                    &lt;td class="info"&gt;
+#cold_bold                        &lt;span&gt;邮箱/用户名/已验证手机&lt;/span&gt;
+#cold_bold                        &lt;br /&gt;
+#cold_bold                        &lt;input type="text" class="txt_username" /&gt;
+#cold_bold                    &lt;/td&gt;
+#cold_bold                &lt;/tr&gt;
+#cold_bold            &lt;/table&gt;
+        &lt;/section&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤四：定义第二行的“密码“部分</p>
+      <p>继续为表格添加代码，定义密码部分。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>table<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td rowspan<span class="sh_symbol">=</span><span class="sh_string">"7"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"Images/jd_show.png"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"info"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>邮箱<span class="sh_regexp">/用户名/</span>已验证手机<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"txt_username"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code">    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"info"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>密码<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"txt_pwd"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code">    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!--其他代码，略--&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="7"&gt;
+            &lt;img src="Images/jd_show.png" /&gt;
+        &lt;/td&gt;
+        &lt;td class="info"&gt;
+            &lt;span&gt;邮箱/用户名/已验证手机&lt;/span&gt;
+            &lt;br /&gt;
+            &lt;input type="text" class="txt_username" /&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+#cold_bold    &lt;tr&gt;
+#cold_bold        &lt;td class="info"&gt;
+#cold_bold            &lt;span&gt;密码&lt;/span&gt;
+#cold_bold            &lt;br /&gt;
+#cold_bold            &lt;input type="text" class="txt_pwd" /&gt;
+#cold_bold        &lt;/td&gt;
+#cold_bold    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;!--其他代码，略--&gt;
+</pre></div></div>
+      <p class="number">步骤五：定义第三行的“自动登录“部分</p>
+      <p>继续为表格添加代码，定义“自动登录“部分。注意，需要使用 &lt;label&gt; 元素定义文本，并和 &lt;input&gt; 元素关联。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>table<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td rowspan<span class="sh_symbol">=</span><span class="sh_string">"7"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"Images/jd_show.png"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"info"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>邮箱<span class="sh_regexp">/用户名/</span>已验证手机<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"txt_username"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"info"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>密码<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"txt_pwd"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code">    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"selection"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkAuto"</span> <span class="sh_regexp">/&gt;&lt;label for="chkAuto"&gt;自动登录&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkSafe"</span> <span class="sh_regexp">/&gt;&lt;label for="chkSafe"&gt;安全控件登录&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkFindPwd"</span> <span class="sh_regexp">/&gt;&lt;label for="chkFindPwd"&gt;&lt;a href="#"&gt;忘记密码?&lt;/</span>a<span class="sh_symbol">&gt;&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code">    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!--其他代码，略--&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="7"&gt;
+            &lt;img src="Images/jd_show.png" /&gt;
+        &lt;/td&gt;
+        &lt;td class="info"&gt;
+            &lt;span&gt;邮箱/用户名/已验证手机&lt;/span&gt;
+            &lt;br /&gt;
+            &lt;input type="text" class="txt_username" /&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class="info"&gt;
+            &lt;span&gt;密码&lt;/span&gt;
+            &lt;br /&gt;
+            &lt;input type="text" class="txt_pwd" /&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+#cold_bold    &lt;tr&gt;
+#cold_bold        &lt;td class="selection"&gt;
+#cold_bold            &lt;input type="checkbox" id="chkAuto" /&gt;&lt;label for="chkAuto"&gt;自动登录&lt;/label&gt;
+#cold_bold            &lt;input type="checkbox" id="chkSafe" /&gt;&lt;label for="chkSafe"&gt;安全控件登录&lt;/label&gt;
+#cold_bold            &lt;input type="checkbox" id="chkFindPwd" /&gt;&lt;label for="chkFindPwd"&gt;&lt;a href="#"&gt;忘记密码?&lt;/a&gt;&lt;/label&gt;
+#cold_bold        &lt;/td&gt;
+#cold_bold    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;!--其他代码，略--&gt;
+</pre></div></div>
+      <p class="number">步骤六：定义第四行的“登录“按钮部分</p>
+      <p>继续为表格添加代码，定义登录按钮部分。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>table<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td rowspan<span class="sh_symbol">=</span><span class="sh_string">"7"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"Images/jd_show.png"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"info"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>邮箱<span class="sh_regexp">/用户名/</span>已验证手机<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"txt_username"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"info"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>密码<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"txt_pwd"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"selection"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkAuto"</span> <span class="sh_regexp">/&gt;&lt;label for="chkAuto"&gt;自动登录&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkSafe"</span> <span class="sh_regexp">/&gt;&lt;label for="chkSafe"&gt;安全控件登录&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkFindPwd"</span> <span class="sh_regexp">/&gt;&lt;label for="chkFindPwd"&gt;&lt;a href="#"&gt;忘记密码?&lt;/</span>a<span class="sh_symbol">&gt;&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code">    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"button"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"button"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"btn_login"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code">    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!--其他代码，略--&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="7"&gt;
+            &lt;img src="Images/jd_show.png" /&gt;
+        &lt;/td&gt;
+        &lt;td class="info"&gt;
+            &lt;span&gt;邮箱/用户名/已验证手机&lt;/span&gt;
+            &lt;br /&gt;
+            &lt;input type="text" class="txt_username" /&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class="info"&gt;
+            &lt;span&gt;密码&lt;/span&gt;
+            &lt;br /&gt;
+            &lt;input type="text" class="txt_pwd" /&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class="selection"&gt;
+            &lt;input type="checkbox" id="chkAuto" /&gt;&lt;label for="chkAuto"&gt;自动登录&lt;/label&gt;
+            &lt;input type="checkbox" id="chkSafe" /&gt;&lt;label for="chkSafe"&gt;安全控件登录&lt;/label&gt;
+            &lt;input type="checkbox" id="chkFindPwd" /&gt;&lt;label for="chkFindPwd"&gt;&lt;a href="#"&gt;忘记密码?&lt;/a&gt;&lt;/label&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+#cold_bold    &lt;tr&gt;
+#cold_bold        &lt;td class="button"&gt;
+#cold_bold            &lt;input type="button" class="btn_login" /&gt;
+#cold_bold        &lt;/td&gt;
+#cold_bold    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;!--其他代码，略--&gt;
+</pre></div></div>
+      <p class="number">步骤七：定义第五行和第六行的文本和链接</p>
+      <p>继续为表格添加代码，定义第五和第六行的内容。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>table<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td rowspan<span class="sh_symbol">=</span><span class="sh_string">"7"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"Images/jd_show.png"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"info"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>邮箱<span class="sh_regexp">/用户名/</span>已验证手机<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"txt_username"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"info"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>密码<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"txt_pwd"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"selection"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkAuto"</span> <span class="sh_regexp">/&gt;&lt;label for="chkAuto"&gt;自动登录&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkSafe"</span> <span class="sh_regexp">/&gt;&lt;label for="chkSafe"&gt;安全控件登录&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkFindPwd"</span> <span class="sh_regexp">/&gt;&lt;label for="chkFindPwd"&gt;&lt;a href="#"&gt;忘记密码?&lt;/</span>a<span class="sh_symbol">&gt;&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"button"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"button"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"btn_login"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code">    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;&lt;</span>span<span class="sh_symbol">&gt;</span>使用合作网站账号登录京东：<span class="sh_symbol">&lt;</span><span class="sh_regexp">/span&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code">    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code">    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span>网银钱包<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span>QQ<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span>其他<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code">    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td align<span class="sh_symbol">=</span><span class="sh_string">"right"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"button"</span> value<span class="sh_symbol">=</span><span class="sh_string">"免费注册&gt;&gt;"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"btn_register"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!--其他代码，略--&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="7"&gt;
+            &lt;img src="Images/jd_show.png" /&gt;
+        &lt;/td&gt;
+        &lt;td class="info"&gt;
+            &lt;span&gt;邮箱/用户名/已验证手机&lt;/span&gt;
+            &lt;br /&gt;
+            &lt;input type="text" class="txt_username" /&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class="info"&gt;
+            &lt;span&gt;密码&lt;/span&gt;
+            &lt;br /&gt;
+            &lt;input type="text" class="txt_pwd" /&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class="selection"&gt;
+            &lt;input type="checkbox" id="chkAuto" /&gt;&lt;label for="chkAuto"&gt;自动登录&lt;/label&gt;
+            &lt;input type="checkbox" id="chkSafe" /&gt;&lt;label for="chkSafe"&gt;安全控件登录&lt;/label&gt;
+            &lt;input type="checkbox" id="chkFindPwd" /&gt;&lt;label for="chkFindPwd"&gt;&lt;a href="#"&gt;忘记密码?&lt;/a&gt;&lt;/label&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class="button"&gt;
+            &lt;input type="button" class="btn_login" /&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+#cold_bold    &lt;tr&gt;
+#cold_bold        &lt;td&gt;&lt;span&gt;使用合作网站账号登录京东：&lt;/span&gt;&lt;/td&gt;
+#cold_bold    &lt;/tr&gt;
+#cold_bold    &lt;tr&gt;
+#cold_bold        &lt;td&gt;
+#cold_bold            &lt;a href="#"&gt;网银钱包&lt;/a&gt;
+#cold_bold            &lt;a href="#"&gt;QQ&lt;/a&gt;
+#cold_bold            &lt;a href="#"&gt;其他&lt;/a&gt;
+#cold_bold        &lt;/td&gt;
+#cold_bold    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td align="right"&gt;
+            &lt;input type="button" value="免费注册&gt;&gt;" class="btn_register" /&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;!--其他代码，略--&gt;
+</pre></div></div>
+      <p class="number">步骤八：定义最后一行的“免费注册“部分</p>
+      <p>继续为表格添加代码，定义最后一行的内容。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>table<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td rowspan<span class="sh_symbol">=</span><span class="sh_string">"7"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"Images/jd_show.png"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"info"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>邮箱<span class="sh_regexp">/用户名/</span>已验证手机<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"txt_username"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"info"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>密码<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"txt_pwd"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"selection"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkAuto"</span> <span class="sh_regexp">/&gt;&lt;label for="chkAuto"&gt;自动登录&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkSafe"</span> <span class="sh_regexp">/&gt;&lt;label for="chkSafe"&gt;安全控件登录&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkFindPwd"</span> <span class="sh_regexp">/&gt;&lt;label for="chkFindPwd"&gt;&lt;a href="#"&gt;忘记密码?&lt;/</span>a<span class="sh_symbol">&gt;&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"button"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"button"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"btn_login"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;&lt;</span>span<span class="sh_symbol">&gt;</span>使用合作网站账号登录京东：<span class="sh_symbol">&lt;</span><span class="sh_regexp">/span&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span>网银钱包<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span>QQ<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span>其他<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code">    <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>td align<span class="sh_symbol">=</span><span class="sh_string">"right"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"button"</span> value<span class="sh_symbol">=</span><span class="sh_string">"免费注册&gt;&gt;"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"btn_register"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code">    <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!--其他代码，略--&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="7"&gt;
+            &lt;img src="Images/jd_show.png" /&gt;
+        &lt;/td&gt;
+        &lt;td class="info"&gt;
+            &lt;span&gt;邮箱/用户名/已验证手机&lt;/span&gt;
+            &lt;br /&gt;
+            &lt;input type="text" class="txt_username" /&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class="info"&gt;
+            &lt;span&gt;密码&lt;/span&gt;
+            &lt;br /&gt;
+            &lt;input type="text" class="txt_pwd" /&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class="selection"&gt;
+            &lt;input type="checkbox" id="chkAuto" /&gt;&lt;label for="chkAuto"&gt;自动登录&lt;/label&gt;
+            &lt;input type="checkbox" id="chkSafe" /&gt;&lt;label for="chkSafe"&gt;安全控件登录&lt;/label&gt;
+            &lt;input type="checkbox" id="chkFindPwd" /&gt;&lt;label for="chkFindPwd"&gt;&lt;a href="#"&gt;忘记密码?&lt;/a&gt;&lt;/label&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class="button"&gt;
+            &lt;input type="button" class="btn_login" /&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;span&gt;使用合作网站账号登录京东：&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+            &lt;a href="#"&gt;网银钱包&lt;/a&gt;
+            &lt;a href="#"&gt;QQ&lt;/a&gt;
+            &lt;a href="#"&gt;其他&lt;/a&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+#cold_bold    &lt;tr&gt;
+#cold_bold        &lt;td align="right"&gt;
+#cold_bold            &lt;input type="button" value="免费注册&gt;&gt;" class="btn_register" /&gt;
+#cold_bold        &lt;/td&gt;
+#cold_bold    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;!--其他代码，略--&gt;
+</pre></div></div>
+      <p class="number">步骤九：为页面定义样式</p>
+      <p>打开文件 login.css，首先为 body 定义整体样式。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li>body</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span> #f2f2f2<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #<span class="sh_number">333</span><span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 12px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">body
+{
+    background: #f2f2f2;
+    color: #333;
+    font-size: 12px;
+}
+</pre></div></div>
+      <p class="number">步骤十：为页头部分定义样式</p>
+      <p>为页头部分定义样式，包括页头中的图片。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*头部*/</span></li><li>header</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 990px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span>10px 0px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span> <span class="sh_number">0</span> auto<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>img<span class="sh_symbol">.</span>welcome</li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>1px solid #ccc<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*头部*/
+header
+{
+    width: 990px;
+    padding:10px 0px;
+    margin: 0 auto;
+}
+img.welcome
+{
+    border-left:1px solid #ccc;
+}
+</pre></div></div>
+      <p class="number">步骤十一：为主要内容以及表格部分定义样式</p>
+      <p>为页面主要内容区域以及其中的表格定义样式。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*主要内容*/</span></li><li>section</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span> #e8e8e8<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>radius<span class="sh_symbol">:</span> 3px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span> 5px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span> 60px auto<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>860px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*表格*/</span></li><li>section table</li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #e1e1e1<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">:</span> #ffffff<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>td</li><li><span class="sh_cbracket">{</span></li><li>    height<span class="sh_symbol">:</span>22px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>td<span class="sh_symbol">.</span>info</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 320px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span>64px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>td<span class="sh_symbol">.</span>selection</li><li><span class="sh_cbracket">{</span></li><li>    height<span class="sh_symbol">:</span>75px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>td<span class="sh_symbol">.</span>button</li><li><span class="sh_cbracket">{</span></li><li>    height<span class="sh_symbol">:</span>52px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*主要内容*/
+section
+{
+    background: #e8e8e8;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 60px auto;
+    width:860px;
+}
+/*表格*/
+section table
+{
+    border: 1px solid #e1e1e1;
+    background: #ffffff;
+}
+td
+{
+    height:22px;
+}
+td.info
+{
+    width: 320px;
+    height:64px;
+}
+td.selection
+{
+    height:75px;
+}
+td.button
+{
+    height:52px;
+}
+</pre></div></div>
+      <p class="number">步骤十二：为其他内容定义样式</p>
+      <p>为表格中的内容定义样式。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*表格中的文本和输入框*/</span></li><li>td span</li><li><span class="sh_cbracket">{</span></li><li>    color<span class="sh_symbol">:</span> #<span class="sh_number">999</span><span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span> 1px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>txt_username<span class="sh_symbol">,</span>input<span class="sh_symbol">.</span>txt_pwd</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 282px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 24px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span> 4px 20px 4px 3px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #cccccc<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 14px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span>7px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>txt_username</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span> <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>user<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat right center<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>txt_pwd</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span> <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>pwd<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat right center<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>btn_login</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 307px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 34px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">:</span> <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>login_all_bg<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat <span class="sh_number">0</span> <span class="sh_symbol">-</span>61px<span class="sh_symbol">;</span></li><li>    overflow<span class="sh_symbol">:</span> hidden<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span>none<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>btn_login<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">-</span>position<span class="sh_symbol">:</span> <span class="sh_number">0</span> <span class="sh_symbol">-</span>95px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>btn_register</li><li><span class="sh_cbracket">{</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 14px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #7cbe56<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span> 115px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 32px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span>#fff<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span>none<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>btn_register<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #89c964<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*表格中的文本和输入框*/
+td span
+{
+    color: #999;
+    margin-top: 1px;
+}
+input.txt_username,input.txt_pwd
+{
+    width: 282px;
+    height: 24px;
+    padding: 4px 20px 4px 3px;
+    border: 1px solid #cccccc;
+    font-size: 14px;
+    margin-top:7px;
+}
+input.txt_username
+{
+    background: url(images/user.png) no-repeat right center;
+}
+input.txt_pwd
+{
+    background: url(images/pwd.png) no-repeat right center;
+}
+input.btn_login
+{
+    width: 307px;
+    height: 34px;
+    background: url(images/login_all_bg.png) no-repeat 0 -61px;
+    overflow: hidden;
+    border:none;
+}
+input.btn_login:hover
+{
+    background-position: 0 -95px;
+}
+input.btn_register
+{
+    font-size: 14px;
+    background-color: #7cbe56;
+    width: 115px;
+    height: 32px;
+    color:#fff;
+    border:none;
+}
+input.btn_register:hover
+{
+    background-color: #89c964;
+}
+</pre></div></div>
+      <h3>4.4 完整代码</h3>
+      <p>01_demo.html 文件的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>登录<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span>   </li><li>        <span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"login.css"</span> <span class="sh_symbol">/&gt;</span> </li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>header<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/jd_logo.png"</span> <span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>img  src<span class="sh_symbol">=</span><span class="sh_string">"images/welcome.png"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"welcome"</span><span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>header<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>section<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>table<span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>                    <span class="sh_symbol">&lt;</span>td rowspan<span class="sh_symbol">=</span><span class="sh_string">"7"</span><span class="sh_symbol">&gt;</span></li><li>                        <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"Images/jd_show.png"</span> <span class="sh_symbol">/&gt;</span></li><li>                    <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>                    <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"info"</span><span class="sh_symbol">&gt;</span></li><li>                        <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>邮箱<span class="sh_regexp">/用户名/</span>已验证手机<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li>                        <span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li>                        <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"txt_username"</span> <span class="sh_symbol">/&gt;</span></li><li>                    <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>                    <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"info"</span><span class="sh_symbol">&gt;</span></li><li>                        <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>密码<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li>                        <span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li>                        <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"txt_pwd"</span> <span class="sh_symbol">/&gt;</span></li><li>                    <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>                    <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"selection"</span><span class="sh_symbol">&gt;</span></li><li>                        <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkAuto"</span> <span class="sh_regexp">/&gt;&lt;label for="chkAuto"&gt;自动登录&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li>                        <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkSafe"</span> <span class="sh_regexp">/&gt;&lt;label for="chkSafe"&gt;安全控件登录&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li>                        <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkFindPwd"</span> <span class="sh_regexp">/&gt;&lt;label for="chkFindPwd"&gt;&lt;a href="#"&gt;忘记密码?&lt;/</span>a<span class="sh_symbol">&gt;&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li>                    <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>                    <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"button"</span><span class="sh_symbol">&gt;</span></li><li>                        <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"button"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"btn_login"</span> <span class="sh_symbol">/&gt;</span></li><li>                    <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>                    <span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;&lt;</span>span<span class="sh_symbol">&gt;</span>使用合作网站账号登录京东：<span class="sh_symbol">&lt;</span><span class="sh_regexp">/span&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>                    <span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li>                        <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span>网银钱包<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>                        <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span>QQ<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>                        <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span>其他<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>                    <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li>                    <span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"right"</span><span class="sh_symbol">&gt;</span></li><li>                        <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"button"</span> value<span class="sh_symbol">=</span><span class="sh_string">"免费注册&gt;&gt;"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"btn_register"</span> <span class="sh_symbol">/&gt;</span></li><li>                    <span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>section<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;登录&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;   
+        &lt;link type="text/css" rel="Stylesheet" href="login.css" /&gt; 
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;header&gt;
+            &lt;img src="images/jd_logo.png" /&gt;
+            &lt;img  src="images/welcome.png" class="welcome"/&gt;
+        &lt;/header&gt;
+        &lt;section&gt;
+            &lt;table&gt;
+                &lt;tr&gt;
+                    &lt;td rowspan="7"&gt;
+                        &lt;img src="Images/jd_show.png" /&gt;
+                    &lt;/td&gt;
+                    &lt;td class="info"&gt;
+                        &lt;span&gt;邮箱/用户名/已验证手机&lt;/span&gt;
+                        &lt;br /&gt;
+                        &lt;input type="text" class="txt_username" /&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class="info"&gt;
+                        &lt;span&gt;密码&lt;/span&gt;
+                        &lt;br /&gt;
+                        &lt;input type="text" class="txt_pwd" /&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class="selection"&gt;
+                        &lt;input type="checkbox" id="chkAuto" /&gt;&lt;label for="chkAuto"&gt;自动登录&lt;/label&gt;
+                        &lt;input type="checkbox" id="chkSafe" /&gt;&lt;label for="chkSafe"&gt;安全控件登录&lt;/label&gt;
+                        &lt;input type="checkbox" id="chkFindPwd" /&gt;&lt;label for="chkFindPwd"&gt;&lt;a href="#"&gt;忘记密码?&lt;/a&gt;&lt;/label&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class="button"&gt;
+                        &lt;input type="button" class="btn_login" /&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;span&gt;使用合作网站账号登录京东：&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;
+                        &lt;a href="#"&gt;网银钱包&lt;/a&gt;
+                        &lt;a href="#"&gt;QQ&lt;/a&gt;
+                        &lt;a href="#"&gt;其他&lt;/a&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class="right"&gt;
+                        &lt;input type="button" value="免费注册&gt;&gt;" class="btn_register" /&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/section&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <p>login.css 文件的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li>body</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span> #f2f2f2<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #<span class="sh_number">333</span><span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 12px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*头部*/</span></li><li>header</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 990px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span>10px 0px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span> <span class="sh_number">0</span> auto<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>img<span class="sh_symbol">.</span>welcome</li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>1px solid #ccc<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*主要内容*/</span></li><li>section</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span> #e8e8e8<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>radius<span class="sh_symbol">:</span> 3px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span> 5px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span> 60px auto<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>860px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*表格*/</span></li><li>section table</li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #e1e1e1<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">:</span> #ffffff<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>td</li><li><span class="sh_cbracket">{</span></li><li>    height<span class="sh_symbol">:</span>22px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>td<span class="sh_symbol">.</span>info</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 320px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span>64px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>td<span class="sh_symbol">.</span>selection</li><li><span class="sh_cbracket">{</span></li><li>    height<span class="sh_symbol">:</span>75px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>td<span class="sh_symbol">.</span>button</li><li><span class="sh_cbracket">{</span></li><li>    height<span class="sh_symbol">:</span>52px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*表格中的文本和输入框*/</span></li><li>td span</li><li><span class="sh_cbracket">{</span></li><li>    color<span class="sh_symbol">:</span> #<span class="sh_number">999</span><span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span> 1px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>txt_username<span class="sh_symbol">,</span>input<span class="sh_symbol">.</span>txt_pwd</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 282px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 24px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span> 4px 20px 4px 3px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #cccccc<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 14px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span>7px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>txt_username</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span> <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>user<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat right center<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>txt_pwd</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span> <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>pwd<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat right center<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>btn_login</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 307px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 34px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">:</span> <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>login_all_bg<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat <span class="sh_number">0</span> <span class="sh_symbol">-</span>61px<span class="sh_symbol">;</span></li><li>    overflow<span class="sh_symbol">:</span> hidden<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span>none<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>btn_login<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">-</span>position<span class="sh_symbol">:</span> <span class="sh_number">0</span> <span class="sh_symbol">-</span>95px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>btn_register</li><li><span class="sh_cbracket">{</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 14px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #7cbe56<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span> 115px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 32px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span>#fff<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span>none<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>btn_register<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #89c964<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">body
+{
+    background: #f2f2f2;
+    color: #333;
+    font-size: 12px;
+}
+/*头部*/
+header
+{
+    width: 990px;
+    padding:10px 0px;
+    margin: 0 auto;
+}
+img.welcome
+{
+    border-left:1px solid #ccc;
+}
+/*主要内容*/
+section
+{
+    background: #e8e8e8;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 60px auto;
+    width:860px;
+}
+/*表格*/
+section table
+{
+    border: 1px solid #e1e1e1;
+    background: #ffffff;
+}
+td
+{
+    height:22px;
+}
+td.info
+{
+    width: 320px;
+    height:64px;
+}
+td.selection
+{
+    height:75px;
+}
+td.button
+{
+    height:52px;
+}
+/*表格中的文本和输入框*/
+td span
+{
+    color: #999;
+    margin-top: 1px;
+}
+input.txt_username,input.txt_pwd
+{
+    width: 282px;
+    height: 24px;
+    padding: 4px 20px 4px 3px;
+    border: 1px solid #cccccc;
+    font-size: 14px;
+    margin-top:7px;
+}
+input.txt_username
+{
+    background: url(images/user.png) no-repeat right center;
+}
+input.txt_pwd
+{
+    background: url(images/pwd.png) no-repeat right center;
+}
+input.btn_login
+{
+    width: 307px;
+    height: 34px;
+    background: url(images/login_all_bg.png) no-repeat 0 -61px;
+    overflow: hidden;
+    border:none;
+}
+input.btn_login:hover
+{
+    background-position: 0 -95px;
+}
+input.btn_register
+{
+    font-size: 14px;
+    background-color: #7cbe56;
+    width: 115px;
+    height: 32px;
+    color:#fff;
+    border:none;
+}
+input.btn_register:hover
+{
+    background-color: #89c964;
+}
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY02/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+    </div>
+  
+</body></html>

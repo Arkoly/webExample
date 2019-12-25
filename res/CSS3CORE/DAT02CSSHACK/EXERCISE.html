@@ -1,0 +1,282 @@
+
+<!-- saved from url=(0095)http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <title>EXERCISE</title> 
+   
+  <script type="text/javascript" src="./EXERCISE_files/jquery.min.js">
+    </script> 
+  <script type="text/javascript" src="./EXERCISE_files/jquery.snippet.js">
+    </script> 
+  <script type="text/javascript" src="./EXERCISE_files/main.js">
+    </script> 
+  <link type="text/css" href="./EXERCISE_files/index.css" rel="Stylesheet"> 
+  <link type="text/css" href="./EXERCISE_files/jquery.snippet.css" rel="Stylesheet"> 
+ </head> 
+ <body> 
+  <div class="source_style_exercise"> 
+   <div> 
+    <h3>1 如何实现多个过渡效果？</h3> 
+    <p class="answerTitle">参考答案</p> 
+    <p>实现多个过渡效果有两种方式。</p> 
+    <p>方式一：为过渡子属性设置多个值，多个值之间用逗号隔开，代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li>#d1  <span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>150px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span>150px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span>1px solid black<span class="sh_symbol">;</span>  </li><li class="bold_code">    transition<span class="sh_symbol">-</span>property<span class="sh_symbol">:</span> background<span class="sh_symbol">,</span>width<span class="sh_symbol">;</span></li><li>    transition<span class="sh_symbol">-</span>duration<span class="sh_symbol">:</span>4s<span class="sh_symbol">;</span></li><li>    transition<span class="sh_symbol">-</span>timing<span class="sh_symbol">-</span><span class="sh_keyword">function</span><span class="sh_symbol">:</span>linear<span class="sh_symbol">;</span></li><li>    transition<span class="sh_symbol">-</span>delay<span class="sh_symbol">:</span>1s<span class="sh_symbol">,</span>4s<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#d1<span class="sh_symbol">:</span>hover  <span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span>#bbb<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>250px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">#d1  {
+    width:150px;
+    height:150px;
+    border:1px solid black;  
+#cold_bold    transition-property: background,width;
+    transition-duration:4s;
+    transition-timing-function:linear;
+    transition-delay:1s,4s;
+}
+#d1:hover  {
+    background:#bbb;
+    width:250px;
+}
+</pre></div></div> 
+    <p>方式二：为transition属性设置多个值，多个值之间用逗号隔开，代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li>#d1  <span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>150px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span>150px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span>1px solid black<span class="sh_symbol">;</span>  </li><li class="bold_code">    transition<span class="sh_symbol">:</span> background 4s linear 1s<span class="sh_symbol">,</span></li><li class="bold_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   border<span class="sh_symbol">-</span>radius 3s ease<span class="sh_symbol">-</span><span class="sh_keyword">in</span> 2s<span class="sh_symbol">,</span></li><li class="bold_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   transform 5s linear 1s<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#d1<span class="sh_symbol">:</span>hover  <span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span>#ddd<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>radius<span class="sh_symbol">:</span>20px<span class="sh_symbol">;</span></li><li>    transform<span class="sh_symbol">:</span><span class="sh_function">rotate</span><span class="sh_symbol">(</span>45deg<span class="sh_symbol">);</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">#d1  {
+    width:150px;
+    height:150px;
+    border:1px solid black;  
+#cold_bold    transition: background 4s linear 1s,
+#cold_bold		  		   border-radius 3s ease-in 2s,
+#cold_bold		  		   transform 5s linear 1s;
+}
+#d1:hover  {
+    background:#ddd;
+    border-radius:20px;
+    transform:rotate(45deg);
+}
+</pre></div></div> 
+   </div> 
+   <div> 
+    <h3>2 animation-fill-mode 属性的作用是什么？</h3> 
+    <p class="answerTitle">参考答案</p> 
+    <p>动画开始播放之前，以及播放完成之后，可能需要设置其效果，则需要用到animation-fill-mode 属性。</p> 
+    <p>此属性用于规定动画在播放之前或之后，其动画效果是否可见，可取值为：</p> 
+    <ul class="list"> 
+     <li>none：不改变默认行为； </li> 
+     <li>forwards：当动画完成后，保持最后一个属性值（在最后一个关键帧中定义）； </li> 
+     <li>backwards：在动画显示之前，应用开始属性值（在第一个关键帧中定义）； </li> 
+     <li>both：向前和向后填充模式都被应用。 </li> 
+    </ul> 
+   </div> 
+   <div> 
+    <h3>3 过渡与动画的区别是什么？</h3> 
+    <p class="answerTitle">参考答案</p> 
+    <p>过渡属性transition可以在一定的时间内实现元素的状态过渡为最终状态，用于模拟一种过渡动画效果，但是功能有限，只能用于制作简单的动画效果；而动画属性 animation 可以制作类似Flash动画，通过关键帧控制动画的每一步，控制更为精确，从而可以制作更为复杂的动画。</p> 
+   </div> 
+   <div> 
+    <h3>4 完成如下所示的动画效果。</h3> 
+    <p>完成一个动画效果，动画连续的效果如图－1所示：</p> 
+    <div class="image"> 
+     <img src="./EXERCISE_files/image001.png"> 
+     <p>图－1</p> 
+    </div> 
+    <p>图－1展示的是动画播放过程中的各效果。主要动画过程为：</p> 
+    <p>1、红色小球图案在方框范围内上下移动，模拟弹跳的效果，耗时2s；</p> 
+    <p>2、红色小球慢慢变小，2s后消失，如图－1中第一行三张图片的效果所示；</p> 
+    <p>3、红色小球消失后，出现红色图片，由小变大，耗时1s，如图－1中下排左一所示；</p> 
+    <p>4、红色图片完全展示后，消失，出现第二张图片，且有一定的透明度，如图－1中下排中间图示；</p> 
+    <p>5、第二张图片，耗时1s，完全展示（透明度消失），如图－1中右一所示。</p> 
+    <p>需要注意的是，请注意浏览器兼容性。</p> 
+    <p class="answerTitle">参考答案</p> 
+    <p>分析此案例，页面元素非常简单，只需要设置一个&lt;div&gt;元素，包含三个&lt;img&gt;元素；然后需要使用CSS样式分别设置各图片的动画效果即可。</p> 
+    <p>其中，第一张图片（红色小球的图片）一开始出现，2s后消失；第三秒是第二个图片的动画时间；第四秒是第三个图片的动画时间。</p> 
+    <p class="number">步骤一：创建页面</p> 
+    <p>首先创建一个纯文本文件，并修改名称为 animation.html，然后在文本编辑工具中打开此文件，为其添加 HTML 代码，以创建一个标准结构的 HTML 文档，并设置文档的标题以及编码格式。</p> 
+    <p>然后为页面添加 &lt;div&gt; 和 &lt;img&gt; 元素。HTML代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>动画<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>div<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/cic.png"</span> <span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>img id<span class="sh_symbol">=</span><span class="sh_string">"step_2"</span> src<span class="sh_symbol">=</span><span class="sh_string">"images/sf.png"</span> <span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>img id<span class="sh_symbol">=</span><span class="sh_string">"step_3"</span> src<span class="sh_symbol">=</span><span class="sh_string">"images/red.png"</span> <span class="sh_symbol">/&gt;</span></li><li>         <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;动画&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;
+            &lt;img src="images/cic.png" /&gt;
+            &lt;img id="step_2" src="images/sf.png" /&gt;
+            &lt;img id="step_3" src="images/red.png" /&gt;
+         &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div> 
+    <p class="number">步骤二：为页面添加内部CSS样式</p> 
+    <p>为页面添加内部CSS样式，并设置&lt;div&gt;元素的边框以及大小；然后设置图片为绝对定位方式，并设置第二和第三张图片不显示。</p> 
+    <p>修改后的代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>动画<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>style<span class="sh_symbol">&gt;</span></li><li class="bold_code">            div</li><li class="bold_code">            <span class="sh_cbracket">{</span></li><li class="bold_code">                border<span class="sh_symbol">:</span>1px solid black<span class="sh_symbol">;</span></li><li class="bold_code">                width<span class="sh_symbol">:</span>200px<span class="sh_symbol">;</span></li><li class="bold_code">                height<span class="sh_symbol">:</span>100px<span class="sh_symbol">;</span></li><li class="bold_code">                position<span class="sh_symbol">:</span>relative<span class="sh_symbol">;</span></li><li class="bold_code">            <span class="sh_cbracket">}</span></li><li class="bold_code">            div img</li><li class="bold_code">            <span class="sh_cbracket">{</span></li><li class="bold_code">                position<span class="sh_symbol">:</span>absolute<span class="sh_symbol">;</span>                </li><li class="bold_code">            <span class="sh_cbracket">}</span></li><li class="bold_code">            #step_2<span class="sh_symbol">,</span>#step_3</li><li class="bold_code">            <span class="sh_cbracket">{</span></li><li class="bold_code">               visibility<span class="sh_symbol">:</span>hidden<span class="sh_symbol">;</span></li><li class="bold_code">               z<span class="sh_symbol">-</span>index<span class="sh_symbol">:</span><span class="sh_number">10</span><span class="sh_symbol">;</span></li><li class="bold_code">            <span class="sh_cbracket">}</span></li><li class="bold_code">        <span class="sh_symbol">&lt;/</span>style<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>div<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/cic.png"</span> <span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>img id<span class="sh_symbol">=</span><span class="sh_string">"step_2"</span> src<span class="sh_symbol">=</span><span class="sh_string">"images/sf.png"</span> <span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>img id<span class="sh_symbol">=</span><span class="sh_string">"step_3"</span> src<span class="sh_symbol">=</span><span class="sh_string">"images/red.png"</span> <span class="sh_symbol">/&gt;</span></li><li>         <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;动画&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+#cold_bold        &lt;style&gt;
+#cold_bold            div
+#cold_bold            {
+#cold_bold                border:1px solid black;
+#cold_bold                width:200px;
+#cold_bold                height:100px;
+#cold_bold                position:relative;
+#cold_bold            }
+#cold_bold            div img
+#cold_bold            {
+#cold_bold                position:absolute;                
+#cold_bold            }
+#cold_bold            #step_2,#step_3
+#cold_bold            {
+#cold_bold               visibility:hidden;
+#cold_bold               z-index:10;
+#cold_bold            }
+#cold_bold        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;
+            &lt;img src="images/cic.png" /&gt;
+            &lt;img id="step_2" src="images/sf.png" /&gt;
+            &lt;img id="step_3" src="images/red.png" /&gt;
+         &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div> 
+    <p class="number">步骤三：定义动画</p> 
+    <p>为三个图片分别定义动画。这里，为了便于阅读，省略了浏览器兼容方面的代码。</p> 
+    <p>添加的CSS代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*定义动画*/</span></li><li>@keyframes jump  </li><li><span class="sh_cbracket">{</span></li><li>    from   <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>5px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>0px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>    <span class="sh_number">10</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>    <span class="sh_number">15</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>35px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>    <span class="sh_number">20</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>55px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>    <span class="sh_number">25</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>75px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>    <span class="sh_number">30</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>20px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>85px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>    <span class="sh_number">35</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>20px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>75px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>    <span class="sh_number">40</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>20px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>55px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>    <span class="sh_number">45</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>20px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>35px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>    <span class="sh_number">50</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>30px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>25px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>    <span class="sh_number">55</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>30px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>35px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>    <span class="sh_number">60</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>25px<span class="sh_symbol">;</span>transform<span class="sh_symbol">:</span><span class="sh_function">scale</span><span class="sh_symbol">(</span><span class="sh_number">0.5</span><span class="sh_symbol">);</span> <span class="sh_cbracket">}</span></li><li>    <span class="sh_number">70</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span> transform<span class="sh_symbol">:</span><span class="sh_function">scale</span><span class="sh_symbol">(</span><span class="sh_number">0.4</span><span class="sh_symbol">);</span><span class="sh_cbracket">}</span></li><li>    <span class="sh_number">80</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>50px<span class="sh_symbol">;</span>transform<span class="sh_symbol">:</span><span class="sh_function">scale</span><span class="sh_symbol">(</span><span class="sh_number">0.3</span><span class="sh_symbol">);</span> <span class="sh_cbracket">}</span></li><li>    <span class="sh_number">90</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>50px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>70px<span class="sh_symbol">;</span>transform<span class="sh_symbol">:</span><span class="sh_function">scale</span><span class="sh_symbol">(</span><span class="sh_number">0.2</span><span class="sh_symbol">);</span> <span class="sh_cbracket">}</span></li><li>    to <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>50px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>35px<span class="sh_symbol">;</span>transform<span class="sh_symbol">:</span><span class="sh_function">scale</span><span class="sh_symbol">(</span><span class="sh_number">0.1</span><span class="sh_symbol">);</span>  <span class="sh_cbracket">}</span></li><li><span class="sh_cbracket">}</span></li><li>@keyframes image_show  </li><li><span class="sh_cbracket">{</span></li><li>    from   <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>25px<span class="sh_symbol">;</span>visibility<span class="sh_symbol">:</span>visible<span class="sh_symbol">;</span>opacity<span class="sh_symbol">:</span><span class="sh_number">0.2</span><span class="sh_symbol">;</span>transform<span class="sh_symbol">:</span><span class="sh_function">scale</span><span class="sh_symbol">(</span><span class="sh_number">0.5</span><span class="sh_symbol">);</span><span class="sh_cbracket">}</span></li><li>    <span class="sh_number">50</span><span class="sh_symbol">%</span>   <span class="sh_cbracket">{</span> opacity<span class="sh_symbol">:</span><span class="sh_number">0.5</span><span class="sh_symbol">;</span><span class="sh_cbracket">}</span></li><li>    <span class="sh_number">70</span><span class="sh_symbol">%</span> <span class="sh_cbracket">{</span>left<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>25px<span class="sh_symbol">;</span>visibility<span class="sh_symbol">:</span>visible<span class="sh_symbol">;</span>opacity<span class="sh_symbol">:</span><span class="sh_number">1</span><span class="sh_symbol">;</span>transform<span class="sh_symbol">:</span><span class="sh_function">scale</span><span class="sh_symbol">(</span><span class="sh_number">1</span><span class="sh_symbol">);</span><span class="sh_cbracket">}</span></li><li>    to <span class="sh_cbracket">{</span>left<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>25px<span class="sh_symbol">;</span>visibility<span class="sh_symbol">:</span>visible<span class="sh_symbol">;</span>opacity<span class="sh_symbol">:</span><span class="sh_number">0</span><span class="sh_symbol">;</span><span class="sh_cbracket">}</span></li><li><span class="sh_cbracket">}</span></li><li>@keyframes image_end  </li><li><span class="sh_cbracket">{</span></li><li>    from   <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>25px<span class="sh_symbol">;</span>visibility<span class="sh_symbol">:</span>visible<span class="sh_symbol">;</span>opacity<span class="sh_symbol">:</span><span class="sh_number">0.2</span><span class="sh_symbol">;</span><span class="sh_cbracket">}</span></li><li>    <span class="sh_number">50</span><span class="sh_symbol">%</span>   <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>25px<span class="sh_symbol">;</span>opacity<span class="sh_symbol">:</span><span class="sh_number">0.5</span><span class="sh_symbol">;</span><span class="sh_cbracket">}</span></li><li>    to <span class="sh_cbracket">{</span>left<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>25px<span class="sh_symbol">;</span>visibility<span class="sh_symbol">:</span>visible<span class="sh_symbol">;</span>z<span class="sh_symbol">-</span>index<span class="sh_symbol">:</span><span class="sh_number">20</span><span class="sh_symbol">;</span>opacity<span class="sh_symbol">:</span><span class="sh_number">1</span><span class="sh_symbol">;</span><span class="sh_cbracket">}</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*定义动画*/
+@keyframes jump  
+{
+    from   { left:5px; top:0px; }
+    10%  { left:15px; top:15px; }
+    15%  { left:15px; top:35px; }
+    20%  { left:15px; top:55px; }
+    25%  { left:15px; top:75px; }
+    30%  { left:20px; top:85px; }
+    35%  { left:20px; top:75px; }
+    40%  { left:20px; top:55px; }
+    45%  { left:20px; top:35px; }
+    50%  { left:30px; top:25px; }
+    55%  { left:30px; top:35px; }
+    60%  { left:40px; top:25px;transform:scale(0.5); }
+    70%  { left:40px; top:40px; transform:scale(0.4);}
+    80%  { left:40px; top:50px;transform:scale(0.3); }
+    90%  { left:50px; top:70px;transform:scale(0.2); }
+    to { left:50px; top:35px;transform:scale(0.1);  }
+}
+@keyframes image_show  
+{
+    from   { left:40px; top:25px;visibility:visible;opacity:0.2;transform:scale(0.5);}
+    50%   { opacity:0.5;}
+    70% {left:40px; top:25px;visibility:visible;opacity:1;transform:scale(1);}
+    to {left:40px; top:25px;visibility:visible;opacity:0;}
+}
+@keyframes image_end  
+{
+    from   { left:40px; top:25px;visibility:visible;opacity:0.2;}
+    50%   { left:40px; top:25px;opacity:0.5;}
+    to {left:40px; top:25px;visibility:visible;z-index:20;opacity:1;}
+}
+</pre></div></div> 
+    <p class="number">步骤四：触发动画</p> 
+    <p>为了触发动画，添加的CSS代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*触发动画*/</span></li><li>img</li><li><span class="sh_cbracket">{</span></li><li>    animation<span class="sh_symbol">:</span>jump 2s<span class="sh_symbol">;</span></li><li>    animation<span class="sh_symbol">-</span>fill<span class="sh_symbol">-</span>mode <span class="sh_symbol">:</span> forwards<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#step_2</li><li><span class="sh_cbracket">{</span></li><li>    animation<span class="sh_symbol">:</span>image_show 1s linear 2s<span class="sh_symbol">;</span></li><li>    animation<span class="sh_symbol">-</span>fill<span class="sh_symbol">-</span>mode <span class="sh_symbol">:</span> forwards<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#step_3</li><li><span class="sh_cbracket">{</span></li><li>    animation<span class="sh_symbol">:</span>image_end 1s linear 3s<span class="sh_symbol">;</span></li><li>    animation<span class="sh_symbol">-</span>fill<span class="sh_symbol">-</span>mode <span class="sh_symbol">:</span> forwards<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*触发动画*/
+img
+{
+    animation:jump 2s;
+    animation-fill-mode : forwards;
+}
+#step_2
+{
+    animation:image_show 1s linear 2s;
+    animation-fill-mode : forwards;
+}
+#step_3
+{
+    animation:image_end 1s linear 3s;
+    animation-fill-mode : forwards;
+}
+</pre></div></div> 
+    <p>整个案例完成后，HTML文件中的完整代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: block;"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>动画<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>style<span class="sh_symbol">&gt;</span></li><li>            div</li><li>            <span class="sh_cbracket">{</span></li><li>                border<span class="sh_symbol">:</span>1px solid black<span class="sh_symbol">;</span></li><li>                width<span class="sh_symbol">:</span>200px<span class="sh_symbol">;</span></li><li>                height<span class="sh_symbol">:</span>100px<span class="sh_symbol">;</span></li><li>                position<span class="sh_symbol">:</span>relative<span class="sh_symbol">;</span></li><li>            <span class="sh_cbracket">}</span></li><li>            div img</li><li>            <span class="sh_cbracket">{</span></li><li>                position<span class="sh_symbol">:</span>absolute<span class="sh_symbol">;</span>                </li><li>            <span class="sh_cbracket">}</span></li><li>            #step_2<span class="sh_symbol">,</span>#step_3</li><li>            <span class="sh_cbracket">{</span></li><li>               visibility<span class="sh_symbol">:</span>hidden<span class="sh_symbol">;</span></li><li>               z<span class="sh_symbol">-</span>index<span class="sh_symbol">:</span><span class="sh_number">10</span><span class="sh_symbol">;</span></li><li>            <span class="sh_cbracket">}</span></li><li>            <span class="sh_comment">/*定义动画*/</span></li><li>            @keyframes jump  </li><li>            <span class="sh_cbracket">{</span></li><li>                from   <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>5px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>0px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>                <span class="sh_number">10</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>                <span class="sh_number">15</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>35px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>                <span class="sh_number">20</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>55px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>                <span class="sh_number">25</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>75px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>                <span class="sh_number">30</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>20px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>85px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>                <span class="sh_number">35</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>20px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>75px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>                <span class="sh_number">40</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>20px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>55px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>                <span class="sh_number">45</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>20px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>35px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>                <span class="sh_number">50</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>30px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>25px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>                <span class="sh_number">55</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>30px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>35px<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>                <span class="sh_number">60</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>25px<span class="sh_symbol">;</span>transform<span class="sh_symbol">:</span><span class="sh_function">scale</span><span class="sh_symbol">(</span><span class="sh_number">0.5</span><span class="sh_symbol">);</span> <span class="sh_cbracket">}</span></li><li>                <span class="sh_number">70</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span> transform<span class="sh_symbol">:</span><span class="sh_function">scale</span><span class="sh_symbol">(</span><span class="sh_number">0.4</span><span class="sh_symbol">);</span><span class="sh_cbracket">}</span></li><li>                <span class="sh_number">80</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>50px<span class="sh_symbol">;</span>transform<span class="sh_symbol">:</span><span class="sh_function">scale</span><span class="sh_symbol">(</span><span class="sh_number">0.3</span><span class="sh_symbol">);</span> <span class="sh_cbracket">}</span></li><li>                <span class="sh_number">90</span><span class="sh_symbol">%</span>  <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>50px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>70px<span class="sh_symbol">;</span>transform<span class="sh_symbol">:</span><span class="sh_function">scale</span><span class="sh_symbol">(</span><span class="sh_number">0.2</span><span class="sh_symbol">);</span> <span class="sh_cbracket">}</span></li><li>                to <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>50px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>35px<span class="sh_symbol">;</span>transform<span class="sh_symbol">:</span><span class="sh_function">scale</span><span class="sh_symbol">(</span><span class="sh_number">0.1</span><span class="sh_symbol">);</span>  <span class="sh_cbracket">}</span></li><li>            <span class="sh_cbracket">}</span></li><li>            @keyframes image_show  </li><li>            <span class="sh_cbracket">{</span></li><li>                from   <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>25px<span class="sh_symbol">;</span>visibility<span class="sh_symbol">:</span>visible<span class="sh_symbol">;</span>opacity<span class="sh_symbol">:</span><span class="sh_number">0.2</span><span class="sh_symbol">;</span>transform<span class="sh_symbol">:</span><span class="sh_function">scale</span><span class="sh_symbol">(</span><span class="sh_number">0.5</span><span class="sh_symbol">);</span><span class="sh_cbracket">}</span></li><li>                <span class="sh_number">50</span><span class="sh_symbol">%</span>   <span class="sh_cbracket">{</span> opacity<span class="sh_symbol">:</span><span class="sh_number">0.5</span><span class="sh_symbol">;</span><span class="sh_cbracket">}</span></li><li>                <span class="sh_number">70</span><span class="sh_symbol">%</span> <span class="sh_cbracket">{</span>left<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>25px<span class="sh_symbol">;</span>visibility<span class="sh_symbol">:</span>visible<span class="sh_symbol">;</span>opacity<span class="sh_symbol">:</span><span class="sh_number">1</span><span class="sh_symbol">;</span>transform<span class="sh_symbol">:</span><span class="sh_function">scale</span><span class="sh_symbol">(</span><span class="sh_number">1</span><span class="sh_symbol">);</span><span class="sh_cbracket">}</span></li><li>                to <span class="sh_cbracket">{</span>left<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>25px<span class="sh_symbol">;</span>visibility<span class="sh_symbol">:</span>visible<span class="sh_symbol">;</span>opacity<span class="sh_symbol">:</span><span class="sh_number">0</span><span class="sh_symbol">;</span><span class="sh_cbracket">}</span></li><li>            <span class="sh_cbracket">}</span></li><li>            @keyframes image_end  </li><li>            <span class="sh_cbracket">{</span></li><li>                from   <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>25px<span class="sh_symbol">;</span>visibility<span class="sh_symbol">:</span>visible<span class="sh_symbol">;</span>opacity<span class="sh_symbol">:</span><span class="sh_number">0.2</span><span class="sh_symbol">;</span><span class="sh_cbracket">}</span></li><li>                <span class="sh_number">50</span><span class="sh_symbol">%</span>   <span class="sh_cbracket">{</span> left<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>25px<span class="sh_symbol">;</span>opacity<span class="sh_symbol">:</span><span class="sh_number">0.5</span><span class="sh_symbol">;</span><span class="sh_cbracket">}</span></li><li>                to <span class="sh_cbracket">{</span>left<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span> top<span class="sh_symbol">:</span>25px<span class="sh_symbol">;</span>visibility<span class="sh_symbol">:</span>visible<span class="sh_symbol">;</span>z<span class="sh_symbol">-</span>index<span class="sh_symbol">:</span><span class="sh_number">20</span><span class="sh_symbol">;</span>opacity<span class="sh_symbol">:</span><span class="sh_number">1</span><span class="sh_symbol">;</span><span class="sh_cbracket">}</span></li><li>            <span class="sh_cbracket">}</span></li><li>            <span class="sh_comment">/*触发动画*/</span></li><li>            img</li><li>            <span class="sh_cbracket">{</span></li><li>                animation<span class="sh_symbol">:</span>jump 2s<span class="sh_symbol">;</span></li><li>                animation<span class="sh_symbol">-</span>fill<span class="sh_symbol">-</span>mode <span class="sh_symbol">:</span> forwards<span class="sh_symbol">;</span></li><li>            <span class="sh_cbracket">}</span></li><li>            #step_2</li><li>            <span class="sh_cbracket">{</span></li><li>                animation<span class="sh_symbol">:</span>image_show 1s linear 2s<span class="sh_symbol">;</span></li><li>                animation<span class="sh_symbol">-</span>fill<span class="sh_symbol">-</span>mode <span class="sh_symbol">:</span> forwards<span class="sh_symbol">;</span></li><li>            <span class="sh_cbracket">}</span></li><li>            #step_3</li><li>            <span class="sh_cbracket">{</span></li><li>                animation<span class="sh_symbol">:</span>image_end 1s linear 3s<span class="sh_symbol">;</span></li><li>                animation<span class="sh_symbol">-</span>fill<span class="sh_symbol">-</span>mode <span class="sh_symbol">:</span> forwards<span class="sh_symbol">;</span></li><li>            <span class="sh_cbracket">}</span></li><li>        <span class="sh_symbol">&lt;/</span>style<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>div<span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/cic.png"</span> <span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>img id<span class="sh_symbol">=</span><span class="sh_string">"step_2"</span> src<span class="sh_symbol">=</span><span class="sh_string">"images/sf.png"</span> <span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>img id<span class="sh_symbol">=</span><span class="sh_string">"step_3"</span> src<span class="sh_symbol">=</span><span class="sh_string">"images/red.png"</span> <span class="sh_symbol">/&gt;</span></li><li>         <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;动画&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+        &lt;style&gt;
+            div
+            {
+                border:1px solid black;
+                width:200px;
+                height:100px;
+                position:relative;
+            }
+            div img
+            {
+                position:absolute;                
+            }
+            #step_2,#step_3
+            {
+               visibility:hidden;
+               z-index:10;
+            }
+            /*定义动画*/
+            @keyframes jump  
+            {
+                from   { left:5px; top:0px; }
+                10%  { left:15px; top:15px; }
+                15%  { left:15px; top:35px; }
+                20%  { left:15px; top:55px; }
+                25%  { left:15px; top:75px; }
+                30%  { left:20px; top:85px; }
+                35%  { left:20px; top:75px; }
+                40%  { left:20px; top:55px; }
+                45%  { left:20px; top:35px; }
+                50%  { left:30px; top:25px; }
+                55%  { left:30px; top:35px; }
+                60%  { left:40px; top:25px;transform:scale(0.5); }
+                70%  { left:40px; top:40px; transform:scale(0.4);}
+                80%  { left:40px; top:50px;transform:scale(0.3); }
+                90%  { left:50px; top:70px;transform:scale(0.2); }
+                to { left:50px; top:35px;transform:scale(0.1);  }
+            }
+            @keyframes image_show  
+            {
+                from   { left:40px; top:25px;visibility:visible;opacity:0.2;transform:scale(0.5);}
+                50%   { opacity:0.5;}
+                70% {left:40px; top:25px;visibility:visible;opacity:1;transform:scale(1);}
+                to {left:40px; top:25px;visibility:visible;opacity:0;}
+            }
+            @keyframes image_end  
+            {
+                from   { left:40px; top:25px;visibility:visible;opacity:0.2;}
+                50%   { left:40px; top:25px;opacity:0.5;}
+                to {left:40px; top:25px;visibility:visible;z-index:20;opacity:1;}
+            }
+            /*触发动画*/
+            img
+            {
+                animation:jump 2s;
+                animation-fill-mode : forwards;
+            }
+            #step_2
+            {
+                animation:image_show 1s linear 2s;
+                animation-fill-mode : forwards;
+            }
+            #step_3
+            {
+                animation:image_end 1s linear 3s;
+                animation-fill-mode : forwards;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;
+            &lt;img src="images/cic.png" /&gt;
+            &lt;img id="step_2" src="images/sf.png" /&gt;
+            &lt;img id="step_3" src="images/red.png" /&gt;
+         &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap" style="display: none;"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3CORE/DAY02/EXERCISE/01/index_answer.html#" class="snippet-toggle sh_url">代码</a></pre></div></div> 
+   </div> 
+  </div>  
+ 
+</body></html>

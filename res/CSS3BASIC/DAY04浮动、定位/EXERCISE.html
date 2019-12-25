@@ -1,0 +1,857 @@
+
+<!-- saved from url=(0096)http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <title>EXERCISE</title> 
+   
+  <script type="text/javascript" src="./EXERCISE_files/jquery.min.js">
+    </script> 
+  <script type="text/javascript" src="./EXERCISE_files/jquery.snippet.js">
+    </script> 
+  <script type="text/javascript" src="./EXERCISE_files/main.js">
+    </script> 
+  <link type="text/css" href="./EXERCISE_files/index.css" rel="Stylesheet"> 
+  <link type="text/css" href="./EXERCISE_files/jquery.snippet.css" rel="Stylesheet"> 
+ </head> 
+ <body> 
+  <div class="source_style_exercise"> 
+   <div> 
+    <h3>1 display 属性的作用是什么？</h3> 
+    <p class="answerTitle">参考答案</p> 
+    <p>可以使用 display 属性定义建立布局时元素生成的显示框类型。</p> 
+    <p>1、如果将 display 属性设置为 block，可以让行内元素（比如 &lt;a&gt; 元素）表现得像块级元素一样；</p> 
+    <p>2、如果将 display 属性设置为 inline，可以让块级元素（比如 &lt;p&gt; 元素）表现得像内联元素一样；</p> 
+    <p>3、如果将 display 属性设置为inline-block，表示将元素设置为行内块元素，即，元素依然可以和其他行内元素位于同一行，但是可以象块级元素一样，设置其高度和宽度；</p> 
+    <p>4、可以通过把 display 属性设置为 none，让生成的元素根本没有框。这样的话，该框及其所有内容就不再显示，且不占用文档中的空间。</p> 
+   </div> 
+   <div> 
+    <h3>2 display 属性和 visibility 属性的区别是什么？</h3> 
+    <p class="answerTitle">参考答案</p> 
+    <p>visibility 属性用于设置元素是否可见，可以使用该属性隐藏元素框，使其不可见。但是，通过设置visibility 属性后，使得不可见的元素依然会占据页面上的空间，因此，可能会影响页面的布局。</p> 
+    <p>如果需要创建不占据页面空间的不可见元素，则可以使用 display 属性。</p> 
+   </div> 
+   <div> 
+    <h3>3 简要描述CSS 中的定位机制。</h3> 
+    <p class="answerTitle">参考答案：</p> 
+    <p>CSS中，除了默认的流定位方式以外，还有如下几种定位机制：浮动定位、相对定位、绝对定位和固定定位。</p> 
+    <p>浮动定位是指将元素排除在普通流之外，并且将它放置在包含框的左边或者右边，但是依旧位于包含框之内，而且不能实现元素的堆叠。</p> 
+    <p>如果需要实现元素的灵活定位，且能够实现元素的堆叠，则可以使用其他三种定位方式。其中：</p> 
+    <ul class="list"> 
+     <li>相对定位将元素相对于它在普通流中的位置进行定位； </li> 
+     <li>绝对定位是指将元素的内容从普通流中完全移除，并且可以使用偏移属性来固定该元素的位置； </li> 
+     <li>固定定位是指将元素的内容固定在页面的某个位置。 </li> 
+    </ul> 
+   </div> 
+   <div> 
+    <h3>4 完成如下图所示的页面。</h3> 
+    <p>在之前练习的基础上，完成淘宝的注册页。页面效果如图－1所示：</p> 
+    <div class="image"> 
+     <img src="./EXERCISE_files/image001.png"> 
+     <p>图－1</p> 
+    </div> 
+    <p>其中，页面顶部灰色的链接文本的颜色为#3c3c3c；橘红色链接文本的颜色为＃ff5b20；注册步骤中，高亮显示的步骤的下边框的颜色为#ff4700；页脚部分的边框颜色为#DDD；页脚部分超级链接的文本颜色为＃6C6C6C。</p> 
+    <p class="answerTitle">参考答案</p> 
+    <p>实现此案例时，只需要在之前练习的基础上，逐一添加内容并定义样式即可。因此，建议按照如下步骤进行。</p> 
+    <p class="number">步骤一：创建页面顶部的导航链接</p> 
+    <p>在文本编辑工具中打开文件taobao_register.html，为页面创建顶部的导航链接。</p> 
+    <p>需要注意的是，因为导航部分的背景色占据了整个页面宽度，而导航内容只占据部分区域，因此，需要使用单独的&lt;div&gt;元素来包含所有的链接，并分别定义登录注册相关的链接，以及网站导航相关的链接。</p> 
+    <p>代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>淘宝_注册<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"taobao_register.css"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>nav<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>div<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>ul <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"login_nav"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"emphasis"</span><span class="sh_symbol">&gt;</span>亲，请登录<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>免费注册<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>手机逛淘宝<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>ul<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>ul <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"site_nav"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"emphasis"</span><span class="sh_symbol">&gt;</span>淘宝网首页<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>我的淘宝<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>购物车<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"favorite"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>a<span class="sh_symbol">&gt;</span>收藏夹<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>ul <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"favorite_items"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>收藏的宝贝<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>收藏的店铺<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>ul<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>购物车<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>商品分类<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>卖家中心<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>联系客服<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>网站导航<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>ul<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>nav<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>header<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">&lt;!</span>—其他代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;/</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>section<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">&lt;!</span>—其他代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;/</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>页脚<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>footer<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">&lt;!</span>—其他代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;/</span>footer<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;淘宝_注册&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;link type="text/css" rel="Stylesheet" href="taobao_register.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;nav&gt;
+#cold_bold&lt;div&gt;
+#cold_bold&lt;ul class="login_nav"&gt;
+#cold_bold&lt;li&gt;&lt;a class="emphasis"&gt;亲，请登录&lt;/a&gt;&lt;/li&gt;
+#cold_bold&lt;li&gt;&lt;a&gt;免费注册&lt;/a&gt;&lt;/li&gt;
+#cold_bold&lt;li&gt;&lt;a&gt;手机逛淘宝&lt;/a&gt;&lt;/li&gt;
+#cold_bold&lt;/ul&gt;
+#cold_bold&lt;ul class="site_nav"&gt;
+#cold_bold&lt;li&gt;&lt;a class="emphasis"&gt;淘宝网首页&lt;/a&gt;&lt;/li&gt;
+#cold_bold&lt;li&gt;&lt;a&gt;我的淘宝&lt;/a&gt;&lt;/li&gt;
+#cold_bold&lt;li&gt;&lt;a&gt;购物车&lt;/a&gt;&lt;/li&gt;
+#cold_bold&lt;li class="favorite"&gt;
+#cold_bold&lt;a&gt;收藏夹&lt;/a&gt;
+#cold_bold&lt;ul class="favorite_items"&gt;
+#cold_bold&lt;li&gt;&lt;a&gt;收藏的宝贝&lt;/a&gt;&lt;/li&gt;
+#cold_bold&lt;li&gt;&lt;a&gt;收藏的店铺&lt;/a&gt;&lt;/li&gt;
+#cold_bold&lt;/ul&gt;
+#cold_bold&lt;/li&gt;
+#cold_bold&lt;li&gt;&lt;a&gt;购物车&lt;/a&gt;&lt;/li&gt;
+#cold_bold&lt;li&gt;&lt;a&gt;商品分类&lt;/a&gt;&lt;/li&gt;
+#cold_bold&lt;li&gt;&lt;a&gt;卖家中心&lt;/a&gt;&lt;/li&gt;
+#cold_bold&lt;li&gt;&lt;a&gt;联系客服&lt;/a&gt;&lt;/li&gt;
+#cold_bold&lt;li&gt;&lt;a&gt;网站导航&lt;/a&gt;&lt;/li&gt;
+#cold_bold&lt;/ul&gt;
+#cold_bold&lt;/div&gt;
+&lt;/nav&gt;
+&lt;header&gt;
+			&lt;!—其他代码，略--&gt;
+&lt;/header&gt;
+&lt;section&gt;
+			&lt;!—其他代码，略--&gt;
+&lt;/section&gt;
+&lt;!--页脚--&gt;
+&lt;footer&gt;
+			&lt;!—其他代码，略--&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div> 
+    <p class="number">步骤二：为顶部导航定义CSS样式</p> 
+    <p>打开文件taobao_register.css，并为顶部导航定义CSS样式。添加的CSS代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*顶部导航*/</span></li><li>nav<span class="sh_symbol">&gt;</span>div</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>1190px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span>0px auto<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>ul</li><li><span class="sh_cbracket">{</span></li><li>    list<span class="sh_symbol">-</span>style<span class="sh_symbol">-</span>type<span class="sh_symbol">:</span>none<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span><span class="sh_number">0</span><span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span><span class="sh_number">0</span><span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>ul li</li><li><span class="sh_cbracket">{</span></li><li>    line<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span>35px<span class="sh_symbol">;</span></li><li>    float<span class="sh_symbol">:</span>left<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span>0px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span>0px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>nav a</li><li><span class="sh_cbracket">{</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 12px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #3c3c3c<span class="sh_symbol">;</span></li><li>    text<span class="sh_symbol">-</span>decoration<span class="sh_symbol">:</span> none<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*左侧和登录相关的导航*/</span></li><li>ul<span class="sh_symbol">.</span>login_nav li</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">-</span>right<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>a<span class="sh_symbol">.</span>emphasis<span class="sh_symbol">,</span>nav a<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    color<span class="sh_symbol">:</span> #F22E00<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*顶部导航*/
+nav&gt;div
+{
+    width:1190px;
+    margin:0px auto;
+}
+ul
+{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+ul li
+{
+    line-height:35px;
+    float:left;
+    margin:0px;
+    padding:0px;
+}
+nav a
+{
+    font-size: 12px;
+    color: #3c3c3c;
+    text-decoration: none;
+}
+/*左侧和登录相关的导航*/
+ul.login_nav li
+{
+    margin-right:15px;
+}
+a.emphasis,nav a:hover
+{
+    color: #F22E00;
+}
+</pre></div></div> 
+    <p class="number">步骤三：为顶部的网站导航链接定义样式</p> 
+    <p>页面顶部右侧是网站的导航链接，其中，“收藏夹”需要定义弹出菜单。分别为其定义CSS样式，代码如下：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*右侧和网站功能相关的导航*/</span></li><li>ul<span class="sh_symbol">.</span>site_nav</li><li><span class="sh_cbracket">{</span></li><li>    float<span class="sh_symbol">:</span>right<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>ul<span class="sh_symbol">.</span>site_nav li</li><li><span class="sh_cbracket">{</span></li><li>   margin<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span></li><li>   border<span class="sh_symbol">:</span>1px solid transparent<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>li<span class="sh_symbol">.</span>favorite</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>20px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">:</span><span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>star<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> 3px center no<span class="sh_symbol">-</span>repeat<span class="sh_symbol">;</span>   </li><li>    position<span class="sh_symbol">:</span>relative<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>60px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>li<span class="sh_symbol">.</span>favorite<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">:</span>1px solid #eee<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">:</span>#fff <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>star_focus<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> 3px center no<span class="sh_symbol">-</span>repeat<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>bottom<span class="sh_symbol">:</span>1px solid #fff<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*子菜单：收藏夹*/</span></li><li>ul<span class="sh_symbol">.</span>favorite_items</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>80px<span class="sh_symbol">;</span></li><li>    position<span class="sh_symbol">:</span>absolute<span class="sh_symbol">;</span></li><li>    left<span class="sh_symbol">:-</span>1px<span class="sh_symbol">;</span></li><li>    top<span class="sh_symbol">:</span>34px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span>#fff<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span>1px solid #eee<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span>1px solid #fff<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>ul<span class="sh_symbol">.</span>favorite_items li</li><li><span class="sh_cbracket">{</span></li><li>    float<span class="sh_symbol">:</span>none<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>100px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span><span class="sh_number">0</span><span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span><span class="sh_number">0</span><span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>5px<span class="sh_symbol">;</span></li><li>    line<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span>30px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*右侧和网站功能相关的导航*/
+ul.site_nav
+{
+    float:right;
+}
+ul.site_nav li
+{
+   margin-left:15px;
+   border:1px solid transparent;
+}
+li.favorite
+{
+    padding-left:20px;
+    background:url(images/star.png) 3px center no-repeat;   
+    position:relative;
+    width:60px;
+}
+li.favorite:hover
+{
+    border:1px solid #eee;
+    background:#fff url(images/star_focus.png) 3px center no-repeat;
+    border-bottom:1px solid #fff;
+}
+/*子菜单：收藏夹*/
+ul.favorite_items
+{
+    width:80px;
+    position:absolute;
+    left:-1px;
+    top:34px;
+    background-color:#fff;
+    border:1px solid #eee;
+    border-top:1px solid #fff;
+}
+ul.favorite_items li
+{
+    float:none;
+    width:100px;
+    margin:0;
+    padding:0;
+    padding-left:5px;
+    line-height:30px;
+}
+</pre></div></div> 
+    <p class="number">步骤四：创建页面上的“注册步骤”</p> 
+    <p>修改 HTML 代码，创建“注册步骤”的相关内容。修改后的 HTML 代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>淘宝_注册<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"taobao_register.css"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>nav<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">&lt;!</span>—其他代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;/</span>nav<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>header<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">&lt;!</span>—其他代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;/</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>注册步骤<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"steps"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;!--</span>注册步骤<span class="sh_symbol">--&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>ul<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"curr"</span><span class="sh_symbol">&gt;&lt;</span>b<span class="sh_symbol">&gt;</span><span class="sh_number">1</span><span class="sh_symbol">&lt;</span><span class="sh_regexp">/b&gt;&lt;span&gt;设置登录名&lt;/</span>span<span class="sh_symbol">&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>b<span class="sh_symbol">&gt;</span><span class="sh_number">2</span><span class="sh_symbol">&lt;</span><span class="sh_regexp">/b&gt;&lt;span&gt;填写账户信息&lt;/</span>span<span class="sh_symbol">&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>b<span class="sh_symbol">&gt;</span><span class="sh_number">3</span><span class="sh_symbol">&lt;</span><span class="sh_regexp">/b&gt;&lt;span&gt;设置支付方式&lt;/</span>span<span class="sh_symbol">&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>b<span class="sh_symbol">&gt;</span><span class="sh_number">4</span><span class="sh_symbol">&lt;</span><span class="sh_regexp">/b&gt;&lt;span&gt;注册成功&lt;/</span>span<span class="sh_symbol">&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>ul<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;!--</span>语言选择<span class="sh_symbol">--&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"lang_switch"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>a<span class="sh_symbol">&gt;</span>中文<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li class="bold_code">                    <span class="sh_symbol">|</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>a<span class="sh_symbol">&gt;</span>English<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>注册框<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"register_box"</span><span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">&lt;!</span>—其他代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>页脚<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>footer<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">&lt;!</span>—其他代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;/</span>footer<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;淘宝_注册&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;link type="text/css" rel="Stylesheet" href="taobao_register.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;nav&gt;
+			&lt;!—其他代码，略--&gt;
+&lt;/nav&gt;
+&lt;header&gt;
+			&lt;!—其他代码，略--&gt;
+&lt;/header&gt;
+&lt;section&gt;
+&lt;!--注册步骤--&gt;
+&lt;div id="steps"&gt;
+#cold_bold&lt;!--注册步骤--&gt;
+#cold_bold&lt;ul&gt;
+#cold_bold&lt;li class="curr"&gt;&lt;b&gt;1&lt;/b&gt;&lt;span&gt;设置登录名&lt;/span&gt;&lt;/li&gt;
+#cold_bold&lt;li&gt;&lt;b&gt;2&lt;/b&gt;&lt;span&gt;填写账户信息&lt;/span&gt;&lt;/li&gt;
+#cold_bold&lt;li&gt;&lt;b&gt;3&lt;/b&gt;&lt;span&gt;设置支付方式&lt;/span&gt;&lt;/li&gt;
+#cold_bold&lt;li&gt;&lt;b&gt;4&lt;/b&gt;&lt;span&gt;注册成功&lt;/span&gt;&lt;/li&gt;
+#cold_bold&lt;/ul&gt;
+#cold_bold&lt;!--语言选择--&gt;
+#cold_bold&lt;div id="lang_switch"&gt;
+#cold_bold&lt;a&gt;中文&lt;/a&gt;
+#cold_bold                    |
+#cold_bold&lt;a&gt;English&lt;/a&gt;
+#cold_bold&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--注册框--&gt;
+&lt;div id="register_box"&gt;
+				&lt;!—其他代码，略--&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;!--页脚--&gt;
+&lt;footer&gt;
+			&lt;!—其他代码，略--&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div> 
+    <p class="number">步骤五：为注册步骤定义样式</p> 
+    <p>为页面的注册步骤定义样式，添加的CSS代码如下：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*注册步骤*/</span></li><li>#steps<span class="sh_symbol">&gt;</span>ul</li><li><span class="sh_cbracket">{</span></li><li>    overflow<span class="sh_symbol">:</span>hidden<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>730px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span>0px auto<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 16px<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>weight<span class="sh_symbol">:</span> bold<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#steps<span class="sh_symbol">&gt;</span>ul li</li><li><span class="sh_cbracket">{</span></li><li>    height<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>150px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>30px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#steps<span class="sh_symbol">&gt;</span>ul li b</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span> <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>ico_circle2<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span>  no<span class="sh_symbol">-</span>repeat left center<span class="sh_symbol">;</span></li><li>    display<span class="sh_symbol">:</span> inline<span class="sh_symbol">-</span>block<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>right<span class="sh_symbol">:</span> 5px<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span> 24px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 40px<span class="sh_symbol">;</span></li><li>    text<span class="sh_symbol">-</span>align<span class="sh_symbol">:</span> center<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>style<span class="sh_symbol">:</span> normal<span class="sh_symbol">;</span></li><li>    line<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span> 40px<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 14px<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>weight<span class="sh_symbol">:</span> bold<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #FFF<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#steps<span class="sh_symbol">&gt;</span>ul li<span class="sh_symbol">.</span>curr</li><li><span class="sh_cbracket">{</span></li><li>    color<span class="sh_symbol">:</span> #3e3e3e<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>bottom<span class="sh_symbol">:</span> 2px solid #ff4700<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#steps<span class="sh_symbol">&gt;</span>ul li<span class="sh_symbol">.</span>curr b</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span> <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>ico_circle1<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat left center<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*语言选择*/</span></li><li>#steps</li><li><span class="sh_cbracket">{</span></li><li>    position<span class="sh_symbol">:</span>relative<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#lang_switch</li><li><span class="sh_cbracket">{</span></li><li>    position<span class="sh_symbol">:</span>absolute<span class="sh_symbol">;</span></li><li>    top<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span></li><li>    right<span class="sh_symbol">:</span>5px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#lang_switch a</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span> 3px 5px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #<span class="sh_number">333</span><span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #ddd<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>radius<span class="sh_symbol">:</span> 3px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #FFF<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#lang_switch a<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    text<span class="sh_symbol">-</span>decoration<span class="sh_symbol">:</span>underline<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #F22E00<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*注册步骤*/
+#steps&gt;ul
+{
+    overflow:hidden;
+    width:730px;
+    margin:0px auto;
+    font-size: 16px;
+    font-weight: bold;
+}
+#steps&gt;ul li
+{
+    height:40px;
+    width:150px;
+    padding-left:30px;
+}
+#steps&gt;ul li b
+{
+    background: url(images/ico_circle2.png)  no-repeat left center;
+    display: inline-block;
+    margin-right: 5px;
+    width: 24px;
+    height: 40px;
+    text-align: center;
+    font-style: normal;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFF;
+}
+#steps&gt;ul li.curr
+{
+    color: #3e3e3e;
+    border-bottom: 2px solid #ff4700;
+}
+#steps&gt;ul li.curr b
+{
+    background: url(images/ico_circle1.png) no-repeat left center;
+}
+/*语言选择*/
+#steps
+{
+    position:relative;
+}
+#lang_switch
+{
+    position:absolute;
+    top:15px;
+    right:5px;
+}
+#lang_switch a
+{
+    padding: 3px 5px;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #FFF;
+}
+#lang_switch a:hover
+{
+    text-decoration:underline;
+    color: #F22E00;
+}
+</pre></div></div> 
+    <p class="number">步骤六：创建页脚部分内容</p> 
+    <p>为页面的页脚部分添加内容，修改后的HTML代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>淘宝_注册<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"taobao_register.css"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>nav<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">&lt;!</span>—其他代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;/</span>nav<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>header<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">&lt;!</span>—其他代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;/</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>section<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">&lt;!</span>—其他代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;/</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>页脚<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>footer<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>p<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>a<span class="sh_symbol">&gt;</span>阿里巴巴集团<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;|&lt;a&gt;阿里巴巴国际站&lt;/</span>a<span class="sh_symbol">&gt;|&lt;</span>a<span class="sh_symbol">&gt;</span>阿里巴巴中国站<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;|&lt;a&gt;全球速卖通&lt;/</span>a<span class="sh_symbol">&gt;|&lt;</span>a<span class="sh_symbol">&gt;</span>淘宝网<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;|&lt;a&gt;天猫&lt;/</span>a<span class="sh_symbol">&gt;|&lt;</span>a<span class="sh_symbol">&gt;</span>聚划算<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;|&lt;a&gt;一淘&lt;/</span>a<span class="sh_symbol">&gt;|&lt;</span>a<span class="sh_symbol">&gt;</span>阿里妈妈<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;|&lt;a&gt;阿里云计算&lt;/</span>a<span class="sh_symbol">&gt;|&lt;</span>a<span class="sh_symbol">&gt;</span>云OS<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;|&lt;a&gt;万网&lt;/</span>a<span class="sh_symbol">&gt;|&lt;</span>a<span class="sh_symbol">&gt;</span>支付宝<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>h2<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>a<span class="sh_symbol">&gt;</span>关于淘宝<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;a&gt;合作伙伴&lt;/</span>a<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>营销中心<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;a&gt;联系客服&lt;/</span>a<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>开放平台<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;a&gt;诚征英才&lt;/</span>a<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>联系我们<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;a&gt;网站地图&lt;/</span>a<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>法律声明<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;span&gt;&amp;copy; 2015 Taobao.com 版权所有&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>h2<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>h3<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>网络文化经营许可证：<span class="sh_symbol">&lt;</span><span class="sh_regexp">/span&gt;&lt;a&gt;文网文[2010]040号&lt;/</span>a<span class="sh_symbol">&gt;&lt;</span>b<span class="sh_symbol">&gt;|&lt;</span><span class="sh_regexp">/b&gt;&lt;span&gt;增值电信业务经营许可证：浙B2-20080224-1&lt;/</span>span<span class="sh_symbol">&gt;&lt;</span>b<span class="sh_symbol">&gt;|&lt;</span><span class="sh_regexp">/b&gt;&lt;span&gt;信息网络传播视听节目许可证：1109364号&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>h3<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>footer<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;淘宝_注册&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;link type="text/css" rel="Stylesheet" href="taobao_register.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;nav&gt;
+			&lt;!—其他代码，略--&gt;
+&lt;/nav&gt;
+&lt;header&gt;
+			&lt;!—其他代码，略--&gt;
+&lt;/header&gt;
+&lt;section&gt;
+			&lt;!—其他代码，略--&gt;
+&lt;/section&gt;
+&lt;!--页脚--&gt;
+&lt;footer&gt;
+#cold_bold&lt;p&gt;
+#cold_bold&lt;a&gt;阿里巴巴集团&lt;/a&gt;|&lt;a&gt;阿里巴巴国际站&lt;/a&gt;|&lt;a&gt;阿里巴巴中国站&lt;/a&gt;|&lt;a&gt;全球速卖通&lt;/a&gt;|&lt;a&gt;淘宝网&lt;/a&gt;|&lt;a&gt;天猫&lt;/a&gt;|&lt;a&gt;聚划算&lt;/a&gt;|&lt;a&gt;一淘&lt;/a&gt;|&lt;a&gt;阿里妈妈&lt;/a&gt;|&lt;a&gt;阿里云计算&lt;/a&gt;|&lt;a&gt;云OS&lt;/a&gt;|&lt;a&gt;万网&lt;/a&gt;|&lt;a&gt;支付宝&lt;/a&gt;
+#cold_bold&lt;/p&gt;
+#cold_bold&lt;h2&gt;
+#cold_bold&lt;a&gt;关于淘宝&lt;/a&gt;&lt;a&gt;合作伙伴&lt;/a&gt;&lt;a&gt;营销中心&lt;/a&gt;&lt;a&gt;联系客服&lt;/a&gt;&lt;a&gt;开放平台&lt;/a&gt;&lt;a&gt;诚征英才&lt;/a&gt;&lt;a&gt;联系我们&lt;/a&gt;&lt;a&gt;网站地图&lt;/a&gt;&lt;a&gt;法律声明&lt;/a&gt;&lt;span&gt;&amp;copy; 2015 Taobao.com 版权所有&lt;/span&gt;
+#cold_bold&lt;/h2&gt;
+#cold_bold&lt;h3&gt;
+#cold_bold&lt;span&gt;网络文化经营许可证：&lt;/span&gt;&lt;a&gt;文网文[2010]040号&lt;/a&gt;&lt;b&gt;|&lt;/b&gt;&lt;span&gt;增值电信业务经营许可证：浙B2-20080224-1&lt;/span&gt;&lt;b&gt;|&lt;/b&gt;&lt;span&gt;信息网络传播视听节目许可证：1109364号&lt;/span&gt;
+#cold_bold&lt;/h3&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div> 
+    <p class="number">步骤七：为页脚定义样式</p> 
+    <p>为页面的页脚部分定义样式，添加的CSS代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*页脚部分*/</span></li><li>footer</li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span>1px solid #ddd<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span>7px 0px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>footer p</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">:</span>5px 0px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">-</span>bottom<span class="sh_symbol">:</span>10px<span class="sh_symbol">;</span></li><li>    line<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span> 27px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>bottom<span class="sh_symbol">:</span> 1px solid #DDD<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #DDD<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>footer p a<span class="sh_symbol">,</span>footer h2 a<span class="sh_symbol">,</span>footer h3 a</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">:</span> <span class="sh_number">0</span> 4px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #6C6C6C<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>footer p a<span class="sh_symbol">:</span>hover<span class="sh_symbol">,</span>footer h2 a<span class="sh_symbol">:</span>hover<span class="sh_symbol">,</span>footer h3 a<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    color<span class="sh_symbol">:</span> #ff5b20<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>footer h2</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span>0px<span class="sh_symbol">;</span>   </li><li>    padding<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span>5px<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>12px<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>weight<span class="sh_symbol">:</span>normal<span class="sh_symbol">;</span> </li><li><span class="sh_cbracket">}</span></li><li>footer h2 span</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>30px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>footer h3</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span>5px 0px 0px 5px<span class="sh_symbol">;</span>   </li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>12px<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>weight<span class="sh_symbol">:</span>normal<span class="sh_symbol">;</span> </li><li><span class="sh_cbracket">}</span></li><li>footer h3 b</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">:</span>0px 5px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*页脚部分*/
+footer
+{
+    border-top:1px solid #ddd;
+    padding:7px 0px;
+}
+footer p
+{
+    margin:5px 0px;
+    padding-bottom:10px;
+    line-height: 27px;
+    border-bottom: 1px solid #DDD;
+    color: #DDD;
+}
+footer p a,footer h2 a,footer h3 a
+{
+    margin: 0 4px;
+    color: #6C6C6C;
+}
+footer p a:hover,footer h2 a:hover,footer h3 a:hover
+{
+    color: #ff5b20;
+}
+footer h2
+{
+    padding:0px;   
+    padding-top:5px;
+    font-size:12px;
+    font-weight:normal; 
+}
+footer h2 span
+{
+    margin-left:30px;
+}
+footer h3
+{
+    padding:5px 0px 0px 5px;   
+    font-size:12px;
+    font-weight:normal; 
+}
+footer h3 b
+{
+    margin:0px 5px;
+}
+</pre></div></div> 
+    <p>整个案例完成后，HTML文件中的完整代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: block;"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>淘宝_注册<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"taobao_register.css"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>nav<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>ul <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"login_nav"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"emphasis"</span><span class="sh_symbol">&gt;</span>亲，请登录<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>免费注册<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>手机逛淘宝<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>ul<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>ul <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"site_nav"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"emphasis"</span><span class="sh_symbol">&gt;</span>淘宝网首页<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>我的淘宝<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>购物车<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"favorite"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>a<span class="sh_symbol">&gt;</span>收藏夹<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>ul <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"favorite_items"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>收藏的宝贝<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>收藏的店铺<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>ul<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>购物车<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>商品分类<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>卖家中心<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>联系客服<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>网站导航<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>ul<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>nav<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>a<span class="sh_symbol">&gt;&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"Images/taobao_logo.png"</span> <span class="sh_regexp">/&gt;&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>h2<span class="sh_symbol">&gt;</span>账户注册<span class="sh_symbol">&lt;/</span>h2<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>注册步骤<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"steps"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>注册步骤<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>ul<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"curr"</span><span class="sh_symbol">&gt;&lt;</span>b<span class="sh_symbol">&gt;</span><span class="sh_number">1</span><span class="sh_symbol">&lt;</span><span class="sh_regexp">/b&gt;&lt;span&gt;设置登录名&lt;/</span>span<span class="sh_symbol">&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>b<span class="sh_symbol">&gt;</span><span class="sh_number">2</span><span class="sh_symbol">&lt;</span><span class="sh_regexp">/b&gt;&lt;span&gt;填写账户信息&lt;/</span>span<span class="sh_symbol">&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>b<span class="sh_symbol">&gt;</span><span class="sh_number">3</span><span class="sh_symbol">&lt;</span><span class="sh_regexp">/b&gt;&lt;span&gt;设置支付方式&lt;/</span>span<span class="sh_symbol">&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;&lt;</span>b<span class="sh_symbol">&gt;</span><span class="sh_number">4</span><span class="sh_symbol">&lt;</span><span class="sh_regexp">/b&gt;&lt;span&gt;注册成功&lt;/</span>span<span class="sh_symbol">&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>ul<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>语言选择<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"lang_switch"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>a<span class="sh_symbol">&gt;</span>中文<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>                    <span class="sh_symbol">|</span></li><li><span class="sh_symbol">&lt;</span>a<span class="sh_symbol">&gt;</span>English<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>注册框<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"register_box"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>span <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"form_label"</span><span class="sh_symbol">&gt;</span>所在国家<span class="sh_regexp">/地区&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>select<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"1"</span><span class="sh_symbol">&gt;</span>中国大陆<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"2"</span><span class="sh_symbol">&gt;</span>香港<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"3"</span><span class="sh_symbol">&gt;</span>澳门<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"4"</span><span class="sh_symbol">&gt;</span>台湾<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>select<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>span <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"form_label"</span><span class="sh_symbol">&gt;</span>手机号码<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"mobile_info"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;+</span><span class="sh_number">86</span><span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span><span class="sh_normal">input </span><span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>p <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"info"</span><span class="sh_symbol">&gt;</span>手机号码格式不正确，请重新输入<span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>span <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"form_label"</span><span class="sh_symbol">&gt;</span>手机号码<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"mobile_info"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;+</span><span class="sh_number">86</span><span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span><span class="sh_normal">input </span><span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>p <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"ok"</span><span class="sh_symbol">&gt;&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>span <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"form_label"</span><span class="sh_symbol">&gt;</span>手机号码<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"mobile_info"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;+</span><span class="sh_number">86</span><span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span><span class="sh_normal">input </span><span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>p <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"error"</span><span class="sh_symbol">&gt;</span>手机号码格式不正确，请重新输入<span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>span <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"form_label"</span><span class="sh_symbol">&gt;</span>验证码<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"code_info"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span><span class="sh_normal">input </span><span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/vali_code.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/refresh.JPG"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>p <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"error"</span><span class="sh_symbol">&gt;</span>验证码不正确，请重新输入<span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>span <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"form_label"</span><span class="sh_symbol">&gt;&amp;</span>nbsp<span class="sh_symbol">;&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input id<span class="sh_symbol">=</span><span class="sh_string">"chk_agree"</span> type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> <span class="sh_regexp">/&gt;&lt;label for="chk_agree"&gt;同意&lt;a href="#"&gt;&amp;lt;&amp;lt;淘宝服务协议&amp;gt;&amp;gt;&lt;/</span>a<span class="sh_symbol">&gt;&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>span <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"form_label"</span><span class="sh_symbol">&gt;&amp;</span>nbsp<span class="sh_symbol">;&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"btn_regis_next"</span> type<span class="sh_symbol">=</span><span class="sh_string">"button"</span> value<span class="sh_symbol">=</span><span class="sh_string">"下一步"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>页脚<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>footer<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>p<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>a<span class="sh_symbol">&gt;</span>阿里巴巴集团<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;|&lt;a&gt;阿里巴巴国际站&lt;/</span>a<span class="sh_symbol">&gt;|&lt;</span>a<span class="sh_symbol">&gt;</span>阿里巴巴中国站<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;|&lt;a&gt;全球速卖通&lt;/</span>a<span class="sh_symbol">&gt;|&lt;</span>a<span class="sh_symbol">&gt;</span>淘宝网<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;|&lt;a&gt;天猫&lt;/</span>a<span class="sh_symbol">&gt;|&lt;</span>a<span class="sh_symbol">&gt;</span>聚划算<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;|&lt;a&gt;一淘&lt;/</span>a<span class="sh_symbol">&gt;|&lt;</span>a<span class="sh_symbol">&gt;</span>阿里妈妈<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;|&lt;a&gt;阿里云计算&lt;/</span>a<span class="sh_symbol">&gt;|&lt;</span>a<span class="sh_symbol">&gt;</span>云OS<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;|&lt;a&gt;万网&lt;/</span>a<span class="sh_symbol">&gt;|&lt;</span>a<span class="sh_symbol">&gt;</span>支付宝<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>h2<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>a<span class="sh_symbol">&gt;</span>关于淘宝<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;a&gt;合作伙伴&lt;/</span>a<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>营销中心<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;a&gt;联系客服&lt;/</span>a<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>开放平台<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;a&gt;诚征英才&lt;/</span>a<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>联系我们<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;a&gt;网站地图&lt;/</span>a<span class="sh_symbol">&gt;&lt;</span>a<span class="sh_symbol">&gt;</span>法律声明<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;span&gt;&amp;copy; 2015 Taobao.com 版权所有&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>h2<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>h3<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>网络文化经营许可证：<span class="sh_symbol">&lt;</span><span class="sh_regexp">/span&gt;&lt;a&gt;文网文[2010]040号&lt;/</span>a<span class="sh_symbol">&gt;&lt;</span>b<span class="sh_symbol">&gt;|&lt;</span><span class="sh_regexp">/b&gt;&lt;span&gt;增值电信业务经营许可证：浙B2-20080224-1&lt;/</span>span<span class="sh_symbol">&gt;&lt;</span>b<span class="sh_symbol">&gt;|&lt;</span><span class="sh_regexp">/b&gt;&lt;span&gt;信息网络传播视听节目许可证：1109364号&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>h3<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>footer<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;淘宝_注册&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;link type="text/css" rel="Stylesheet" href="taobao_register.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;nav&gt;
+&lt;div&gt;
+&lt;ul class="login_nav"&gt;
+&lt;li&gt;&lt;a class="emphasis"&gt;亲，请登录&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a&gt;免费注册&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a&gt;手机逛淘宝&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="site_nav"&gt;
+&lt;li&gt;&lt;a class="emphasis"&gt;淘宝网首页&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a&gt;我的淘宝&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a&gt;购物车&lt;/a&gt;&lt;/li&gt;
+&lt;li class="favorite"&gt;
+&lt;a&gt;收藏夹&lt;/a&gt;
+&lt;ul class="favorite_items"&gt;
+&lt;li&gt;&lt;a&gt;收藏的宝贝&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a&gt;收藏的店铺&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a&gt;购物车&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a&gt;商品分类&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a&gt;卖家中心&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a&gt;联系客服&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a&gt;网站导航&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/nav&gt;
+&lt;header&gt;
+&lt;a&gt;&lt;img src="Images/taobao_logo.png" /&gt;&lt;/a&gt;
+&lt;h2&gt;账户注册&lt;/h2&gt;
+&lt;/header&gt;
+&lt;section&gt;
+&lt;!--注册步骤--&gt;
+&lt;div id="steps"&gt;
+&lt;!--注册步骤--&gt;
+&lt;ul&gt;
+&lt;li class="curr"&gt;&lt;b&gt;1&lt;/b&gt;&lt;span&gt;设置登录名&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;2&lt;/b&gt;&lt;span&gt;填写账户信息&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;3&lt;/b&gt;&lt;span&gt;设置支付方式&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;4&lt;/b&gt;&lt;span&gt;注册成功&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--语言选择--&gt;
+&lt;div id="lang_switch"&gt;
+&lt;a&gt;中文&lt;/a&gt;
+                    |
+&lt;a&gt;English&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--注册框--&gt;
+&lt;div id="register_box"&gt;
+&lt;div&gt;
+&lt;span class="form_label"&gt;所在国家/地区&lt;/span&gt;
+&lt;select&gt;
+&lt;option value="1"&gt;中国大陆&lt;/option&gt;
+&lt;option value="2"&gt;香港&lt;/option&gt;
+&lt;option value="3"&gt;澳门&lt;/option&gt;
+&lt;option value="4"&gt;台湾&lt;/option&gt;
+&lt;/select&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;span class="form_label"&gt;手机号码&lt;/span&gt;
+&lt;div class="mobile_info"&gt;
+&lt;span&gt;+86&lt;/span&gt;
+&lt;input /&gt;
+&lt;/div&gt;
+&lt;p class="info"&gt;手机号码格式不正确，请重新输入&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;span class="form_label"&gt;手机号码&lt;/span&gt;
+&lt;div class="mobile_info"&gt;
+&lt;span&gt;+86&lt;/span&gt;
+&lt;input /&gt;
+&lt;/div&gt;
+&lt;p class="ok"&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;span class="form_label"&gt;手机号码&lt;/span&gt;
+&lt;div class="mobile_info"&gt;
+&lt;span&gt;+86&lt;/span&gt;
+&lt;input /&gt;
+&lt;/div&gt;
+&lt;p class="error"&gt;手机号码格式不正确，请重新输入&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;span class="form_label"&gt;验证码&lt;/span&gt;
+&lt;div class="code_info"&gt;
+&lt;input /&gt;
+&lt;img src="images/vali_code.jpg" /&gt;
+&lt;img src="images/refresh.JPG" /&gt;
+&lt;/div&gt;
+&lt;p class="error"&gt;验证码不正确，请重新输入&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;span class="form_label"&gt;&amp;nbsp;&lt;/span&gt;
+&lt;input id="chk_agree" type="checkbox" /&gt;&lt;label for="chk_agree"&gt;同意&lt;a href="#"&gt;&amp;lt;&amp;lt;淘宝服务协议&amp;gt;&amp;gt;&lt;/a&gt;&lt;/label&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;span class="form_label"&gt;&amp;nbsp;&lt;/span&gt;
+&lt;input class="btn_regis_next" type="button" value="下一步" /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;!--页脚--&gt;
+&lt;footer&gt;
+&lt;p&gt;
+&lt;a&gt;阿里巴巴集团&lt;/a&gt;|&lt;a&gt;阿里巴巴国际站&lt;/a&gt;|&lt;a&gt;阿里巴巴中国站&lt;/a&gt;|&lt;a&gt;全球速卖通&lt;/a&gt;|&lt;a&gt;淘宝网&lt;/a&gt;|&lt;a&gt;天猫&lt;/a&gt;|&lt;a&gt;聚划算&lt;/a&gt;|&lt;a&gt;一淘&lt;/a&gt;|&lt;a&gt;阿里妈妈&lt;/a&gt;|&lt;a&gt;阿里云计算&lt;/a&gt;|&lt;a&gt;云OS&lt;/a&gt;|&lt;a&gt;万网&lt;/a&gt;|&lt;a&gt;支付宝&lt;/a&gt;
+&lt;/p&gt;
+&lt;h2&gt;
+&lt;a&gt;关于淘宝&lt;/a&gt;&lt;a&gt;合作伙伴&lt;/a&gt;&lt;a&gt;营销中心&lt;/a&gt;&lt;a&gt;联系客服&lt;/a&gt;&lt;a&gt;开放平台&lt;/a&gt;&lt;a&gt;诚征英才&lt;/a&gt;&lt;a&gt;联系我们&lt;/a&gt;&lt;a&gt;网站地图&lt;/a&gt;&lt;a&gt;法律声明&lt;/a&gt;&lt;span&gt;&amp;copy; 2015 Taobao.com 版权所有&lt;/span&gt;
+&lt;/h2&gt;
+&lt;h3&gt;
+&lt;span&gt;网络文化经营许可证：&lt;/span&gt;&lt;a&gt;文网文[2010]040号&lt;/a&gt;&lt;b&gt;|&lt;/b&gt;&lt;span&gt;增值电信业务经营许可证：浙B2-20080224-1&lt;/span&gt;&lt;b&gt;|&lt;/b&gt;&lt;span&gt;信息网络传播视听节目许可证：1109364号&lt;/span&gt;
+&lt;/h3&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap" style="display: none;"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#" class="snippet-toggle sh_url">代码</a></pre></div></div> 
+    <p>CSS 文件中的完整代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: block;"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/* 布局样式 */</span></li><li>body</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">:</span> 0px auto<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span> 0px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> <span class="sh_number">0</span><span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #fff<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #3C3C3C<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">:</span>12px arial<span class="sh_symbol">,</span><span class="sh_string">'Hiragino Sans GB'</span><span class="sh_symbol">,\</span>5b8b<span class="sh_symbol">\</span>4f53<span class="sh_symbol">,</span>sans<span class="sh_symbol">-</span>serif<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>header<span class="sh_symbol">,</span>section<span class="sh_symbol">,</span>footer</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 1190px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span>0px auto<span class="sh_symbol">;</span></li><li>    overflow<span class="sh_symbol">:</span>hidden<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*顶部导航*/</span></li><li>nav</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> <span class="sh_number">100</span><span class="sh_symbol">%;</span></li><li>    height<span class="sh_symbol">:</span>35px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">:</span> #F5F5F5<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>bottom<span class="sh_symbol">:</span> 1px solid #EEE<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*头部*/</span></li><li>header</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span> 10px <span class="sh_number">0</span><span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>header h2</li><li><span class="sh_cbracket">{</span></li><li>    display<span class="sh_symbol">:</span> inline<span class="sh_symbol">-</span>block<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 43px<span class="sh_symbol">;</span></li><li>    line<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span> 43px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span> 6px<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 22px<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>weight<span class="sh_symbol">:</span> bold<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*注册步骤*/</span></li><li>#steps</li><li><span class="sh_cbracket">{</span></li><li>    height<span class="sh_symbol">:</span> 40px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>bottom<span class="sh_symbol">:</span> 2px solid #e6e6e6<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span style="display:none;">&nbsp;</span></li><li><span class="sh_comment">/*注册框*/</span></li><li>#register_box</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 770px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span>0px auto<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span>10px 0px<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 14px<span class="sh_symbol">;</span></li><li>    overflow<span class="sh_symbol">:</span>hidden<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#register_box<span class="sh_symbol">&gt;</span>div</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span> 10px<span class="sh_symbol">;</span></li><li>    line<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span> 36px<span class="sh_symbol">;</span></li><li>    overflow<span class="sh_symbol">:</span>hidden<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>span<span class="sh_symbol">.</span>form_label</li><li><span class="sh_cbracket">{</span></li><li>    float<span class="sh_symbol">:</span> left<span class="sh_symbol">;</span>    </li><li>    width<span class="sh_symbol">:</span> 240px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 37px<span class="sh_symbol">;</span></li><li>    line<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span> 37px<span class="sh_symbol">;</span></li><li>    text<span class="sh_symbol">-</span>align<span class="sh_symbol">:</span> right<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>right<span class="sh_symbol">:</span>10px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#register_box<span class="sh_symbol">&gt;</span>div select</li><li><span class="sh_cbracket">{</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 16px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> black<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> white<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>120px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*手机号码相关*/</span></li><li>div<span class="sh_symbol">.</span>mobile_info<span class="sh_symbol">,</span>div<span class="sh_symbol">.</span>code_info</li><li><span class="sh_cbracket">{</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>14px<span class="sh_symbol">;</span></li><li>    line<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span>36px<span class="sh_symbol">;</span></li><li>    float<span class="sh_symbol">:</span> left<span class="sh_symbol">;</span>  </li><li><span class="sh_cbracket">}</span></li><li>div<span class="sh_symbol">.</span>mobile_info span</li><li><span class="sh_cbracket">{</span></li><li>    float<span class="sh_symbol">:</span>left<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span> 60px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 35px<span class="sh_symbol">;</span></li><li>    line<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span> 35px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #ededed<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #<span class="sh_number">999</span><span class="sh_symbol">;</span></li><li>    text<span class="sh_symbol">-</span>align<span class="sh_symbol">:</span> center<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #dedede<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>right<span class="sh_symbol">:</span><span class="sh_number">0</span><span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>div<span class="sh_symbol">.</span>mobile_info input</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span> 5px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #dedede<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span> 162px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 33px<span class="sh_symbol">;</span></li><li>    line<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span> 33px<span class="sh_symbol">;</span>    </li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*提示信息*/</span></li><li>p<span class="sh_symbol">.</span>info<span class="sh_symbol">,</span>p<span class="sh_symbol">.</span>error<span class="sh_symbol">,</span>p<span class="sh_symbol">.</span>ok</li><li><span class="sh_cbracket">{</span></li><li>    float<span class="sh_symbol">:</span>left<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #<span class="sh_number">000</span><span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 12px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 35px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">:</span><span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>info<span class="sh_symbol">.</span>jpg<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat 2px center<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>20px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span>0px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>p<span class="sh_symbol">.</span>error</li><li><span class="sh_cbracket">{</span></li><li>    color<span class="sh_symbol">:</span> #ff3f13<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">:</span><span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>error<span class="sh_symbol">.</span>jpg<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat 2px center<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>p<span class="sh_symbol">.</span>ok</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span><span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>ok<span class="sh_symbol">.</span>jpg<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat 2px center<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*验证码相关*/</span></li><li>div<span class="sh_symbol">.</span>code_info input</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span> 5px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #dedede<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span> 122px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 33px<span class="sh_symbol">;</span></li><li>    line<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span> 33px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>div<span class="sh_symbol">.</span>code_info img</li><li><span class="sh_cbracket">{</span></li><li>    vertical<span class="sh_symbol">-</span>align<span class="sh_symbol">:</span>middle<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*注册*/</span></li><li>label<span class="sh_symbol">[</span><span class="sh_keyword">for</span><span class="sh_symbol">=</span><span class="sh_string">"chk_agree"</span><span class="sh_symbol">]</span></li><li><span class="sh_cbracket">{</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>12px<span class="sh_symbol">;</span></li><li>    line<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span>36px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>label<span class="sh_symbol">[</span><span class="sh_keyword">for</span><span class="sh_symbol">=</span><span class="sh_string">"chk_agree"</span><span class="sh_symbol">]</span> a</li><li><span class="sh_cbracket">{</span></li><li>    color<span class="sh_symbol">:</span> #ff5b20<span class="sh_symbol">;</span></li><li>    text<span class="sh_symbol">-</span>decoration<span class="sh_symbol">:</span> none<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>label<span class="sh_symbol">[</span><span class="sh_keyword">for</span><span class="sh_symbol">=</span><span class="sh_string">"chk_agree"</span><span class="sh_symbol">]</span> a<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    text<span class="sh_symbol">-</span>decoration<span class="sh_symbol">:</span> underline<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>btn_regis_next</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>180px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 36px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span> <span class="sh_number">0</span> 20px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #FFF<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>weight<span class="sh_symbol">:</span> bold<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 16px<span class="sh_symbol">;</span></li><li>    text<span class="sh_symbol">-</span>align<span class="sh_symbol">:</span> center<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">:</span> #ff4001<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> none<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>radius<span class="sh_symbol">:</span> 3px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*顶部导航*/</span></li><li>nav<span class="sh_symbol">&gt;</span>div</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>1190px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span>0px auto<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>ul</li><li><span class="sh_cbracket">{</span></li><li>    list<span class="sh_symbol">-</span>style<span class="sh_symbol">-</span>type<span class="sh_symbol">:</span>none<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span><span class="sh_number">0</span><span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span><span class="sh_number">0</span><span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>ul li</li><li><span class="sh_cbracket">{</span></li><li>    line<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span>35px<span class="sh_symbol">;</span></li><li>    float<span class="sh_symbol">:</span>left<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span>0px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span>0px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>nav a</li><li><span class="sh_cbracket">{</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 12px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #3c3c3c<span class="sh_symbol">;</span></li><li>    text<span class="sh_symbol">-</span>decoration<span class="sh_symbol">:</span> none<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*左侧和登录相关的导航*/</span></li><li>ul<span class="sh_symbol">.</span>login_nav li</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">-</span>right<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>a<span class="sh_symbol">.</span>emphasis<span class="sh_symbol">,</span>nav a<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    color<span class="sh_symbol">:</span> #F22E00<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*右侧和网站功能相关的导航*/</span></li><li>ul<span class="sh_symbol">.</span>site_nav</li><li><span class="sh_cbracket">{</span></li><li>    float<span class="sh_symbol">:</span>right<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>ul<span class="sh_symbol">.</span>site_nav li</li><li><span class="sh_cbracket">{</span></li><li>   margin<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span></li><li>   border<span class="sh_symbol">:</span>1px solid transparent<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>li<span class="sh_symbol">.</span>favorite</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>20px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">:</span><span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>star<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> 3px center no<span class="sh_symbol">-</span>repeat<span class="sh_symbol">;</span>   </li><li>    position<span class="sh_symbol">:</span>relative<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>60px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>li<span class="sh_symbol">.</span>favorite<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">:</span>1px solid #eee<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">:</span>#fff <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>star_focus<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> 3px center no<span class="sh_symbol">-</span>repeat<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>bottom<span class="sh_symbol">:</span>1px solid #fff<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*子菜单：收藏夹*/</span></li><li>ul<span class="sh_symbol">.</span>favorite_items</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>80px<span class="sh_symbol">;</span></li><li>    position<span class="sh_symbol">:</span>absolute<span class="sh_symbol">;</span></li><li>    left<span class="sh_symbol">:-</span>1px<span class="sh_symbol">;</span></li><li>    top<span class="sh_symbol">:</span>34px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span>#fff<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span>1px solid #eee<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span>1px solid #fff<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>ul<span class="sh_symbol">.</span>favorite_items li</li><li><span class="sh_cbracket">{</span></li><li>    float<span class="sh_symbol">:</span>none<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>100px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span><span class="sh_number">0</span><span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span><span class="sh_number">0</span><span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>5px<span class="sh_symbol">;</span></li><li>    line<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span>30px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span style="display:none;">&nbsp;</span></li><li><span class="sh_comment">/*注册步骤*/</span></li><li>#steps<span class="sh_symbol">&gt;</span>ul</li><li><span class="sh_cbracket">{</span></li><li>    overflow<span class="sh_symbol">:</span>hidden<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>730px<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">:</span>0px auto<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 16px<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>weight<span class="sh_symbol">:</span> bold<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#steps<span class="sh_symbol">&gt;</span>ul li</li><li><span class="sh_cbracket">{</span></li><li>    height<span class="sh_symbol">:</span>40px<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>150px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>30px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#steps<span class="sh_symbol">&gt;</span>ul li b</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span> <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>ico_circle2<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span>  no<span class="sh_symbol">-</span>repeat left center<span class="sh_symbol">;</span></li><li>    display<span class="sh_symbol">:</span> inline<span class="sh_symbol">-</span>block<span class="sh_symbol">;</span></li><li>    margin<span class="sh_symbol">-</span>right<span class="sh_symbol">:</span> 5px<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span> 24px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 40px<span class="sh_symbol">;</span></li><li>    text<span class="sh_symbol">-</span>align<span class="sh_symbol">:</span> center<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>style<span class="sh_symbol">:</span> normal<span class="sh_symbol">;</span></li><li>    line<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span> 40px<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 14px<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>weight<span class="sh_symbol">:</span> bold<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #FFF<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#steps<span class="sh_symbol">&gt;</span>ul li<span class="sh_symbol">.</span>curr</li><li><span class="sh_cbracket">{</span></li><li>    color<span class="sh_symbol">:</span> #3e3e3e<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>bottom<span class="sh_symbol">:</span> 2px solid #ff4700<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#steps<span class="sh_symbol">&gt;</span>ul li<span class="sh_symbol">.</span>curr b</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">:</span> <span class="sh_function">url</span><span class="sh_symbol">(</span><span class="sh_normal">images</span><span class="sh_symbol">/</span>ico_circle1<span class="sh_symbol">.</span>png<span class="sh_symbol">)</span> no<span class="sh_symbol">-</span>repeat left center<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*语言选择*/</span></li><li>#steps</li><li><span class="sh_cbracket">{</span></li><li>    position<span class="sh_symbol">:</span>relative<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#lang_switch</li><li><span class="sh_cbracket">{</span></li><li>    position<span class="sh_symbol">:</span>absolute<span class="sh_symbol">;</span></li><li>    top<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span></li><li>    right<span class="sh_symbol">:</span>5px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#lang_switch a</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span> 3px 5px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #<span class="sh_number">333</span><span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #ddd<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>radius<span class="sh_symbol">:</span> 3px<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #FFF<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#lang_switch a<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    text<span class="sh_symbol">-</span>decoration<span class="sh_symbol">:</span>underline<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #F22E00<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*页脚部分*/</span></li><li>footer</li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span>1px solid #ddd<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">:</span>7px 0px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>footer p</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">:</span>5px 0px<span class="sh_symbol">;</span></li><li>    padding<span class="sh_symbol">-</span>bottom<span class="sh_symbol">:</span>10px<span class="sh_symbol">;</span></li><li>    line<span class="sh_symbol">-</span>height<span class="sh_symbol">:</span> 27px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>bottom<span class="sh_symbol">:</span> 1px solid #DDD<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #DDD<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>footer p a<span class="sh_symbol">,</span>footer h2 a<span class="sh_symbol">,</span>footer h3 a</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">:</span> <span class="sh_number">0</span> 4px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #6C6C6C<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>footer p a<span class="sh_symbol">:</span>hover<span class="sh_symbol">,</span>footer h2 a<span class="sh_symbol">:</span>hover<span class="sh_symbol">,</span>footer h3 a<span class="sh_symbol">:</span>hover</li><li><span class="sh_cbracket">{</span></li><li>    color<span class="sh_symbol">:</span> #ff5b20<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>footer h2</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span>0px<span class="sh_symbol">;</span>   </li><li>    padding<span class="sh_symbol">-</span>top<span class="sh_symbol">:</span>5px<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>12px<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>weight<span class="sh_symbol">:</span>normal<span class="sh_symbol">;</span> </li><li><span class="sh_cbracket">}</span></li><li>footer h2 span</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">-</span>left<span class="sh_symbol">:</span>30px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>footer h3</li><li><span class="sh_cbracket">{</span></li><li>    padding<span class="sh_symbol">:</span>5px 0px 0px 5px<span class="sh_symbol">;</span>   </li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>12px<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>weight<span class="sh_symbol">:</span>normal<span class="sh_symbol">;</span> </li><li><span class="sh_cbracket">}</span></li><li>footer h3 b</li><li><span class="sh_cbracket">{</span></li><li>    margin<span class="sh_symbol">:</span>0px 5px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/* 布局样式 */
+body
+{
+    margin: 0px auto;
+    padding: 0px;
+    border: 0;
+    background-color: #fff;
+    color: #3C3C3C;
+    font:12px arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+}
+header,section,footer
+{
+    width: 1190px;
+    margin:0px auto;
+    overflow:hidden;
+}
+/*顶部导航*/
+nav
+{
+    width: 100%;
+    height:35px;
+    background: #F5F5F5;
+    border-bottom: 1px solid #EEE;
+}
+/*头部*/
+header
+{
+    padding: 10px 0;
+}
+header h2
+{
+    display: inline-block;
+    height: 43px;
+    line-height: 43px;
+    margin-left: 6px;
+    font-size: 22px;
+    font-weight: bold;
+}
+/*注册步骤*/
+#steps
+{
+    height: 40px;
+    border-bottom: 2px solid #e6e6e6;
+}
+
+/*注册框*/
+#register_box
+{
+    width: 770px;
+    margin:0px auto;
+    padding:10px 0px;
+    font-size: 14px;
+    overflow:hidden;
+}
+#register_box&gt;div
+{
+    padding: 10px;
+    line-height: 36px;
+    overflow:hidden;
+}
+span.form_label
+{
+    float: left;    
+    width: 240px;
+    height: 37px;
+    line-height: 37px;
+    text-align: right;
+    margin-right:10px;
+}
+#register_box&gt;div select
+{
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    width:120px;
+}
+/*手机号码相关*/
+div.mobile_info,div.code_info
+{
+    font-size:14px;
+    line-height:36px;
+    float: left;  
+}
+div.mobile_info span
+{
+    float:left;
+    width: 60px;
+    height: 35px;
+    line-height: 35px;
+    background-color: #ededed;
+    color: #999;
+    text-align: center;
+    border: 1px solid #dedede;
+    border-right:0;
+}
+div.mobile_info input
+{
+    padding-left: 5px;
+    border: 1px solid #dedede;
+    width: 162px;
+    height: 33px;
+    line-height: 33px;    
+}
+/*提示信息*/
+p.info,p.error,p.ok
+{
+    float:left;
+    color: #000;
+    font-size: 12px;
+    height: 35px;
+    background:url(images/info.jpg) no-repeat 2px center;
+    padding-left:20px;
+    margin:0px;
+}
+p.error
+{
+    color: #ff3f13;
+    background:url(images/error.jpg) no-repeat 2px center;
+}
+p.ok
+{
+    background:url(images/ok.jpg) no-repeat 2px center;
+}
+/*验证码相关*/
+div.code_info input
+{
+    padding-left: 5px;
+    border: 1px solid #dedede;
+    width: 122px;
+    height: 33px;
+    line-height: 33px;
+}
+div.code_info img
+{
+    vertical-align:middle;
+}
+/*注册*/
+label[for="chk_agree"]
+{
+    font-size:12px;
+    line-height:36px;
+}
+label[for="chk_agree"] a
+{
+    color: #ff5b20;
+    text-decoration: none;
+}
+label[for="chk_agree"] a:hover
+{
+    text-decoration: underline;
+}
+input.btn_regis_next
+{
+    width:180px;
+    height: 36px;
+    padding: 0 20px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    background: #ff4001;
+    border: none;
+    border-radius: 3px;
+}
+/*顶部导航*/
+nav&gt;div
+{
+    width:1190px;
+    margin:0px auto;
+}
+ul
+{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+ul li
+{
+    line-height:35px;
+    float:left;
+    margin:0px;
+    padding:0px;
+}
+nav a
+{
+    font-size: 12px;
+    color: #3c3c3c;
+    text-decoration: none;
+}
+/*左侧和登录相关的导航*/
+ul.login_nav li
+{
+    margin-right:15px;
+}
+a.emphasis,nav a:hover
+{
+    color: #F22E00;
+}
+/*右侧和网站功能相关的导航*/
+ul.site_nav
+{
+    float:right;
+}
+ul.site_nav li
+{
+   margin-left:15px;
+   border:1px solid transparent;
+}
+li.favorite
+{
+    padding-left:20px;
+    background:url(images/star.png) 3px center no-repeat;   
+    position:relative;
+    width:60px;
+}
+li.favorite:hover
+{
+    border:1px solid #eee;
+    background:#fff url(images/star_focus.png) 3px center no-repeat;
+    border-bottom:1px solid #fff;
+}
+/*子菜单：收藏夹*/
+ul.favorite_items
+{
+    width:80px;
+    position:absolute;
+    left:-1px;
+    top:34px;
+    background-color:#fff;
+    border:1px solid #eee;
+    border-top:1px solid #fff;
+}
+ul.favorite_items li
+{
+    float:none;
+    width:100px;
+    margin:0;
+    padding:0;
+    padding-left:5px;
+    line-height:30px;
+}
+
+/*注册步骤*/
+#steps&gt;ul
+{
+    overflow:hidden;
+    width:730px;
+    margin:0px auto;
+    font-size: 16px;
+    font-weight: bold;
+}
+#steps&gt;ul li
+{
+    height:40px;
+    width:150px;
+    padding-left:30px;
+}
+#steps&gt;ul li b
+{
+    background: url(images/ico_circle2.png)  no-repeat left center;
+    display: inline-block;
+    margin-right: 5px;
+    width: 24px;
+    height: 40px;
+    text-align: center;
+    font-style: normal;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFF;
+}
+#steps&gt;ul li.curr
+{
+    color: #3e3e3e;
+    border-bottom: 2px solid #ff4700;
+}
+#steps&gt;ul li.curr b
+{
+    background: url(images/ico_circle1.png) no-repeat left center;
+}
+/*语言选择*/
+#steps
+{
+    position:relative;
+}
+#lang_switch
+{
+    position:absolute;
+    top:15px;
+    right:5px;
+}
+#lang_switch a
+{
+    padding: 3px 5px;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #FFF;
+}
+#lang_switch a:hover
+{
+    text-decoration:underline;
+    color: #F22E00;
+}
+/*页脚部分*/
+footer
+{
+    border-top:1px solid #ddd;
+    padding:7px 0px;
+}
+footer p
+{
+    margin:5px 0px;
+    padding-bottom:10px;
+    line-height: 27px;
+    border-bottom: 1px solid #DDD;
+    color: #DDD;
+}
+footer p a,footer h2 a,footer h3 a
+{
+    margin: 0 4px;
+    color: #6C6C6C;
+}
+footer p a:hover,footer h2 a:hover,footer h3 a:hover
+{
+    color: #ff5b20;
+}
+footer h2
+{
+    padding:0px;   
+    padding-top:5px;
+    font-size:12px;
+    font-weight:normal; 
+}
+footer h2 span
+{
+    margin-left:30px;
+}
+footer h3
+{
+    padding:5px 0px 0px 5px;   
+    font-size:12px;
+    font-weight:normal; 
+}
+footer h3 b
+{
+    margin:0px 5px;
+}
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap" style="display: none;"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY04/EXERCISE/01/index_answer.html#" class="snippet-toggle sh_url">代码</a></pre></div></div> 
+   </div> 
+  </div>  
+ 
+</body></html>

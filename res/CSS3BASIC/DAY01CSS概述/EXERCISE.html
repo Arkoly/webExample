@@ -1,0 +1,281 @@
+
+<!-- saved from url=(0096)http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <title>EXERCISE</title> 
+   
+  <script type="text/javascript" src="./EXERCISE_files/jquery.min.js">
+    </script> 
+  <script type="text/javascript" src="./EXERCISE_files/jquery.snippet.js">
+    </script> 
+  <script type="text/javascript" src="./EXERCISE_files/main.js">
+    </script> 
+  <link type="text/css" href="./EXERCISE_files/index.css" rel="Stylesheet"> 
+  <link type="text/css" href="./EXERCISE_files/jquery.snippet.css" rel="Stylesheet"> 
+ </head> 
+ <body> 
+  <div class="source_style_exercise"> 
+   <div> 
+    <h3>1 简述 CSS 样式表的使用方式。</h3> 
+    <p class="answerTitle">参考答案：</p> 
+    <p>HTML 页面有三种使用 CSS 样式表的方式：</p> 
+    <p>1、内联样式表：样式规定在单个的元素中，写在元素的 style 属性里；</p> 
+    <p>2、内部样式表：样式定义在HTML页面的头元素中；</p> 
+    <p>3、外部样式表：将样式定义在一个外部的 CSS 文件中，然后由 HTML页面引用样式表文件。</p> 
+   </div> 
+   <div> 
+    <h3>2 如何理解 CSS 样式表的层叠性和优先级？</h3> 
+    <p class="answerTitle">参考答案</p> 
+    <p>CSS使用层叠（Cascade）的原则来考虑继承、层叠次序和优先级等重要特征，从而判断相互冲突的规则中哪个规则应该起作用。</p> 
+    <p>继承性是指，许多CSS的样式规则不但影响选择器所定义的元素，而且会被这些元素的后代继承。</p> 
+    <p>层叠性是指，当一个Web页面使用多个样式表，多个样式表中的样式可层叠为一个。在多个样式表之间所定义的样式没有冲突的时候，浏览器会显示所有的样式。</p> 
+    <p>优先级是指，当发生样式定义冲突时，浏览器首先会按照不同样式规则的优先级来应用样式。CSS 样式的优先级如下所示（其中数字 3 拥有最高的优先权）：</p> 
+    <p>1、浏览器缺省设置；</p> 
+    <p>2、外部样式表（.css 文件）或者内部样式表（位于 &lt;head&gt;元素内部）；</p> 
+    <p>3、内联样式（作为某个元素的style属性的值）。</p> 
+    <p>同等优先级下，以最后定义的样式为准。</p> 
+   </div> 
+   <div> 
+    <h3>3 CSS 选择器中，元素选择器和类选择器的区别是什么？</h3> 
+    <p class="answerTitle">参考答案</p> 
+    <p>元素选择器是最常见的 CSS 选择器，即，文档的元素就是最基本的选择器。选择器通常是某个 HTML 元素，比如 &lt;p&gt;、&lt;h1&gt;、&lt;em&gt;、&lt;a&gt;等，甚至可以是 &lt;html&gt;元素本身。</p> 
+    <p>类选择器用于将样式规则与附带class属性的元素匹配，其中该class属性的值为类选择器中指定的值。使用类选择器时，首先需要定义样式类，其语法为：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">.</span>className  <span class="sh_cbracket">{</span> <span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">.className  { }
+</pre></div></div> 
+    <p>所有能够附带class属性的元素都可以使用此样式声明。只需要将class属性的值设置为“className”，则可以将类选择器的样式与元素关联。</p> 
+    <p>在实际使用时，如果需要为某种元素定义样式，则往往使用元素选择器；如果要应用样式而不考虑具体设计的元素，最常用的方法就是使用类选择器。</p> 
+   </div> 
+   <div> 
+    <h3>4 CSS 选择器中，后代选择器和子代选择器的区别是什么？</h3> 
+    <p class="answerTitle">参考答案</p> 
+    <p>后代选择器是依据元素在其位置的上下文关系来定义样式，又称为包含选择器，用于选择作为某元素后代的元素。需要注意的是，后代是指，包括子元素、子元素的子元素等在内的所有后代元素。比如，查看如下样式规则：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li>h1  span  </li><li><span class="sh_cbracket">{</span></li><li>        color<span class="sh_symbol">:</span>red<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">h1  span  
+{
+        color:red;
+}
+</pre></div></div> 
+    <p>只要是包含在 &lt;h1&gt; 元素中的 &lt;span&gt; 元素，均使用上述样式定义，而无论 &lt;span&gt;是 &lt;h1&gt; 的子元素还是孙子元素。</p> 
+    <p>子代选择器要求选择器之间只能存在父子关系，使用一个特殊的符号大于号（&gt;）作为子结合符。比如，查看如下样式规则：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li>div<span class="sh_symbol">&gt;</span>span</li><li><span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color <span class="sh_symbol">:</span> red<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>20pt<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">div&gt;span
+{
+		color : red;
+		font-size:20pt;
+}
+</pre></div></div> 
+    <p>只有 &lt;div&gt; 的子元素 &lt;span&gt; 元素中的文本使用该样式。如果 &lt;span&gt; 元素是 &lt;div&gt; 元素的孙子元素，则不会使用该样式。</p> 
+    <p>因此，在实际使用中，需要根据所选择的范围来挑选合适的选择器。如果不希望选择任意的后代元素，而是希望缩小范围，则使用子代选择器。</p> 
+   </div> 
+   <div> 
+    <h3>5 完成如下图所示的页面</h3> 
+    <p>完成如图-1所示的页面。</p> 
+    <div class="image"> 
+     <img src="./EXERCISE_files/image001.png"> 
+     <p>图－1</p> 
+    </div> 
+    <p>图－1中，页面的背景颜色为 #f2f2f2；注册信息框的边框颜色为 #ddd；字体的颜色为 #999；按钮“立即注册”的背景颜色为#E43E42，按钮的边框颜色为＃E4454C。</p> 
+    <p>提示：在没有学习其他布局方式时，使用表格实现图－1所示页面的布局和对齐。</p> 
+    <p class="answerTitle">参考答案</p> 
+    <p>实现此案例需要按照如下步骤进行。</p> 
+    <p class="number">步骤一：创建页面</p> 
+    <p>首先创建一个纯文本文件，并修改名称为 jd_register.html，然后在文本编辑工具中打开此文件，为其添加 HTML 代码，以创建一个标准结构的 HTML 文档，并设置文档的标题以及编码格式。代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>注册<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;注册&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div> 
+    <p class="number">步骤二：为页面创建 CSS 文件</p> 
+    <p>创建名为 jd_register.css 的文件，用于为页面定义样式，然后修改上一步中所创建的 HTML 文件，为其引入此 CSS 文件。</p> 
+    <p>修改后的 html 代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>注册<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"jd_register.css"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;注册&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+#cold_bold&lt;link type="text/css" rel="Stylesheet" href="jd_register.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div> 
+    <p class="number">步骤三：创建页面元素</p> 
+    <p>为页面添加表格，以定义页面的布局。页面布局如图－2所示：</p> 
+    <div class="image"> 
+     <img src="./EXERCISE_files/image002.png"> 
+     <p>图－2</p> 
+    </div> 
+    <p>并在表格中定义相应的元素。需要注意的是，为了方便定义 CSS 样式，为某些元素定义了 id属性以及class 属性。修改后的 html 代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>注册<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"jd_register.css"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>section<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>table id<span class="sh_symbol">=</span><span class="sh_string">"login"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"text_info"</span><span class="sh_symbol">&gt;</span>用户名：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"data_info"</span><span class="sh_symbol">&gt;&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> <span class="sh_regexp">/&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;&lt;</span>span<span class="sh_symbol">&gt;</span><span class="sh_number">4</span>－<span class="sh_number">20</span>位字符，支持汉字、字母和数字组合<span class="sh_symbol">&lt;</span><span class="sh_regexp">/span&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td rowspan<span class="sh_symbol">=</span><span class="sh_string">"7"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/phone-bg.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>请设置密码：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> <span class="sh_regexp">/&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;&lt;</span>span<span class="sh_symbol">&gt;</span><span class="sh_number">6</span>－<span class="sh_number">20</span>位字符，支持汉字、字母和数字组合<span class="sh_symbol">&lt;</span><span class="sh_regexp">/span&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>请确认密码：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> <span class="sh_regexp">/&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;&lt;</span>span<span class="sh_symbol">&gt;</span>请再次输入密码<span class="sh_symbol">&lt;</span><span class="sh_regexp">/span&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>验证手机：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> <span class="sh_regexp">/&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;&lt;</span>span<span class="sh_symbol">&gt;</span>完成验证后，可以使用手机找回密码<span class="sh_symbol">&lt;</span><span class="sh_regexp">/span&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>短信验证码：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"width100"</span> <span class="sh_regexp">/&gt;&lt;input type="button" class="width100" value="获取短信验证码" /</span><span class="sh_symbol">&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;&lt;</span>span<span class="sh_symbol">&gt;</span>请再次输入密码<span class="sh_symbol">&lt;</span><span class="sh_regexp">/span&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkRead"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>label <span class="sh_keyword">for</span><span class="sh_symbol">=</span><span class="sh_string">"chkRead"</span><span class="sh_symbol">&gt;</span>我已阅读并同意<span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;</span>《京东用户注册协议》<span class="sh_symbol">&lt;</span><span class="sh_regexp">/a&gt;&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"button"</span> value<span class="sh_symbol">=</span><span class="sh_string">"立即注册"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"btn_register"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;注册&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;link type="text/css" rel="Stylesheet" href="jd_register.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+#cold_bold&lt;section&gt;
+#cold_bold&lt;table id="login"&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td class="text_info"&gt;用户名：&lt;/td&gt;
+#cold_bold&lt;td class="data_info"&gt;&lt;input type="text" /&gt;&lt;/td&gt;
+#cold_bold&lt;td&gt;&lt;span&gt;4－20位字符，支持汉字、字母和数字组合&lt;/span&gt;&lt;/td&gt;
+#cold_bold&lt;td rowspan="7"&gt;
+#cold_bold&lt;img src="images/phone-bg.jpg" /&gt;
+#cold_bold&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td&gt;请设置密码：&lt;/td&gt;
+#cold_bold&lt;td&gt;&lt;input type="text" /&gt;&lt;/td&gt;
+#cold_bold&lt;td&gt;&lt;span&gt;6－20位字符，支持汉字、字母和数字组合&lt;/span&gt;&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td&gt;请确认密码：&lt;/td&gt;
+#cold_bold&lt;td&gt;&lt;input type="text" /&gt;&lt;/td&gt;
+#cold_bold&lt;td&gt;&lt;span&gt;请再次输入密码&lt;/span&gt;&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td&gt;验证手机：&lt;/td&gt;
+#cold_bold&lt;td&gt;&lt;input type="text" /&gt;&lt;/td&gt;
+#cold_bold&lt;td&gt;&lt;span&gt;完成验证后，可以使用手机找回密码&lt;/span&gt;&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td&gt;短信验证码：&lt;/td&gt;
+#cold_bold&lt;td&gt;&lt;input type="text" class="width100" /&gt;&lt;input type="button" class="width100" value="获取短信验证码" /&gt;&lt;/td&gt;
+#cold_bold&lt;td&gt;&lt;span&gt;请再次输入密码&lt;/span&gt;&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td&gt;&lt;/td&gt;
+#cold_bold&lt;td&gt;
+#cold_bold&lt;input type="checkbox" id="chkRead" /&gt;
+#cold_bold&lt;label for="chkRead"&gt;我已阅读并同意&lt;a href="#"&gt;《京东用户注册协议》&lt;/a&gt;&lt;/label&gt;
+#cold_bold&lt;/td&gt;
+#cold_bold&lt;td&gt;&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td&gt;&lt;/td&gt;
+#cold_bold&lt;td&gt;
+#cold_bold&lt;input type="button" value="立即注册" class="btn_register" /&gt;
+#cold_bold&lt;/td&gt;
+#cold_bold&lt;td&gt;&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+#cold_bold&lt;/table&gt;
+#cold_bold&lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div> 
+    <p class="number">步骤四：定义样式</p> 
+    <p>打开 jd_register.css文件，为页面定义样式。</p> 
+    <p>首先，定义全局样式，即，定义页面的背景颜色以及字体颜色，代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/* 全局样式 */</span></li><li>body</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #f2f2f2<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #<span class="sh_number">999</span><span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/* 全局样式 */
+body
+{
+    background-color: #f2f2f2;
+    color: #999;
+}
+</pre></div></div> 
+    <p>然后，为表格定义样式，定义表格的边框、背景颜色以及大小。代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*表格样式*/</span></li><li>#login</li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">:</span>1px solid #ddd<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span>White<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>990px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span>445px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*表格样式*/
+#login
+{
+    border:1px solid #ddd;
+    background-color:White;
+    width:990px;
+    height:445px;
+}
+</pre></div></div> 
+    <p>并定义表格第一列和第二列的宽度。代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li>td<span class="sh_symbol">.</span>text_info</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>190px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>td<span class="sh_symbol">.</span>data_info</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>270px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">td.text_info
+{
+    width:190px;
+}
+td.data_info
+{
+    width:270px;
+}
+</pre></div></div> 
+    <p>为所有的 &lt;input&gt; 元素定义样式。代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*输入框的样式*/</span></li><li>input</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 258px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 36px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #cccccc<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*输入框的样式*/
+input
+{
+    width: 258px;
+    height: 36px;
+    border: 1px solid #cccccc;
+}
+</pre></div></div> 
+    <p>然后为特殊的 &lt;input&gt;元素单独定义样式。代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">.</span>width100</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>100px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#chkRead</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>btn_register</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 270px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 36px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span>#fff<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span>#E43E42<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span>1px solid #E4454C<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>radius<span class="sh_symbol">:</span>5px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">.width100
+{
+    width:100px;
+}
+#chkRead
+{
+    width:15px;
+    height:15px;
+}
+input.btn_register
+{
+    width: 270px;
+    height: 36px;
+    color:#fff;
+    background-color:#E43E42;
+    border:1px solid #E4454C;
+    border-radius:5px;
+}
+</pre></div></div> 
+    <p>完成后，整个 CSS 文件中的完整代码如下所示：</p> 
+    <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: block;"><div class="snippet-menu sh_sourceCode" style=""><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li>body</li><li><span class="sh_cbracket">{</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span> #f2f2f2<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span> #<span class="sh_number">999</span><span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span style="display:none;">&nbsp;</span></li><li><span class="sh_comment">/*表格样式*/</span></li><li>#login</li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">:</span>1px solid #ddd<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span>White<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>990px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span>445px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>td<span class="sh_symbol">.</span>text_info</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>190px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>td<span class="sh_symbol">.</span>data_info</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>270px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span style="display:none;">&nbsp;</span></li><li><span class="sh_comment">/*输入框的样式*/</span></li><li>input</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 258px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 36px<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span> 1px solid #cccccc<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_symbol">.</span>width100</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>100px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>#chkRead</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span>15px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>btn_register</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span> 270px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span> 36px<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span>#fff<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span>#E43E42<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span>1px solid #E4454C<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">-</span>radius<span class="sh_symbol">:</span>5px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">body
+{
+    background-color: #f2f2f2;
+    color: #999;
+}
+
+/*表格样式*/
+#login
+{
+    border:1px solid #ddd;
+    background-color:White;
+    width:990px;
+    height:445px;
+}
+td.text_info
+{
+    width:190px;
+}
+td.data_info
+{
+    width:270px;
+}
+
+/*输入框的样式*/
+input
+{
+    width: 258px;
+    height: 36px;
+    border: 1px solid #cccccc;
+}
+.width100
+{
+    width:100px;
+}
+#chkRead
+{
+    width:15px;
+    height:15px;
+}
+input.btn_register
+{
+    width: 270px;
+    height: 36px;
+    color:#fff;
+    background-color:#E43E42;
+    border:1px solid #E4454C;
+    border-radius:5px;
+}
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap" style="display: none;"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/EXERCISE/01/index_answer.html#" class="snippet-toggle sh_url">代码</a></pre></div></div> 
+   </div> 
+  </div>  
+ 
+</body></html>

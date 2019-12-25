@@ -1,0 +1,1149 @@
+
+<!-- saved from url=(0085)http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CASE</title>
+    
+    <script type="text/javascript" src="./CASE_files/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="./CASE_files/jquery.snippet.js">
+    </script>
+    <script type="text/javascript" src="./CASE_files/main.js">
+    </script>
+    <link type="text/css" href="./CASE_files/index.css" rel="Stylesheet">
+    <link type="text/css" href="./CASE_files/jquery.snippet.css" rel="Stylesheet">
+  </head>
+  <body>
+    <div class="source_style_case">
+      <a name="page_top_case" id="top_anchor">
+      </a><a id="link_top" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#page_top_case">Top</a>
+      <h1>WEB CSS3BASIC DAY01</h1>
+      <ol class="index">
+        <li>
+          <a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#case1">使用 CSS 样式</a>
+        </li>
+        <li>
+          <a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#case2">测试 CSS 样式优先级</a>
+        </li>
+        <li>
+          <a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#case3">CSS 选择器（1）</a>
+        </li>
+        <li>
+          <a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#case4">CSS 选择器（2）</a>
+        </li>
+        <li>
+          <a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#case5">CSS 选择器（３）</a>
+        </li>
+        <li>
+          <a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#case6">CSS 选择器（4）</a>
+        </li>
+        <li>
+          <a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#case7">CSS 选择器（5）</a>
+        </li>
+        <li>
+          <a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#case8">尺寸属性的使用</a>
+        </li>
+        <li>
+          <a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#case9">边框属性的使用</a>
+        </li>
+      </ol>
+      <a name="case1">
+      </a>
+      <h2>1 使用 CSS 样式</h2>
+      <h3>1.1 问题</h3>
+      <p>创建一个 HTML 文档，并分别使用内联样式、内部样式表和外部样式表为页面的元素定义 CSS 样式。页面效果如图－1所示。</p>
+      <div class="image">
+        <img src="./CASE_files/image001.png">
+        <p>图－1</p>
+      </div>
+      <p>图－1中各元素的样式详细描述如下：</p>
+      <ul class="list">
+        <li>第一行文本为 &lt;p&gt; 元素，使用内联样式定义其样式为 25pt 的红色文本；
+</li>
+        <li>第二行文本为 &lt;h1&gt; 元素，使用内部样式表定义其样式为 20pt 的蓝色文本；
+</li>
+        <li>第三行文本为 &lt;h2&gt; 元素，使用外部样式表定义其样式为 15pt 的绿色文本，且背景色为银灰色（silver）。
+</li>
+      </ul>
+      <h3>1.2 方案</h3>
+      <p>使用 CSS 样式的方式有三种：</p>
+      <ul class="list">
+        <li>内联方式：样式定义在单个的HTML元素的标准属性style里；
+</li>
+        <li>内部样式表：样式定义在 HTML 页的头元素中；
+</li>
+        <li>外部样式表：将样式定义在一个外部的 CSS 文件中（.css 文件），并在HTML页面引用样式表文件。
+</li>
+      </ul>
+      <h3>1.3 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：创建页面文件</p>
+      <p>首先创建一个纯文本文件，并修改名称为01_demo.html；然后使用文本编辑工具，打开所创建的文件。</p>
+      <p>在此文件中，添加 HTML 代码，以创建一个标准结构的 HTML 文档。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>使用 CSS 样式<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span>        </li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;使用 CSS 样式&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;        
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤二：使用内联方式为 &lt;p&gt; 元素定义样式</p>
+      <p>在&lt;body&gt;元素中添加 &lt;p&gt; 元素，并使用 style 属性为其定义内联样式。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>使用 CSS 样式<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>使用 CSS 样式<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>内联样式<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>p style<span class="sh_symbol">=</span><span class="sh_string">"color:Red;font-size:25pt;"</span><span class="sh_symbol">&gt;</span>段落文本（p）：使用内联样式<span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;使用 CSS 样式&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!--使用 CSS 样式--&gt;
+        &lt;!--内联样式--&gt;
+        &lt;p style="color:Red;font-size:25pt;"&gt;段落文本（p）：使用内联样式&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤三：使用内部样式表为 &lt;h1&gt; 元素定义样式</p>
+      <p>为了使用内部样式表，首先需要在页面的 &lt;head&gt; 元素里添加 &lt;style&gt; 元素，并为 &lt;h1&gt; 元素定义 CSS 样式，以设置其字体颜色和字体大小。</p>
+      <p>样式定义完毕后，在&lt;body&gt;元素中定义&lt;h1&gt;元素。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>使用 CSS 样式<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span>        </li><li class="bold_code">        <span class="sh_symbol">&lt;</span>style type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code">            h1 <span class="sh_cbracket">{</span>color<span class="sh_symbol">:</span>Blue<span class="sh_symbol">;</span>font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>20pt<span class="sh_symbol">;</span><span class="sh_cbracket">}</span>            </li><li class="bold_code">        <span class="sh_symbol">&lt;/</span>style<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>使用 CSS 样式<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>内联样式<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>p style<span class="sh_symbol">=</span><span class="sh_string">"color:Red;font-size:25pt;"</span><span class="sh_symbol">&gt;</span>段落文本（p）：使用内联样式<span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;!--</span>内部样式表<span class="sh_symbol">--&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>h1<span class="sh_symbol">&gt;</span>一级标题（h1）<span class="sh_symbol">:</span>使用内部样式表<span class="sh_symbol">&lt;/</span>h1<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;使用 CSS 样式&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;        
+#cold_bold        &lt;style type="text/css"&gt;
+#cold_bold            h1 {color:Blue;font-size:20pt;}            
+#cold_bold        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!--使用 CSS 样式--&gt;
+        &lt;!--内联样式--&gt;
+        &lt;p style="color:Red;font-size:25pt;"&gt;段落文本（p）：使用内联样式&lt;/p&gt;
+#cold_bold        &lt;!--内部样式表--&gt;
+#cold_bold        &lt;h1&gt;一级标题（h1）:使用内部样式表&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤四：创建外部样式表为 &lt;h2&gt; 元素定义样式</p>
+      <p>在当前目录下创建一个名为 demo.css 的文件。</p>
+      <p>注意此文件的存放路径。此案例中，demo.css 文件和01_demo.html文件存放在同一个目录下。</p>
+      <p class="number">步骤五：在外部样式表中为 &lt;h2&gt; 元素定义样式</p>
+      <p>使用文本编辑器打开 demo.css 文件，并在此样式文件中添加 CSS 样式，以定义 &lt;h2&gt; 元素的字体颜色、字体大小和背景色。demo.css 文件中的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*使用样式表的示例*/</span></li><li>h2 </li><li><span class="sh_cbracket">{</span></li><li>    color<span class="sh_symbol">:</span>Green<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>15pt<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span>Silver<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*使用样式表的示例*/
+h2 
+{
+    color:Green;
+    font-size:15pt;
+    background-color:Silver;
+}
+</pre></div></div>
+      <p class="number">步骤六：为 HTML 页面引入外部样式表</p>
+      <p>在 01_demo.html页面的 &lt;head&gt; 元素中使用 &lt;link&gt; 元素引入外部样式表，并在&lt;body&gt;元素中定义&lt;h2&gt;元素。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>使用 CSS 样式<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span>        </li><li>        <span class="sh_symbol">&lt;</span>style type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span><span class="sh_symbol">&gt;</span></li><li>            h1 <span class="sh_cbracket">{</span>color<span class="sh_symbol">:</span>Blue<span class="sh_symbol">;</span>font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>20pt<span class="sh_symbol">;</span><span class="sh_cbracket">}</span>            </li><li>        <span class="sh_symbol">&lt;/</span>style<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> <span class="sh_symbol">/&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>使用 CSS 样式<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>内联样式<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>p style<span class="sh_symbol">=</span><span class="sh_string">"color:Red;font-size:25pt;"</span><span class="sh_symbol">&gt;</span>段落文本（p）：使用内联样式<span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>内部样式表<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>h1<span class="sh_symbol">&gt;</span>一级标题（h1）<span class="sh_symbol">:</span>使用内部样式表<span class="sh_symbol">&lt;/</span>h1<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;!--</span>外部样式表<span class="sh_symbol">--&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>h2<span class="sh_symbol">&gt;</span>二级标题（h2）<span class="sh_symbol">:</span>使用外部样式表<span class="sh_symbol">&lt;/</span>h2<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;使用 CSS 样式&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;        
+        &lt;style type="text/css"&gt;
+            h1 {color:Blue;font-size:20pt;}            
+        &lt;/style&gt;
+#cold_bold        &lt;link type="text/css" rel="Stylesheet" href="demo.css" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!--使用 CSS 样式--&gt;
+        &lt;!--内联样式--&gt;
+        &lt;p style="color:Red;font-size:25pt;"&gt;段落文本（p）：使用内联样式&lt;/p&gt;
+        &lt;!--内部样式表--&gt;
+        &lt;h1&gt;一级标题（h1）:使用内部样式表&lt;/h1&gt;
+#cold_bold        &lt;!--外部样式表--&gt;
+#cold_bold        &lt;h2&gt;二级标题（h2）:使用外部样式表&lt;/h2&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <h3>1.4 完整代码</h3>
+      <p>01_demo.html文件中的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>使用 CSS 样式<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>style type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span><span class="sh_symbol">&gt;</span></li><li>            h1 <span class="sh_cbracket">{</span>color<span class="sh_symbol">:</span>Blue<span class="sh_symbol">;</span>font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>20pt<span class="sh_symbol">;</span><span class="sh_cbracket">}</span>            </li><li>        <span class="sh_symbol">&lt;/</span>style<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> <span class="sh_symbol">/&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>使用 CSS 样式<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>内联样式<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>p style<span class="sh_symbol">=</span><span class="sh_string">"color:Red;font-size:25pt;"</span><span class="sh_symbol">&gt;</span>段落文本（p）：使用内联样式<span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>内部样式表<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>h1<span class="sh_symbol">&gt;</span>一级标题（h1）<span class="sh_symbol">:</span>使用内部样式表<span class="sh_symbol">&lt;/</span>h1<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>外部样式表<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>h2<span class="sh_symbol">&gt;</span>二级标题（h2）<span class="sh_symbol">:</span>使用外部样式表<span class="sh_symbol">&lt;/</span>h2<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;使用 CSS 样式&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+        &lt;style type="text/css"&gt;
+            h1 {color:Blue;font-size:20pt;}            
+        &lt;/style&gt;
+        &lt;link type="text/css" rel="Stylesheet" href="demo.css" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!--使用 CSS 样式--&gt;
+        &lt;!--内联样式--&gt;
+        &lt;p style="color:Red;font-size:25pt;"&gt;段落文本（p）：使用内联样式&lt;/p&gt;
+        &lt;!--内部样式表--&gt;
+        &lt;h1&gt;一级标题（h1）:使用内部样式表&lt;/h1&gt;
+        &lt;!--外部样式表--&gt;
+        &lt;h2&gt;二级标题（h2）:使用外部样式表&lt;/h2&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <p>demo.css 文件中的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*使用样式表的示例*/</span></li><li>h2 </li><li><span class="sh_cbracket">{</span></li><li>    color<span class="sh_symbol">:</span>Green<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>15pt<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span>Silver<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*使用样式表的示例*/
+h2 
+{
+    color:Green;
+    font-size:15pt;
+    background-color:Silver;
+}
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <a name="case2">
+      </a>
+      <h2>2 测试 CSS 样式优先级</h2>
+      <h3>2.1 问题</h3>
+      <p>比较内联样式、内部样式表和外部样式表的优先级。</p>
+      <h3>2.2 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：创建页面文件</p>
+      <p>首先创建一个纯文本文件，并修改名称为03_demo.html；然后使用文本编辑工具，打开所创建的文件。</p>
+      <p>在此文件中，添加 HTML 代码，以创建一个标准结构的 HTML 文档。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>CSS 样式优先级<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span> </li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CSS 样式优先级&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt; 
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤二：添加&lt;h3&gt;元素，并为其定义内联样式</p>
+      <p>在文档中添加 &lt;h3&gt; 元素，并使用内联样式为其定义字体颜色为灰色，代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>CSS 样式优先级<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span>      </li><li class="bold_code">        <span class="sh_symbol">&lt;!--</span>样式优先级<span class="sh_symbol">--&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>h3 style<span class="sh_symbol">=</span><span class="sh_string">"color:Gray;"</span><span class="sh_symbol">&gt;</span>h3 text：使用何种样式？<span class="sh_symbol">&lt;/</span>h3<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CSS 样式优先级&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;      
+#cold_bold        &lt;!--样式优先级--&gt;
+#cold_bold        &lt;h3 style="color:Gray;"&gt;h3 text：使用何种样式？&lt;/h3&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤三：在内部样式表中为&lt;h3&gt;元素定义样式</p>
+      <p>在页面的&lt;head&gt;元素中添加&lt;style&gt;元素，为页面定义内部样式表。并在内部样式表中继续为 &lt;h3&gt; 元素定义样式：字体颜色为红色，且字体大小为 30pt，代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>CSS 样式优先级<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>style type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span><span class="sh_symbol">&gt;</span>         </li><li class="bold_code">            h3 <span class="sh_cbracket">{</span>color<span class="sh_symbol">:</span>Red<span class="sh_symbol">;</span>font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>30pt<span class="sh_symbol">;</span><span class="sh_cbracket">}</span>           </li><li class="bold_code">        <span class="sh_symbol">&lt;/</span>style<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span>      </li><li>        <span class="sh_symbol">&lt;!--</span>样式优先级<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>h3 style<span class="sh_symbol">=</span><span class="sh_string">"color:Gray;"</span><span class="sh_symbol">&gt;</span>h3 text：使用何种样式？<span class="sh_symbol">&lt;/</span>h3<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CSS 样式优先级&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+#cold_bold        &lt;style type="text/css"&gt;         
+#cold_bold            h3 {color:Red;font-size:30pt;}           
+#cold_bold        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;      
+        &lt;!--样式优先级--&gt;
+        &lt;h3 style="color:Gray;"&gt;h3 text：使用何种样式？&lt;/h3&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p>此时，在浏览器中查看页面，页面显示效果如图－2所示：</p>
+      <div class="image">
+        <img src="./CASE_files/image002.png">
+        <p>图－2</p>
+      </div>
+      <p>由图－2可以看出，&lt;h3&gt;中的文本显示为灰色，字体大小为30pt。因此，可以得出第一个结论：样式没有重复定义时，取并集（比如字体大小）；样式重复定义时，内联样式优先于内部样式表（比如字体颜色）。</p>
+      <p class="number">步骤四：在外部样式表中为&lt;h3&gt;元素定义样式</p>
+      <p>在外部样式表 demo.css 中再为 &lt;h3&gt; 元素定义样式：字体颜色为黄色，字体大小为 10pt，且背景色为银灰色。demo.css 文件中添加的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*样式优先级的示例*/</span></li><li>h3</li><li><span class="sh_cbracket">{</span></li><li>    color<span class="sh_symbol">:</span>Yellow<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span>Silver<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>10pt<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*样式优先级的示例*/
+h3
+{
+    color:Yellow;
+    background-color:Silver;
+    font-size:10pt;
+}
+</pre></div></div>
+      <p class="number">步骤五：先引入外部样式表，再定义内部样式表</p>
+      <p>在 html 文档中，先引入外部样式表，再定义内部样式表。HTML 页面的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>CSS 样式优先级<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> <span class="sh_symbol">/&gt;</span>      </li><li>        <span class="sh_symbol">&lt;</span>style type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span><span class="sh_symbol">&gt;</span>         </li><li>            h3 <span class="sh_cbracket">{</span>color<span class="sh_symbol">:</span>Red<span class="sh_symbol">;</span>font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>30pt<span class="sh_symbol">;</span><span class="sh_cbracket">}</span>           </li><li>        <span class="sh_symbol">&lt;/</span>style<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span>      </li><li>        <span class="sh_symbol">&lt;!--</span>样式优先级<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>h3 style<span class="sh_symbol">=</span><span class="sh_string">"color:Gray;"</span><span class="sh_symbol">&gt;</span>h3 text：使用何种样式？<span class="sh_symbol">&lt;/</span>h3<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CSS 样式优先级&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+#cold_bold        &lt;link type="text/css" rel="Stylesheet" href="demo.css" /&gt;      
+        &lt;style type="text/css"&gt;         
+            h3 {color:Red;font-size:30pt;}           
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;      
+        &lt;!--样式优先级--&gt;
+        &lt;h3 style="color:Gray;"&gt;h3 text：使用何种样式？&lt;/h3&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p>至此，使用了三种方式为 &lt;h3&gt; 元素定义 CSS 样式。&lt;h3&gt; 元素中的文本的最终显示效果如图－3所示。</p>
+      <div class="image">
+        <img src="./CASE_files/image003.png">
+        <p>图－3</p>
+      </div>
+      <p>由图－3可以看出，&lt;h3&gt; 元素中的文本的字体颜色为灰色，即内联样式表的优先级最高；而 &lt;h3&gt; 元素中的文本的字体大小为 30pt，似乎内部样式表的优先级高于外部样式表。</p>
+      <p class="number">步骤六：先定义内部样式表，再引入外部样式表</p>
+      <p>为了最终确定外部样式表和内部样式表的优先级，我们将代码略作修改：在 html 文档中，先定义内部样式表，再引入外部样式表，代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>CSS 样式优先级<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>style type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span><span class="sh_symbol">&gt;</span>         </li><li class="bold_code">            h3 <span class="sh_cbracket">{</span>color<span class="sh_symbol">:</span>Red<span class="sh_symbol">;</span>font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>30pt<span class="sh_symbol">;</span><span class="sh_cbracket">}</span>           </li><li class="bold_code">        <span class="sh_symbol">&lt;/</span>style<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> <span class="sh_symbol">/&gt;</span>      </li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span>      </li><li>        <span class="sh_symbol">&lt;!--</span>样式优先级<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>h3 style<span class="sh_symbol">=</span><span class="sh_string">"color:Gray;"</span><span class="sh_symbol">&gt;</span>h3 text：使用何种样式？<span class="sh_symbol">&lt;/</span>h3<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CSS 样式优先级&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+#cold_bold        &lt;style type="text/css"&gt;         
+#cold_bold            h3 {color:Red;font-size:30pt;}           
+#cold_bold        &lt;/style&gt;
+#cold_bold        &lt;link type="text/css" rel="Stylesheet" href="demo.css" /&gt;      
+    &lt;/head&gt;
+    &lt;body&gt;      
+        &lt;!--样式优先级--&gt;
+        &lt;h3 style="color:Gray;"&gt;h3 text：使用何种样式？&lt;/h3&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p>此时，页面的显示效果如图－4所示。</p>
+      <div class="image">
+        <img src="./CASE_files/image004.png">
+        <p>图－4</p>
+      </div>
+      <p>由图－4可以看出，&lt;h3&gt; 元素中文本的字体大小为 10pt，即外部样式表的优先级高于内部样式表。</p>
+      <p class="number">步骤七：结论</p>
+      <p>最后，&lt;h3&gt; 元素中的文本的背景色为银灰色，表示各种样式表中的样式会统一应用到元素中，而重复定义的样式则以优先级为准。</p>
+      <p>因此，对于CSS样式优先级，有如下结论：</p>
+      <p>1、可以为页面定义多重样式；</p>
+      <p>2、多重样式定义不冲突时，多个样式表中的样式可层叠为一个；</p>
+      <p>3、当多重样式定义冲突时，按照不同样式规则的优先级来应用样式；</p>
+      <p>4、内联样式的优先级最高，而内部样式表和外部样式表的优先级取决于样式定义的先后位置，后定义的样式会覆盖先定义的样式，即就近优先。</p>
+      <h3>2.3 完整代码</h3>
+      <p>02_demo.html文件中的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>CSS 样式优先级<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>style type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span><span class="sh_symbol">&gt;</span>         </li><li>            h3 <span class="sh_cbracket">{</span>color<span class="sh_symbol">:</span>Red<span class="sh_symbol">;</span>font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>30pt<span class="sh_symbol">;</span><span class="sh_cbracket">}</span> </li><li>        <span class="sh_symbol">&lt;/</span>style<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> <span class="sh_symbol">/&gt;</span>      </li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span>      </li><li>        <span class="sh_symbol">&lt;!--</span>样式优先级<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>h3 style<span class="sh_symbol">=</span><span class="sh_string">"color:Gray;"</span><span class="sh_symbol">&gt;</span>h3 text：使用何种样式？<span class="sh_symbol">&lt;/</span>h3<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CSS 样式优先级&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+        &lt;style type="text/css"&gt;         
+            h3 {color:Red;font-size:30pt;} 
+        &lt;/style&gt;
+        &lt;link type="text/css" rel="Stylesheet" href="demo.css" /&gt;      
+    &lt;/head&gt;
+    &lt;body&gt;      
+        &lt;!--样式优先级--&gt;
+        &lt;h3 style="color:Gray;"&gt;h3 text：使用何种样式？&lt;/h3&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <p>demo.css 文件中的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*样式优先级的示例*/</span></li><li>h3</li><li><span class="sh_cbracket">{</span></li><li>    color<span class="sh_symbol">:</span>Yellow<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span>Silver<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>10pt<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*样式优先级的示例*/
+h3
+{
+    color:Yellow;
+    background-color:Silver;
+    font-size:10pt;
+}
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <a name="case3">
+      </a>
+      <h2>3 CSS 选择器（1）</h2>
+      <h3>3.1 问题</h3>
+      <p>使用通用选择器为页面上的所有元素定义样式，并使用元素选择器为 &lt;h4&gt; 元素定义样式。页面效果如图－5所示。</p>
+      <div class="image">
+        <img src="./CASE_files/image005.png">
+        <p>图－5</p>
+      </div>
+      <p>图－5中各元素及其样式的详细描述如下：</p>
+      <ul class="list">
+        <li>第一行文本为页面上的元素，直接包含在 &lt;body&gt; 元素中，使用通用选择器定义文本颜色为灰色，字体大小为 9pt；
+</li>
+        <li>第二行文本为 &lt;h4&gt; 元素，使用元素选择器定义其文本为红色。
+</li>
+      </ul>
+      <h3>3.2 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：创建页面文件</p>
+      <p>首先创建一个纯文本文件，并修改名称为03_demo.html；然后使用文本编辑工具，打开所创建的文件。在此文件中，添加 HTML 代码，以创建一个标准结构的 HTML 文档，并引入外部 CSS 文件。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>CSS 选择器<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span>     </li><li>        <span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> <span class="sh_symbol">/&gt;</span>   </li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CSS 选择器&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;     
+        &lt;link type="text/css" rel="Stylesheet" href="demo.css" /&gt;   
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤二：使用通用选择器和元素选择器</p>
+      <p>为demo.css文件添加代码，使用通用选择器为定义文本样式（9pt 的灰色文本）；并使用元素选择器为 &lt;h4&gt; 定义文本颜色为红色。</p>
+      <p>CSS 文件中添加的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*通用选择器*/</span></li><li><span class="sh_symbol">*</span>  </li><li><span class="sh_cbracket">{</span></li><li>    color<span class="sh_symbol">:</span>Gray<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size <span class="sh_symbol">:</span> 9pt<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span>  </li><li><span class="sh_comment">/*元素选择器*/</span></li><li>h4  </li><li><span class="sh_cbracket">{</span></li><li>    color<span class="sh_symbol">:</span>Red<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*通用选择器*/
+*  
+{
+    color:Gray;
+    font-size : 9pt;
+}  
+/*元素选择器*/
+h4  
+{
+    color:Red;
+}
+</pre></div></div>
+      <p class="number">步骤三：测试选择器</p>
+      <p>然后修改 HTML 代码，在&lt;body&gt;元素中添加一行文本，并添加 &lt;h4&gt; 元素。HTML 页面的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>CSS 选择器<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span>     </li><li>        <span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> <span class="sh_symbol">/&gt;</span>   </li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;!--</span>选择器<span class="sh_number">1</span>：通用、元素<span class="sh_symbol">--&gt;</span></li><li class="bold_code">        页面上的文本</li><li class="bold_code">        <span class="sh_symbol">&lt;</span>h4<span class="sh_symbol">&gt;</span>h4：元素选择器<span class="sh_symbol">&lt;/</span>h4<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CSS 选择器&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;     
+        &lt;link type="text/css" rel="Stylesheet" href="demo.css" /&gt;   
+    &lt;/head&gt;
+    &lt;body&gt;
+#cold_bold        &lt;!--选择器1：通用、元素--&gt;
+#cold_bold        页面上的文本
+#cold_bold        &lt;h4&gt;h4：元素选择器&lt;/h4&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p>此时，页面的显示效果如图－5所示。</p>
+      <p>由此可见，通用选择器 *，可以可以与任何元素匹配，常用于设置一些默认样式，比如设置整个文档的文本的默认字体和大小。本案例中，页面上的普通文本以及 &lt;h4&gt; 元素中的文本的大小都为 9pt，即，使用了通用选择器中所定义的样式；但是，&lt;h4&gt; 元素中的文本为红色，是因为使用了元素选择器为 &lt;h4&gt; 元素重新定义了样式。</p>
+      <h3>3.3 完整代码</h3>
+      <p>03_demo.html文件中的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>CSS 选择器<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span>     </li><li>        <span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> <span class="sh_symbol">/&gt;</span>   </li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>选择器<span class="sh_number">1</span>：通用、元素<span class="sh_symbol">--&gt;</span></li><li>        页面上的文本</li><li>        <span class="sh_symbol">&lt;</span>h4<span class="sh_symbol">&gt;</span>h4：元素选择器<span class="sh_symbol">&lt;/</span>h4<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CSS 选择器&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;     
+        &lt;link type="text/css" rel="Stylesheet" href="demo.css" /&gt;   
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!--选择器1：通用、元素--&gt;
+        页面上的文本
+        &lt;h4&gt;h4：元素选择器&lt;/h4&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <p>demo.css 文件中的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*通用选择器*/</span></li><li><span class="sh_symbol">*</span>  </li><li><span class="sh_cbracket">{</span></li><li>    color<span class="sh_symbol">:</span>Gray<span class="sh_symbol">;</span></li><li>    font<span class="sh_symbol">-</span>size <span class="sh_symbol">:</span> 9pt<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span>  </li><li><span class="sh_comment">/*元素选择器*/</span></li><li>h4  </li><li><span class="sh_cbracket">{</span></li><li>    color<span class="sh_symbol">:</span>Red<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*通用选择器*/
+*  
+{
+    color:Gray;
+    font-size : 9pt;
+}  
+/*元素选择器*/
+h4  
+{
+    color:Red;
+}
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <a name="case4">
+      </a>
+      <h2>4 CSS 选择器（2）</h2>
+      <h3>4.1 问题</h3>
+      <p>使用类选择器为页面元素定义样式。页面效果如图－6所示。</p>
+      <div class="image">
+        <img src="./CASE_files/image006.png">
+        <p>图－6</p>
+      </div>
+      <p>图－6中各元素及其样式的详细描述如下：</p>
+      <ul class="list">
+        <li>第一行的 &lt;div&gt; 元素和第二行的 &lt;p&gt; 元素使用同一个样式类，样式为：绿色文本，1px宽度的灰色实线边框；
+</li>
+        <li>使用分类选择器为第三行的按钮定义样式：1px宽度的灰色实线边框，50px宽度；并为文本框定义 1px 宽度的黑色实线边框，150px宽度；
+</li>
+        <li>段落“警告”文本使用样式类，定义为红色文本；
+</li>
+        <li>段落“重要”文本使用样式类，定义为文本加粗显示；
+</li>
+        <li>段落“哈哈“文本使用前两种样式类，定义为红色加粗文本。
+</li>
+      </ul>
+      <h3>4.2 方案</h3>
+      <p>由图－6可以看出，&lt;div&gt; 和 &lt;p&gt; 使用相同的样式类，因此可以使用类选择器；按钮和文本框都是 &lt;input&gt; 元素，但是拥有不同的样式，因此可以使用分类选择器定义。</p>
+      <p>另，可以分别为“警告”和“重要”文本定义样式类，然后对于“哈哈”文本使用多类选择器，同时使用两种样式。</p>
+      <h3>4.3 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：使用类选择器定义样式</p>
+      <p>打开 demo.css 文件，为其添加代码，分别定义所需要的样式类。所添加的 CSS 代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*类选择器*/</span></li><li><span class="sh_symbol">.</span>style  </li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">:</span>1px solid gray<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span>Green<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>btn </li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">:</span>1px solid gray<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>50px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>txt  </li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">:</span>1px solid black<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>150px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_symbol">.</span>important  </li><li><span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;   font<span class="sh_symbol">-</span>weight <span class="sh_symbol">:</span> bold<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_symbol">.</span>warning  </li><li><span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;    color <span class="sh_symbol">:</span> red<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*类选择器*/
+.style  
+{
+    border:1px solid gray;
+    color:Green;
+}
+input.btn 
+{
+    border:1px solid gray;
+    width:50px;
+}
+input.txt  
+{
+    border:1px solid black;
+    width:150px;
+}
+.important  
+{
+	   font-weight : bold;
+}
+.warning  
+{
+	    color : red;
+}
+</pre></div></div>
+      <p>其中，&lt;div&gt; 和 &lt;p&gt; 使用相同的样式类 style；为了区分 &lt;input&gt; 元素中的按钮和文本框，需要使用分类选择器定义 input.btn 和 input.txt；并分别定义样式类 important 和 warning。</p>
+      <p class="number">步骤二：使用样式类</p>
+      <p>打开 03_demo.html 文件，为其添加代码，分别使用上一步中所定义的样式类。修改后的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>CSS 选择器<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> <span class="sh_symbol">/&gt;</span>   </li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;!--</span>选择器<span class="sh_number">2</span>：类、分类、多类<span class="sh_symbol">--&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"style"</span><span class="sh_symbol">&gt;</span>div：类选择器<span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>p <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"style"</span><span class="sh_symbol">&gt;</span>p：类选择器<span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"button"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"btn"</span> value<span class="sh_symbol">=</span><span class="sh_string">"按钮"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"txt"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>p <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"warning"</span><span class="sh_symbol">&gt;</span>警告<span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>p <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"important"</span><span class="sh_symbol">&gt;</span>重要<span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>p <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"important warning"</span><span class="sh_symbol">&gt;</span>哈哈<span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CSS 选择器&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+        &lt;link type="text/css" rel="Stylesheet" href="demo.css" /&gt;   
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!--其他代码，略--&gt;
+#cold_bold        &lt;!--选择器2：类、分类、多类--&gt;
+#cold_bold        &lt;div class="style"&gt;div：类选择器&lt;/div&gt;
+#cold_bold        &lt;p class="style"&gt;p：类选择器&lt;/p&gt;
+#cold_bold        &lt;input type="button" class="btn" value="按钮" /&gt;
+#cold_bold        &lt;input type="text" class="txt" /&gt;
+#cold_bold        &lt;p class="warning"&gt;警告&lt;/p&gt;
+#cold_bold        &lt;p class="important"&gt;重要&lt;/p&gt;
+#cold_bold        &lt;p class="important warning"&gt;哈哈&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p>此时，页面的显示效果如图－６所示。</p>
+      <h3>4.4 完整代码</h3>
+      <p>03_demo.html文件中的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>CSS 选择器<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> <span class="sh_symbol">/&gt;</span>   </li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>选择器<span class="sh_number">2</span>：类、分类、多类<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"style"</span><span class="sh_symbol">&gt;</span>div：类选择器<span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>p <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"style"</span><span class="sh_symbol">&gt;</span>p：类选择器<span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"button"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"btn"</span> value<span class="sh_symbol">=</span><span class="sh_string">"按钮"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"txt"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>p <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"warning"</span><span class="sh_symbol">&gt;</span>警告<span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>p <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"important"</span><span class="sh_symbol">&gt;</span>重要<span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>p <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"important warning"</span><span class="sh_symbol">&gt;</span>哈哈<span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CSS 选择器&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+        &lt;link type="text/css" rel="Stylesheet" href="demo.css" /&gt;   
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!--其他代码，略--&gt;
+        &lt;!--选择器2：类、分类、多类--&gt;
+        &lt;div class="style"&gt;div：类选择器&lt;/div&gt;
+        &lt;p class="style"&gt;p：类选择器&lt;/p&gt;
+        &lt;input type="button" class="btn" value="按钮" /&gt;
+        &lt;input type="text" class="txt" /&gt;
+        &lt;p class="warning"&gt;警告&lt;/p&gt;
+        &lt;p class="important"&gt;重要&lt;/p&gt;
+        &lt;p class="important warning"&gt;哈哈&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <p>demo.css 文件中的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*其他代码，略*/</span></li><li><span class="sh_comment">/*类选择器*/</span></li><li><span class="sh_symbol">.</span>style  </li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">:</span>1px solid gray<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span>Green<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>btn </li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">:</span>1px solid gray<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>50px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">.</span>txt  </li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">:</span>1px solid black<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>150px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_symbol">.</span>important  </li><li><span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;   font<span class="sh_symbol">-</span>weight <span class="sh_symbol">:</span> bold<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_symbol">.</span>warning  </li><li><span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;    color <span class="sh_symbol">:</span> red<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*其他代码，略*/
+/*类选择器*/
+.style  
+{
+    border:1px solid gray;
+    color:Green;
+}
+input.btn 
+{
+    border:1px solid gray;
+    width:50px;
+}
+input.txt  
+{
+    border:1px solid black;
+    width:150px;
+}
+.important  
+{
+	   font-weight : bold;
+}
+.warning  
+{
+	    color : red;
+}
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <a name="case5">
+      </a>
+      <h2>5 CSS 选择器（３）</h2>
+      <h3>5.1 问题</h3>
+      <p>使用ｉｄ选择器和群组选择器为页面元素定义样式。页面效果如图－７所示。</p>
+      <div class="image">
+        <img src="./CASE_files/image007.png">
+        <p>图－７</p>
+      </div>
+      <p>图－７中各元素及其样式的详细描述如下：</p>
+      <ul class="list">
+        <li>第一行的 &lt;ｐ&gt; 元素使用 id 选择器为其定义样式：30pt文本，银灰色背景；
+</li>
+        <li>使用群组选择器为第二行的 &lt;label&gt; 和第三行的 &lt;h5&gt; 元素定义样式：1px宽度的黑色实线边框， 15pt文本。
+</li>
+      </ul>
+      <h3>5.2 方案</h3>
+      <p>由图－7可以看出，对于第一行文本，如果需要使用 id 选择器，则首先需要为元素定义 id 属性；对于第二和第三行文本，样式相同时，除了可以使用类选择器，还可以直接使用群组选择器进行定义。</p>
+      <h3>5.3 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：使用类选择器定义样式</p>
+      <p>打开 demo.css 文件，为其添加代码，分别定义所需要的样式类。所添加的 CSS 代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/* id 选择器*/</span></li><li>#title  </li><li><span class="sh_cbracket">{</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>30pt<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span>Silver<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*群组选择器*/</span></li><li>label<span class="sh_symbol">,</span>h5 </li><li><span class="sh_cbracket">{</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>15pt<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span>1px solid black<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/* id 选择器*/
+#title  
+{
+    font-size:30pt;
+    background-color:Silver;
+}
+/*群组选择器*/
+label,h5 
+{
+    font-size:15pt;
+    border:1px solid black;
+}
+</pre></div></div>
+      <p class="number">步骤二：使用样式类</p>
+      <p>打开 03_demo.html 文件，为其添加代码，分别使用上一步中所定义的样式。修改后的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>CSS 选择器<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> <span class="sh_symbol">/&gt;</span>   </li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;!--</span>选择器<span class="sh_number">3</span>：id、群组<span class="sh_symbol">--&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>p id<span class="sh_symbol">=</span><span class="sh_string">"title"</span><span class="sh_symbol">&gt;</span>id 选择器<span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>label<span class="sh_symbol">&gt;</span>label 文本<span class="sh_symbol">&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>h5<span class="sh_symbol">&gt;</span>h5 文本<span class="sh_symbol">&lt;/</span>h5<span class="sh_symbol">&gt;</span>       </li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CSS 选择器&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+        &lt;link type="text/css" rel="Stylesheet" href="demo.css" /&gt;   
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!--其他代码，略--&gt;
+#cold_bold        &lt;!--选择器3：id、群组--&gt;
+#cold_bold        &lt;p id="title"&gt;id 选择器&lt;/p&gt;
+#cold_bold        &lt;label&gt;label 文本&lt;/label&gt;
+#cold_bold        &lt;h5&gt;h5 文本&lt;/h5&gt;       
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p>此时，页面的显示效果如图－7所示。</p>
+      <h3>5.4 完整代码</h3>
+      <p>03_demo.html文件中的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>CSS 选择器<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> <span class="sh_symbol">/&gt;</span>   </li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>选择器<span class="sh_number">3</span>：id、群组<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>p id<span class="sh_symbol">=</span><span class="sh_string">"title"</span><span class="sh_symbol">&gt;</span>id 选择器<span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>label<span class="sh_symbol">&gt;</span>label 文本<span class="sh_symbol">&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>h5<span class="sh_symbol">&gt;</span>h5 文本<span class="sh_symbol">&lt;/</span>h5<span class="sh_symbol">&gt;</span>       </li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CSS 选择器&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+        &lt;link type="text/css" rel="Stylesheet" href="demo.css" /&gt;   
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!--其他代码，略--&gt;
+        &lt;!--选择器3：id、群组--&gt;
+        &lt;p id="title"&gt;id 选择器&lt;/p&gt;
+        &lt;label&gt;label 文本&lt;/label&gt;
+        &lt;h5&gt;h5 文本&lt;/h5&gt;       
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <p>demo.css 文件中的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*其他代码，略*/</span></li><li><span class="sh_comment">/* id 选择器*/</span></li><li>#title  </li><li><span class="sh_cbracket">{</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>30pt<span class="sh_symbol">;</span></li><li>    background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span>Silver<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*群组选择器*/</span></li><li>label<span class="sh_symbol">,</span>h5 </li><li><span class="sh_cbracket">{</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>15pt<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span>1px solid black<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*其他代码，略*/
+/* id 选择器*/
+#title  
+{
+    font-size:30pt;
+    background-color:Silver;
+}
+/*群组选择器*/
+label,h5 
+{
+    font-size:15pt;
+    border:1px solid black;
+}
+</pre></div></div>
+      <a name="case6">
+      </a>
+      <h2>6 CSS 选择器（4）</h2>
+      <h3>6.1 问题</h3>
+      <p>有 HTML 代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;</span>div<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>div 中的 span<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">&lt;</span>p<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;div 中的 p</li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>div 中的 p 中的 span<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;div&gt;
+		&lt;span&gt;div 中的 span&lt;/span&gt;
+		&lt;p&gt;
+			div 中的 p
+			&lt;span&gt;div 中的 p 中的 span&lt;/span&gt;
+		&lt;/p&gt;
+&lt;/div&gt;
+</pre></div></div>
+      <p>使用后代和子代选择器为上述代码中的元素定义样式，实现如图－8所示的页面效果。</p>
+      <div class="image">
+        <img src="./CASE_files/image008.png">
+        <p>图－8</p>
+      </div>
+      <p>图－8中各元素及其样式的详细描述如下：</p>
+      <ul class="list">
+        <li>文本“div中的span“为1px宽度的红色实线边框，25pt 的绿色文本；
+</li>
+        <li>文本“div 中的 p 中的 span ”也拥有1px宽度的红色实线边框，文本为15pt，且为红色。
+</li>
+      </ul>
+      <h3>6.2 方案</h3>
+      <p>结合问题中的 HTML 代码和图－8可以看出，&lt;div&gt; 元素中的两个 &lt;span&gt;，样式不同，且第一个 &lt;span&gt; 元素属于子代元素。</p>
+      <p>因此，可以先使用后代选择器定义通用的样式：1px宽度的红色实线边框，文本为15pt，且为红色；再使用子代选择器为第一个 &lt;span&gt; 元素单独定义其文本大小和颜色。</p>
+      <h3>6.3 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：使用后代选择器定义样式</p>
+      <p>打开 demo.css 文件，为其添加代码，分别定义所需要的样式。所添加的 CSS 代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*后代选择器*/</span></li><li>div span</li><li><span class="sh_cbracket">{</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>15pt<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span>Red<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span>1px solid red<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*子代选择器*/</span></li><li>div<span class="sh_symbol">&gt;</span>span</li><li><span class="sh_cbracket">{</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>25pt<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span>green<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*后代选择器*/
+div span
+{
+    font-size:15pt;
+    color:Red;
+    border:1px solid red;
+}
+/*子代选择器*/
+div&gt;span
+{
+    font-size:25pt;
+    color:green;
+}
+</pre></div></div>
+      <p class="number">步骤二：使用样式类</p>
+      <p>打开 03_demo.html 文件，为其添加代码，分别使用上一步中所定义的样式。修改后的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>CSS 选择器<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> <span class="sh_symbol">/&gt;</span>   </li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span>        </li><li>        <span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;!--</span>选择器<span class="sh_number">4</span>：子代、后代<span class="sh_symbol">--&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>div<span class="sh_symbol">&gt;</span></li><li class="bold_code">&nbsp;&nbsp;&nbsp;&nbsp;        <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>div 中的 span<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li class="bold_code">&nbsp;&nbsp;&nbsp;&nbsp;        <span class="sh_symbol">&lt;</span>p<span class="sh_symbol">&gt;</span></li><li class="bold_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        div 中的 p</li><li class="bold_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>div 中的 p 中的 span<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li class="bold_code">&nbsp;&nbsp;&nbsp;&nbsp;        <span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CSS 选择器&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+        &lt;link type="text/css" rel="Stylesheet" href="demo.css" /&gt;   
+    &lt;/head&gt;
+    &lt;body&gt;        
+        &lt;!--其他代码，略--&gt;
+#cold_bold        &lt;!--选择器4：子代、后代--&gt;
+#cold_bold        &lt;div&gt;
+#cold_bold	        &lt;span&gt;div 中的 span&lt;/span&gt;
+#cold_bold	        &lt;p&gt;
+#cold_bold		        div 中的 p
+#cold_bold		        &lt;span&gt;div 中的 p 中的 span&lt;/span&gt;
+#cold_bold	        &lt;/p&gt;
+#cold_bold        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p>此时，页面的显示效果如图－8所示。</p>
+      <h3>6.4 完整代码</h3>
+      <p>03_demo.html文件中的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>CSS 选择器<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> <span class="sh_symbol">/&gt;</span>   </li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span>        </li><li>        <span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>选择器<span class="sh_number">4</span>：子代、后代<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>div<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;        <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>div 中的 span<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;        <span class="sh_symbol">&lt;</span>p<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        div 中的 p</li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <span class="sh_symbol">&lt;</span>span<span class="sh_symbol">&gt;</span>div 中的 p 中的 span<span class="sh_symbol">&lt;/</span>span<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;        <span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CSS 选择器&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+        &lt;link type="text/css" rel="Stylesheet" href="demo.css" /&gt;   
+    &lt;/head&gt;
+    &lt;body&gt;        
+        &lt;!--其他代码，略--&gt;
+        &lt;!--选择器4：子代、后代--&gt;
+        &lt;div&gt;
+	        &lt;span&gt;div 中的 span&lt;/span&gt;
+	        &lt;p&gt;
+		        div 中的 p
+		        &lt;span&gt;div 中的 p 中的 span&lt;/span&gt;
+	        &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <p>demo.css 文件中的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*其他代码，略*/</span></li><li><span class="sh_comment">/*后代选择器*/</span></li><li>div span</li><li><span class="sh_cbracket">{</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>15pt<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span>Red<span class="sh_symbol">;</span></li><li>    border<span class="sh_symbol">:</span>1px solid red<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_comment">/*子代选择器*/</span></li><li>div<span class="sh_symbol">&gt;</span>span</li><li><span class="sh_cbracket">{</span></li><li>    font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>25pt<span class="sh_symbol">;</span></li><li>    color<span class="sh_symbol">:</span>green<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*其他代码，略*/
+/*后代选择器*/
+div span
+{
+    font-size:15pt;
+    color:Red;
+    border:1px solid red;
+}
+/*子代选择器*/
+div&gt;span
+{
+    font-size:25pt;
+    color:green;
+}
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <a name="case7">
+      </a>
+      <h2>7 CSS 选择器（5）</h2>
+      <h3>7.1 问题</h3>
+      <p>使用伪类选择器为页面元素定义样式，实现如图－9所示的页面效果。</p>
+      <div class="image">
+        <img src="./CASE_files/image009.png">
+        <p>图－9</p>
+      </div>
+      <p>图－9中，访问过的链接（比如第一个链接），为15pt的粉色文本；没有访问过的链接（比如第二个链接），为15pt的黑色文本；当鼠标移入链接时，文本为 20pt；当鼠标按下激活链接时，文本为红色。效果如图－10所示：</p>
+      <div class="image">
+        <img src="./CASE_files/image010.png">
+        <p>图－10</p>
+      </div>
+      <p>当激活文本框时，其样式为：11pt 的黑色文本，且文本加粗显示。效果如图－11所示。</p>
+      <div class="image">
+        <img src="./CASE_files/image011.png">
+        <p>图－11</p>
+      </div>
+      <h3>7.2 方案</h3>
+      <p>由问题描述可以看出，需要为元素的不同状态定义样式，因此需要使用伪类选择器。其中，链接伪类有：</p>
+      <ul class="list">
+        <li>: link ，适用于尚未访问的链接
+</li>
+        <li>: visited ，适用于访问过的链接
+</li>
+      </ul>
+      <p>动态伪类有：</p>
+      <ul class="list">
+        <li>:hover，适用于鼠标悬停在 HTML 元素时
+</li>
+        <li>:active，适用于 HTML 元素被激活时
+</li>
+        <li>:focus，适用于 HTML 元素获取焦点时
+</li>
+      </ul>
+      <h3>7.3 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：使用后代选择器定义样式</p>
+      <p>打开 demo.css 文件，为其添加代码，分别定义所需要的样式。所添加的 CSS 代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*伪类*/</span></li><li>a<span class="sh_symbol">:</span>link </li><li><span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;color<span class="sh_symbol">:</span> black<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>15pt<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>a<span class="sh_symbol">:</span>visited  </li><li><span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;color<span class="sh_symbol">:</span> pink<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>15pt<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>a<span class="sh_symbol">:</span>hover  </li><li><span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;font<span class="sh_symbol">-</span>size <span class="sh_symbol">:</span> 20pt<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>a<span class="sh_symbol">:</span>active  </li><li><span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;color <span class="sh_symbol">:</span> red<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">:</span>focus </li><li><span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;color <span class="sh_symbol">:</span> black<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;font<span class="sh_symbol">-</span>weight<span class="sh_symbol">:</span>bold<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 11pt<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*伪类*/
+a:link 
+{
+	color: black;
+	font-size:15pt;
+}
+a:visited  
+{
+	color: pink;
+	font-size:15pt;
+}
+a:hover  
+{
+	font-size : 20pt;
+}
+a:active  
+{
+	color : red;
+}
+input:focus 
+{
+	color : black;
+	font-weight:bold;
+	font-size: 11pt;
+}
+</pre></div></div>
+      <p class="number">步骤二：使用样式类</p>
+      <p>打开 03_demo.html 文件，为其添加代码，定义 HTML 元素。修改后的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>CSS 选择器<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> <span class="sh_symbol">/&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;!--</span>选择器<span class="sh_number">5</span>：伪类<span class="sh_symbol">--&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"http://tmooc.tarena.com.cn"</span><span class="sh_symbol">&gt;</span>访问过的链接<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"unknown.html"</span><span class="sh_symbol">&gt;</span>没有的链接（未访问的）<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> value<span class="sh_symbol">=</span><span class="sh_string">"用户名"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> value<span class="sh_symbol">=</span><span class="sh_string">"地址"</span> <span class="sh_symbol">/&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CSS 选择器&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+        &lt;link type="text/css" rel="Stylesheet" href="demo.css" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!--其他代码，略--&gt;
+#cold_bold        &lt;!--选择器5：伪类--&gt;
+#cold_bold        &lt;a href="http://tmooc.tarena.com.cn"&gt;访问过的链接&lt;/a&gt;
+#cold_bold        &lt;br /&gt;
+#cold_bold        &lt;a href="unknown.html"&gt;没有的链接（未访问的）&lt;/a&gt;
+#cold_bold        &lt;br /&gt;&lt;br /&gt;
+#cold_bold        &lt;input type="text" value="用户名" /&gt;
+#cold_bold        &lt;br /&gt;&lt;br /&gt;
+#cold_bold        &lt;input type="text" value="地址" /&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <h3>7.4 完整代码</h3>
+      <p>03_demo.html文件中的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>CSS 选择器<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>link type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span> rel<span class="sh_symbol">=</span><span class="sh_string">"Stylesheet"</span> href<span class="sh_symbol">=</span><span class="sh_string">"demo.css"</span> <span class="sh_symbol">/&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;!--</span>选择器<span class="sh_number">5</span>：伪类<span class="sh_symbol">--&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"http://tmooc.tarena.com.cn"</span><span class="sh_symbol">&gt;</span>访问过的链接<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"unknown.html"</span><span class="sh_symbol">&gt;</span>没有的链接（未访问的）<span class="sh_symbol">&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> value<span class="sh_symbol">=</span><span class="sh_string">"用户名"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> value<span class="sh_symbol">=</span><span class="sh_string">"地址"</span> <span class="sh_symbol">/&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CSS 选择器&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+        &lt;link type="text/css" rel="Stylesheet" href="demo.css" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!--其他代码，略--&gt;
+        &lt;!--选择器5：伪类--&gt;
+        &lt;a href="http://tmooc.tarena.com.cn"&gt;访问过的链接&lt;/a&gt;
+        &lt;br /&gt;
+        &lt;a href="unknown.html"&gt;没有的链接（未访问的）&lt;/a&gt;
+        &lt;br /&gt;&lt;br /&gt;
+        &lt;input type="text" value="用户名" /&gt;
+        &lt;br /&gt;&lt;br /&gt;
+        &lt;input type="text" value="地址" /&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <p>demo.css 文件中的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_comment">/*其他代码，略*/</span></li><li><span class="sh_comment">/*伪类*/</span></li><li>a<span class="sh_symbol">:</span>link </li><li><span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;color<span class="sh_symbol">:</span> black<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>15pt<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>a<span class="sh_symbol">:</span>visited  </li><li><span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;color<span class="sh_symbol">:</span> pink<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span>15pt<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>a<span class="sh_symbol">:</span>hover  </li><li><span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;font<span class="sh_symbol">-</span>size <span class="sh_symbol">:</span> 20pt<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>a<span class="sh_symbol">:</span>active  </li><li><span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;color <span class="sh_symbol">:</span> red<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>input<span class="sh_symbol">:</span>focus </li><li><span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;color <span class="sh_symbol">:</span> black<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;font<span class="sh_symbol">-</span>weight<span class="sh_symbol">:</span>bold<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;font<span class="sh_symbol">-</span>size<span class="sh_symbol">:</span> 11pt<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">/*其他代码，略*/
+/*伪类*/
+a:link 
+{
+	color: black;
+	font-size:15pt;
+}
+a:visited  
+{
+	color: pink;
+	font-size:15pt;
+}
+a:hover  
+{
+	font-size : 20pt;
+}
+a:active  
+{
+	color : red;
+}
+input:focus 
+{
+	color : black;
+	font-weight:bold;
+	font-size: 11pt;
+}
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <a name="case8">
+      </a>
+      <h2>8 尺寸属性的使用</h2>
+      <h3>8.1 问题</h3>
+      <p>创建产品展示的页面，页面效果如图－12所示。</p>
+      <div class="image">
+        <img src="./CASE_files/image012.png">
+        <p>图－12</p>
+      </div>
+      <p>图－12中的样式描述如下：</p>
+      <ul class="list">
+        <li>包含框（外层的展示框）：高150px，宽500px，有水平方向的滚动条;
+</li>
+        <li>所有图片所在的框：总宽度800px；
+</li>
+        <li>图片宽度：100px。
+</li>
+      </ul>
+      <h3>8.2 方案</h3>
+      <p>分析图－12所示的页面，可以发现，实现此案例时，首先使用 &lt;div&gt; 元素定义最外层的包含框，并为其定义宽度、高度、边框和横向滚动条；然后还需要使用块级元素定义包含所有图片的包含框，且此包含框的宽度要大于外层的包含框，从而实现横向滚动的效果。</p>
+      <h3>8.3 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：创建 HTML 文档</p>
+      <p>创建文件 04_demo.html，并为其定义内部样式表，HTML页面的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>尺寸<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span>   </li><li>        <span class="sh_symbol">&lt;</span>style type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span><span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>style<span class="sh_symbol">&gt;</span>  </li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;尺寸&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;   
+        &lt;style type="text/css"&gt;
+        &lt;/style&gt;  
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤二：定义页面元素</p>
+      <p>在HTML文件的 &lt;body&gt; 元素中添加元素，实现页面内容的定义。</p>
+      <p>此案例中，用 &lt;div&gt; 元素表示最外层的包含框，用 &lt;p&gt; 元素表示里层的包含框。</p>
+      <p>因为需要为最外层的包含框定义样式，因此可以对 &lt;div&gt; 元素使用id选择器或者类选择器。本案例中，使用类选择器。</p>
+      <p>HTML 页面的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>尺寸<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span>   </li><li>        <span class="sh_symbol">&lt;</span>style type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span><span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>style<span class="sh_symbol">&gt;</span>  </li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"image_list"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;</span>p<span class="sh_symbol">&gt;</span></li><li class="bold_code">                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_001.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_002.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_003.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_004.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_005.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_006.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_007.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">            <span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li class="bold_code">        <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;尺寸&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;   
+        &lt;style type="text/css"&gt;
+        &lt;/style&gt;  
+    &lt;/head&gt;
+    &lt;body&gt;
+#cold_bold        &lt;div class="image_list"&gt;
+#cold_bold            &lt;p&gt;
+#cold_bold                &lt;img src="images/p_small_001.jpg" /&gt;
+#cold_bold                &lt;img src="images/p_small_002.jpg" /&gt;
+#cold_bold                &lt;img src="images/p_small_003.jpg" /&gt;
+#cold_bold                &lt;img src="images/p_small_004.jpg" /&gt;
+#cold_bold                &lt;img src="images/p_small_005.jpg" /&gt;
+#cold_bold                &lt;img src="images/p_small_006.jpg" /&gt;
+#cold_bold                &lt;img src="images/p_small_007.jpg" /&gt;
+#cold_bold            &lt;/p&gt;
+#cold_bold        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤三：为页面定义样式</p>
+      <p>首先为外层 &lt;div&gt; 元素定义样式，再为 &lt;p&gt; 元素和 &lt;img&gt; 元素定义样式。添加的CSS 代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li>div<span class="sh_symbol">.</span>image_list</li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">:</span>1px solid black<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>500px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span>150px<span class="sh_symbol">;</span></li><li>    overflow<span class="sh_symbol">-</span>x<span class="sh_symbol">:</span>auto<span class="sh_symbol">;</span></li><li>    overflow<span class="sh_symbol">-</span>y<span class="sh_symbol">:</span>hidden<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li>div<span class="sh_symbol">.</span>image_list p</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>800px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span>100px<span class="sh_symbol">;</span>     </li><li><span class="sh_cbracket">}</span></li><li>div<span class="sh_symbol">.</span>image_list p img</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>100px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">div.image_list
+{
+    border:1px solid black;
+    width:500px;
+    height:150px;
+    overflow-x:auto;
+    overflow-y:hidden;
+}
+div.image_list p
+{
+    width:800px;
+    height:100px;     
+}
+div.image_list p img
+{
+    width:100px;
+}
+</pre></div></div>
+      <h3>8.4 完整代码</h3>
+      <p>04_demo.html 的文件的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>尺寸<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>style type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span><span class="sh_symbol">&gt;</span></li><li>            div<span class="sh_symbol">.</span>image_list</li><li>            <span class="sh_cbracket">{</span></li><li>                border<span class="sh_symbol">:</span>1px solid black<span class="sh_symbol">;</span></li><li>                width<span class="sh_symbol">:</span>500px<span class="sh_symbol">;</span></li><li>                height<span class="sh_symbol">:</span>150px<span class="sh_symbol">;</span></li><li>                overflow<span class="sh_symbol">-</span>x<span class="sh_symbol">:</span>auto<span class="sh_symbol">;</span></li><li>                overflow<span class="sh_symbol">-</span>y<span class="sh_symbol">:</span>hidden<span class="sh_symbol">;</span></li><li>            <span class="sh_cbracket">}</span></li><li>            div<span class="sh_symbol">.</span>image_list p</li><li>            <span class="sh_cbracket">{</span></li><li>                width<span class="sh_symbol">:</span>800px<span class="sh_symbol">;</span></li><li>                height<span class="sh_symbol">:</span>100px<span class="sh_symbol">;</span>     </li><li>            <span class="sh_cbracket">}</span></li><li>            div<span class="sh_symbol">.</span>image_list p img</li><li>            <span class="sh_cbracket">{</span></li><li>                width<span class="sh_symbol">:</span>100px<span class="sh_symbol">;</span></li><li>            <span class="sh_cbracket">}</span></li><li>        <span class="sh_symbol">&lt;/</span>style<span class="sh_symbol">&gt;</span>  </li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"image_list"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>p<span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_001.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_002.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_003.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_004.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_005.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_006.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_007.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;尺寸&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+        &lt;style type="text/css"&gt;
+            div.image_list
+            {
+                border:1px solid black;
+                width:500px;
+                height:150px;
+                overflow-x:auto;
+                overflow-y:hidden;
+            }
+            div.image_list p
+            {
+                width:800px;
+                height:100px;     
+            }
+            div.image_list p img
+            {
+                width:100px;
+            }
+        &lt;/style&gt;  
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class="image_list"&gt;
+            &lt;p&gt;
+                &lt;img src="images/p_small_001.jpg" /&gt;
+                &lt;img src="images/p_small_002.jpg" /&gt;
+                &lt;img src="images/p_small_003.jpg" /&gt;
+                &lt;img src="images/p_small_004.jpg" /&gt;
+                &lt;img src="images/p_small_005.jpg" /&gt;
+                &lt;img src="images/p_small_006.jpg" /&gt;
+                &lt;img src="images/p_small_007.jpg" /&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <a name="case9">
+      </a>
+      <h2>9 边框属性的使用</h2>
+      <h3>9.1 问题</h3>
+      <p>修改上一个案例中所创建的页面，为当前选中的图片设置样式，且鼠标移入某图片时，为其设置样式。页面效果如图－13所示。</p>
+      <div class="image">
+        <img src="./CASE_files/image013.png">
+        <p>图－13</p>
+      </div>
+      <p>图－13中的样式描述如下：</p>
+      <ul class="list">
+        <li>图片的边框需要倒圆；
+</li>
+        <li>图片的边框颜色为 #ccc;
+</li>
+        <li>当前图片（如图中第二个图片）的边框颜色为 #e4393c;
+</li>
+        <li>鼠标悬停图片上时（如图中第三个图片），其阴影颜色为 #ddd。
+</li>
+      </ul>
+      <h3>9.2 方案</h3>
+      <p>分析图－13所示的页面，可以发现，实现此案例时，首先需要为所有的图片定义边框倒角；然后需要使用伪类选择器，为所有的图片定义边框阴影；还定义一个样式类，专用于当前选中图片的样式。</p>
+      <h3>9.3 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：定义 CSS 样式</p>
+      <p>打开文件 04_demo.html，在内部样式表中添加样式定义，修改后的 CSS 代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">.</span>image_list</li><li><span class="sh_cbracket">{</span></li><li>    border<span class="sh_symbol">:</span>1px solid black<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>500px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span>150px<span class="sh_symbol">;</span></li><li>    overflow<span class="sh_symbol">-</span>x<span class="sh_symbol">:</span>auto<span class="sh_symbol">;</span></li><li>    overflow<span class="sh_symbol">-</span>y<span class="sh_symbol">:</span>hidden<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_symbol">.</span>image_list p</li><li><span class="sh_cbracket">{</span></li><li>    width<span class="sh_symbol">:</span>800px<span class="sh_symbol">;</span></li><li>    height<span class="sh_symbol">:</span>100px<span class="sh_symbol">;</span>     </li><li><span class="sh_cbracket">}</span></li><li><span class="sh_symbol">.</span>image_list img</li><li><span class="sh_cbracket">{</span></li><li class="bold_code">    border<span class="sh_symbol">:</span>1px solid #ccc<span class="sh_symbol">;</span></li><li class="bold_code">    border<span class="sh_symbol">-</span>radius<span class="sh_symbol">:</span>5px<span class="sh_symbol">;</span></li><li>    width<span class="sh_symbol">:</span>100px<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span>      </li><li class="bold_code">img<span class="sh_symbol">:</span>hover</li><li class="bold_code"><span class="sh_cbracket">{</span></li><li class="bold_code">    box<span class="sh_symbol">-</span>shadow<span class="sh_symbol">:</span> 3px 3px #ddd<span class="sh_symbol">;</span></li><li class="bold_code"><span class="sh_cbracket">}</span></li><li class="bold_code">img<span class="sh_symbol">.</span>current</li><li class="bold_code"><span class="sh_cbracket">{</span></li><li class="bold_code">    border<span class="sh_symbol">:</span>2px solid #e4393c<span class="sh_symbol">;</span></li><li class="bold_code"><span class="sh_cbracket">}</span>  </li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">.image_list
+{
+    border:1px solid black;
+    width:500px;
+    height:150px;
+    overflow-x:auto;
+    overflow-y:hidden;
+}
+.image_list p
+{
+    width:800px;
+    height:100px;     
+}
+.image_list img
+{
+#cold_bold    border:1px solid #ccc;
+#cold_bold    border-radius:5px;
+    width:100px;
+}      
+#cold_boldimg:hover
+#cold_bold{
+#cold_bold    box-shadow: 3px 3px #ddd;
+#cold_bold}
+#cold_boldimg.current
+#cold_bold{
+#cold_bold    border:2px solid #e4393c;
+#cold_bold}  
+</pre></div></div>
+      <p class="number">步骤二：为页面元素添加样式类</p>
+      <p>为第二个图片声明样式类属性。修改后的 HTML 页面的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"image_list"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>p<span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_001.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">                <span class="sh_symbol">&lt;</span>img <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"current"</span> src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_002.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_003.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_004.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_005.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_006.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_007.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!--其他代码，略--&gt;
+    &lt;body&gt;
+        &lt;div class="image_list"&gt;
+            &lt;p&gt;
+                &lt;img src="images/p_small_001.jpg" /&gt;
+#cold_bold                &lt;img class="current" src="images/p_small_002.jpg" /&gt;
+                &lt;img src="images/p_small_003.jpg" /&gt;
+                &lt;img src="images/p_small_004.jpg" /&gt;
+                &lt;img src="images/p_small_005.jpg" /&gt;
+                &lt;img src="images/p_small_006.jpg" /&gt;
+                &lt;img src="images/p_small_007.jpg" /&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <h3>9.4 完整代码</h3>
+      <p>04_demo.html 的文件的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/CSS3BASIC/DAY01/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>边框<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span>   </li><li>        <span class="sh_symbol">&lt;</span>style type<span class="sh_symbol">=</span><span class="sh_string">"text/css"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">.</span>image_list</li><li>            <span class="sh_cbracket">{</span></li><li>                border<span class="sh_symbol">:</span>1px solid black<span class="sh_symbol">;</span></li><li>                width<span class="sh_symbol">:</span>500px<span class="sh_symbol">;</span></li><li>                height<span class="sh_symbol">:</span>150px<span class="sh_symbol">;</span></li><li>                overflow<span class="sh_symbol">-</span>x<span class="sh_symbol">:</span>auto<span class="sh_symbol">;</span></li><li>                overflow<span class="sh_symbol">-</span>y<span class="sh_symbol">:</span>hidden<span class="sh_symbol">;</span></li><li>            <span class="sh_cbracket">}</span></li><li>            <span class="sh_symbol">.</span>image_list p</li><li>            <span class="sh_cbracket">{</span></li><li>                width<span class="sh_symbol">:</span>800px<span class="sh_symbol">;</span></li><li>                height<span class="sh_symbol">:</span>100px<span class="sh_symbol">;</span>     </li><li>            <span class="sh_cbracket">}</span></li><li>            <span class="sh_symbol">.</span>image_list img</li><li>            <span class="sh_cbracket">{</span></li><li>                border<span class="sh_symbol">:</span>1px solid #ccc<span class="sh_symbol">;</span></li><li>                border<span class="sh_symbol">-</span>radius<span class="sh_symbol">:</span>5px<span class="sh_symbol">;</span></li><li>                width<span class="sh_symbol">:</span>100px<span class="sh_symbol">;</span></li><li>            <span class="sh_cbracket">}</span>      </li><li>            img<span class="sh_symbol">:</span>hover</li><li>            <span class="sh_cbracket">{</span></li><li>                box<span class="sh_symbol">-</span>shadow<span class="sh_symbol">:</span> 3px 3px #ddd<span class="sh_symbol">;</span></li><li>            <span class="sh_cbracket">}</span></li><li>            img<span class="sh_symbol">.</span>current</li><li>            <span class="sh_cbracket">{</span></li><li>                border<span class="sh_symbol">:</span>2px solid #e4393c<span class="sh_symbol">;</span></li><li>            <span class="sh_cbracket">}</span>    </li><li>        <span class="sh_symbol">&lt;/</span>style<span class="sh_symbol">&gt;</span>  </li><li>    <span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;</span>div <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"image_list"</span><span class="sh_symbol">&gt;</span></li><li>            <span class="sh_symbol">&lt;</span>p<span class="sh_symbol">&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_001.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>img <span class="sh_keyword">class</span><span class="sh_symbol">=</span><span class="sh_string">"current"</span> src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_002.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_003.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_004.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_005.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_006.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li>                <span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/p_small_007.jpg"</span> <span class="sh_symbol">/&gt;</span></li><li>            <span class="sh_symbol">&lt;/</span>p<span class="sh_symbol">&gt;</span></li><li>        <span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>    <span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;边框&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;   
+        &lt;style type="text/css"&gt;
+            .image_list
+            {
+                border:1px solid black;
+                width:500px;
+                height:150px;
+                overflow-x:auto;
+                overflow-y:hidden;
+            }
+            .image_list p
+            {
+                width:800px;
+                height:100px;     
+            }
+            .image_list img
+            {
+                border:1px solid #ccc;
+                border-radius:5px;
+                width:100px;
+            }      
+            img:hover
+            {
+                box-shadow: 3px 3px #ddd;
+            }
+            img.current
+            {
+                border:2px solid #e4393c;
+            }    
+        &lt;/style&gt;  
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class="image_list"&gt;
+            &lt;p&gt;
+                &lt;img src="images/p_small_001.jpg" /&gt;
+                &lt;img class="current" src="images/p_small_002.jpg" /&gt;
+                &lt;img src="images/p_small_003.jpg" /&gt;
+                &lt;img src="images/p_small_004.jpg" /&gt;
+                &lt;img src="images/p_small_005.jpg" /&gt;
+                &lt;img src="images/p_small_006.jpg" /&gt;
+                &lt;img src="images/p_small_007.jpg" /&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+    </div>
+  
+</body></html>

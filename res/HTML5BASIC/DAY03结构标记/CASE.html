@@ -1,0 +1,1068 @@
+
+<!-- saved from url=(0086)http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CASE</title>
+    
+    <script type="text/javascript" src="./CASE_files/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="./CASE_files/jquery.snippet.js">
+    </script>
+    <script type="text/javascript" src="./CASE_files/main.js">
+    </script>
+    <link type="text/css" href="./CASE_files/index.css" rel="Stylesheet">
+    <link type="text/css" href="./CASE_files/jquery.snippet.css" rel="Stylesheet">
+  </head>
+  <body>
+    <div class="source_style_case">
+      <a name="page_top_case" id="top_anchor">
+      </a><a id="link_top" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#page_top_case">Top</a>
+      <h1>WEB HTML5 DAY03</h1>
+      <ol class="index">
+        <li>
+          <a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#case1">使用结构标记为 HTML文档定义布局</a>
+        </li>
+        <li>
+          <a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#case2">创建基础表单</a>
+        </li>
+        <li>
+          <a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#case3">创建复杂表单_1</a>
+        </li>
+        <li>
+          <a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#case4">创建复杂表单_2</a>
+        </li>
+      </ol>
+      <a name="case1">
+      </a>
+      <h2>1 使用结构标记为 HTML文档定义布局</h2>
+      <h3>1.1 问题</h3>
+      <p>编写简化版的京东登录页，页面效果如图－1所示。</p>
+      <div class="image">
+        <img src="./CASE_files/image001.png">
+        <p>图－1</p>
+      </div>
+      <p>图中所示页面作为京东登录页的第一版，页面中需要使用表单元素的位置（比如文本框、密码框以及按钮等部分），暂时使用文本替代。</p>
+      <h3>1.2 方案</h3>
+      <p>由图－1可以看出，页面主要分为三个区域：页头部分、主要内容部分和页脚部分。因此，首先需要使用结构标记为页面定义布局。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>header<span class="sh_symbol">&gt;&lt;/</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>section<span class="sh_symbol">&gt;&lt;/</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>footer<span class="sh_symbol">&gt;&lt;/</span>footer<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;body&gt;
+&lt;header&gt;&lt;/header&gt;
+&lt;section&gt;&lt;/section&gt;
+&lt;footer&gt;&lt;/footer&gt;
+&lt;/body&gt;
+</pre></div></div>
+      <p>页面的主要内容区域，需要使用表格实现内容的布局。表格结构如图－2所示：</p>
+      <div class="image">
+        <img src="./CASE_files/image002.png">
+        <p>图－2</p>
+      </div>
+      <p>对于图－2所示的表格，需要设置边框之间的间隔为0。</p>
+      <p>页脚部分，也需要使用一个一行五列的表格来实现超级链接的布局。</p>
+      <h3>1.3 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：创建文件</p>
+      <p>首先创建一个纯文本文件，并修改名称为Day03_jd_login.html；</p>
+      <p class="number">步骤二：创建 html 文档的结构</p>
+      <p>使用文本编辑工具，打开上一步中所创建的文件。</p>
+      <p>在此文件中，添加 HTML 代码，以创建一个标准结构的 HTML 文档，代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>登录<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta name<span class="sh_symbol">=</span><span class="sh_string">"keywords"</span> content<span class="sh_symbol">=</span><span class="sh_string">"HTML,CSS,JS"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;登录&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;meta name="keywords" content="HTML,CSS,JS" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤三：使用结构标记为页面定义布局</p>
+      <p>在&lt;body&gt; 元素中，添加结构标记，为页面定义布局。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>登录<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta name<span class="sh_symbol">=</span><span class="sh_string">"keywords"</span> content<span class="sh_symbol">=</span><span class="sh_string">"HTML,CSS,JS"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>header<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>header<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>section<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>section<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>footer<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>footer<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;登录&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;meta name="keywords" content="HTML,CSS,JS" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+#cold_bold&lt;header&gt;
+#cold_bold&lt;/header&gt;
+#cold_bold&lt;section&gt;
+#cold_bold&lt;/section&gt;
+#cold_bold&lt;footer&gt;
+#cold_bold&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤四：定义页头部分</p>
+      <p>为页头部分添加文本和图像。为实现图中文本的效果，文本需要写在 &lt;h1&gt; 元素中。而为了让图像和文本位于同一行，将图像也写在 &lt;h1&gt; 元素中。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>登录<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta name<span class="sh_symbol">=</span><span class="sh_string">"keywords"</span> content<span class="sh_symbol">=</span><span class="sh_string">"HTML,CSS,JS"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>header<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>h1<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/jd_logo.png"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code">                欢迎登录</li><li class="bold_code"><span class="sh_symbol">&lt;/</span>h1<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>footer<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>footer<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;登录&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;meta name="keywords" content="HTML,CSS,JS" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;
+#cold_bold&lt;h1&gt;
+#cold_bold&lt;img src="images/jd_logo.png" /&gt;
+#cold_bold                欢迎登录
+#cold_bold&lt;/h1&gt;
+&lt;/header&gt;
+&lt;section&gt;
+&lt;/section&gt;
+&lt;footer&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤五：定义主要内容区域的表格</p>
+      <p>为主要内容区域，添加表格。</p>
+      <p>其中，第一行第一列的单元格，需要使用 rowspan 属性设置其跨行，并在该单元格中添加图片；最后一行的单元格，需要使用 colspan 属性设置其跨列，并在该单元格中添加带链接的图片，且设置单元格中的文本居右对齐。</p>
+      <p>代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>登录<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta name<span class="sh_symbol">=</span><span class="sh_string">"keywords"</span> content<span class="sh_symbol">=</span><span class="sh_string">"HTML,CSS,JS"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>h1<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/jd_logo.png"</span> <span class="sh_symbol">/&gt;</span></li><li>                欢迎登录</li><li><span class="sh_symbol">&lt;/</span>h1<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>section<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>table align<span class="sh_symbol">=</span><span class="sh_string">"center"</span> border<span class="sh_symbol">=</span><span class="sh_string">"1"</span> cellspacing<span class="sh_symbol">=</span><span class="sh_string">"0"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td rowspan<span class="sh_symbol">=</span><span class="sh_string">"8"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/login.png"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span> width<span class="sh_symbol">=</span><span class="sh_string">"300"</span><span class="sh_symbol">&gt;</span>用户名<span class="sh_regexp">/邮箱：&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span><span class="sh_symbol">&gt;</span>mary@<span class="sh_number">163</span><span class="sh_symbol">.</span>com<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span><span class="sh_symbol">&gt;</span>密码<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span><span class="sh_symbol">&gt;*************&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code">                        自动登录</li><li class="bold_code"><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"30"</span> align<span class="sh_symbol">=</span><span class="sh_string">"center"</span><span class="sh_symbol">&gt;</span>登录按钮<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>使用京东合作账号登录<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td align<span class="sh_symbol">=</span><span class="sh_string">"right"</span><span class="sh_symbol">&gt;</span>合作帐号选项<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td colspan<span class="sh_symbol">=</span><span class="sh_string">"2"</span> align<span class="sh_symbol">=</span><span class="sh_string">"right"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/btn_register.jpg"</span> <span class="sh_regexp">/&gt;&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>footer<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>footer<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;登录&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;meta name="keywords" content="HTML,CSS,JS" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;
+&lt;h1&gt;
+&lt;img src="images/jd_logo.png" /&gt;
+                欢迎登录
+&lt;/h1&gt;
+&lt;/header&gt;
+&lt;section&gt;
+#cold_bold&lt;table align="center" border="1" cellspacing="0"&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td rowspan="8"&gt;
+#cold_bold&lt;img src="images/login.png" /&gt;
+#cold_bold&lt;/td&gt;
+#cold_bold&lt;td height="50" width="300"&gt;用户名/邮箱：&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td height="50"&gt;mary@163.com&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td height="50"&gt;密码&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td height="50"&gt;*************&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td height="50"&gt;
+#cold_bold                        自动登录
+#cold_bold&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td height="30" align="center"&gt;登录按钮&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td&gt;使用京东合作账号登录&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td align="right"&gt;合作帐号选项&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td colspan="2" align="right"&gt;
+#cold_bold&lt;a href="#"&gt;&lt;img src="images/btn_register.jpg" /&gt;&lt;/a&gt;
+#cold_bold&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+#cold_bold&lt;/table&gt;
+&lt;/section&gt;
+&lt;footer&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤六：定义页脚区域</p>
+      <p>为页脚区域添加内容。首先添加表格，然后在单元格中添加文本内容。</p>
+      <p>代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>登录<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta name<span class="sh_symbol">=</span><span class="sh_string">"keywords"</span> content<span class="sh_symbol">=</span><span class="sh_string">"HTML,CSS,JS"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>h1<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/jd_logo.png"</span> <span class="sh_symbol">/&gt;</span></li><li>                欢迎登录</li><li><span class="sh_symbol">&lt;/</span>h1<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>table align<span class="sh_symbol">=</span><span class="sh_string">"center"</span> border<span class="sh_symbol">=</span><span class="sh_string">"1"</span> cellspacing<span class="sh_symbol">=</span><span class="sh_string">"0"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td rowspan<span class="sh_symbol">=</span><span class="sh_string">"8"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/login.png"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span> width<span class="sh_symbol">=</span><span class="sh_string">"300"</span><span class="sh_symbol">&gt;</span>用户名<span class="sh_regexp">/邮箱：&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span><span class="sh_symbol">&gt;</span>mary@<span class="sh_number">163</span><span class="sh_symbol">.</span>com<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span><span class="sh_symbol">&gt;</span>密码<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span><span class="sh_symbol">&gt;*************&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span><span class="sh_symbol">&gt;</span></li><li>                        自动登录</li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"30"</span> align<span class="sh_symbol">=</span><span class="sh_string">"center"</span><span class="sh_symbol">&gt;</span>登录按钮<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>使用京东合作账号登录<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td align<span class="sh_symbol">=</span><span class="sh_string">"right"</span><span class="sh_symbol">&gt;</span>合作帐号选项<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td colspan<span class="sh_symbol">=</span><span class="sh_string">"2"</span> align<span class="sh_symbol">=</span><span class="sh_string">"right"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/btn_register.jpg"</span> <span class="sh_regexp">/&gt;&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>footer<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>table align<span class="sh_symbol">=</span><span class="sh_string">"center"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>关于我们<span class="sh_symbol">|&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>联系我们<span class="sh_symbol">|&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>人才招聘<span class="sh_symbol">|&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>商家入驻<span class="sh_symbol">|&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>广告服务<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>footer<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;登录&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;meta name="keywords" content="HTML,CSS,JS" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;
+&lt;h1&gt;
+&lt;img src="images/jd_logo.png" /&gt;
+                欢迎登录
+&lt;/h1&gt;
+&lt;/header&gt;
+&lt;section&gt;
+&lt;table align="center" border="1" cellspacing="0"&gt;
+&lt;tr&gt;
+&lt;td rowspan="8"&gt;
+&lt;img src="images/login.png" /&gt;
+&lt;/td&gt;
+&lt;td height="50" width="300"&gt;用户名/邮箱：&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="50"&gt;mary@163.com&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="50"&gt;密码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="50"&gt;*************&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="50"&gt;
+                        自动登录
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="30" align="center"&gt;登录按钮&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;使用京东合作账号登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="right"&gt;合作帐号选项&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan="2" align="right"&gt;
+&lt;a href="#"&gt;&lt;img src="images/btn_register.jpg" /&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/section&gt;
+&lt;footer&gt;
+#cold_bold&lt;br /&gt;&lt;br /&gt;
+#cold_bold&lt;table align="center"&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td&gt;关于我们|&lt;/td&gt;
+#cold_bold&lt;td&gt;联系我们|&lt;/td&gt;
+#cold_bold&lt;td&gt;人才招聘|&lt;/td&gt;
+#cold_bold&lt;td&gt;商家入驻|&lt;/td&gt;
+#cold_bold&lt;td&gt;广告服务&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+#cold_bold&lt;/table&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <h3>1.4 完整代码</h3>
+      <p>本案例的完整代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>登录<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta name<span class="sh_symbol">=</span><span class="sh_string">"keywords"</span> content<span class="sh_symbol">=</span><span class="sh_string">"HTML,CSS,JS"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>h1<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/jd_logo.png"</span> <span class="sh_symbol">/&gt;</span></li><li>                欢迎登录</li><li><span class="sh_symbol">&lt;/</span>h1<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>table align<span class="sh_symbol">=</span><span class="sh_string">"center"</span> border<span class="sh_symbol">=</span><span class="sh_string">"1"</span> cellspacing<span class="sh_symbol">=</span><span class="sh_string">"0"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td rowspan<span class="sh_symbol">=</span><span class="sh_string">"8"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/login.png"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span> width<span class="sh_symbol">=</span><span class="sh_string">"300"</span><span class="sh_symbol">&gt;</span>用户名<span class="sh_regexp">/邮箱：&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span><span class="sh_symbol">&gt;</span>mary@<span class="sh_number">163</span><span class="sh_symbol">.</span>com<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span><span class="sh_symbol">&gt;</span>密码<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span><span class="sh_symbol">&gt;*************&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span><span class="sh_symbol">&gt;</span></li><li>                        自动登录</li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"30"</span> align<span class="sh_symbol">=</span><span class="sh_string">"center"</span><span class="sh_symbol">&gt;</span>登录按钮<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>使用京东合作账号登录<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td align<span class="sh_symbol">=</span><span class="sh_string">"right"</span><span class="sh_symbol">&gt;</span>合作帐号选项<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td colspan<span class="sh_symbol">=</span><span class="sh_string">"2"</span> align<span class="sh_symbol">=</span><span class="sh_string">"right"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/btn_register.jpg"</span> <span class="sh_regexp">/&gt;&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>footer<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>table align<span class="sh_symbol">=</span><span class="sh_string">"center"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>关于我们<span class="sh_symbol">|&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>联系我们<span class="sh_symbol">|&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>人才招聘<span class="sh_symbol">|&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>商家入驻<span class="sh_symbol">|&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>广告服务<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>footer<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;登录&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;meta name="keywords" content="HTML,CSS,JS" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;
+&lt;h1&gt;
+&lt;img src="images/jd_logo.png" /&gt;
+                欢迎登录
+&lt;/h1&gt;
+&lt;/header&gt;
+&lt;section&gt;
+&lt;table align="center" border="1" cellspacing="0"&gt;
+&lt;tr&gt;
+&lt;td rowspan="8"&gt;
+&lt;img src="images/login.png" /&gt;
+&lt;/td&gt;
+&lt;td height="50" width="300"&gt;用户名/邮箱：&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="50"&gt;mary@163.com&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="50"&gt;密码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="50"&gt;*************&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="50"&gt;
+                        自动登录
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="30" align="center"&gt;登录按钮&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;使用京东合作账号登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="right"&gt;合作帐号选项&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan="2" align="right"&gt;
+&lt;a href="#"&gt;&lt;img src="images/btn_register.jpg" /&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/section&gt;
+&lt;footer&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;table align="center"&gt;
+&lt;tr&gt;
+&lt;td&gt;关于我们|&lt;/td&gt;
+&lt;td&gt;联系我们|&lt;/td&gt;
+&lt;td&gt;人才招聘|&lt;/td&gt;
+&lt;td&gt;商家入驻|&lt;/td&gt;
+&lt;td&gt;广告服务&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <a name="case2">
+      </a>
+      <h2>2 创建基础表单</h2>
+      <h3>2.1 问题</h3>
+      <p>继续修改上一个案例中的 html 文档，为登录页面添加表单元素，页面效果如图－3所示。</p>
+      <div class="image">
+        <img src="./CASE_files/image003.png">
+        <p>图－3</p>
+      </div>
+      <h3>2.2 方案</h3>
+      <p>分析图－3可以看出，本案例需要在上一个案例的基础上，使用 &lt;inpu&gt; 元素替换原有的部分文本即可。</p>
+      <h3>2.3 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：创建 &lt;form&gt; 表单</p>
+      <p>修改上一个案例中的代码，在 &lt;section&gt; 中添加 &lt;form&gt; 元素，包含整个 &lt;table&gt;。修改后的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>登录<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta name<span class="sh_symbol">=</span><span class="sh_string">"keywords"</span> content<span class="sh_symbol">=</span><span class="sh_string">"HTML,CSS,JS"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>h1<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/jd_logo.png"</span> <span class="sh_symbol">/&gt;</span></li><li>                欢迎登录</li><li><span class="sh_symbol">&lt;/</span>h1<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>section<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>form<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>table align<span class="sh_symbol">=</span><span class="sh_string">"center"</span> border<span class="sh_symbol">=</span><span class="sh_string">"1"</span> cellspacing<span class="sh_symbol">=</span><span class="sh_string">"0"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>form<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>footer<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>table align<span class="sh_symbol">=</span><span class="sh_string">"center"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>关于我们<span class="sh_symbol">|&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>联系我们<span class="sh_symbol">|&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>人才招聘<span class="sh_symbol">|&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>商家入驻<span class="sh_symbol">|&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>广告服务<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>footer<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;登录&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;meta name="keywords" content="HTML,CSS,JS" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;
+&lt;h1&gt;
+&lt;img src="images/jd_logo.png" /&gt;
+                欢迎登录
+&lt;/h1&gt;
+&lt;/header&gt;
+&lt;section&gt;
+#cold_bold&lt;form&gt;
+&lt;table align="center" border="1" cellspacing="0"&gt;
+&lt;!--其他代码，略--&gt;
+&lt;/table&gt;
+#cold_bold&lt;/form&gt;
+&lt;/section&gt;
+&lt;footer&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;table align="center"&gt;
+&lt;tr&gt;
+&lt;td&gt;关于我们|&lt;/td&gt;
+&lt;td&gt;联系我们|&lt;/td&gt;
+&lt;td&gt;人才招聘|&lt;/td&gt;
+&lt;td&gt;商家入驻|&lt;/td&gt;
+&lt;td&gt;广告服务&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤二：定义 &lt;input&gt; 元素</p>
+      <p>使用 &lt;input&gt; 元素替换页面中的文本。其中，用户名输入使用单行文本框；密码输入使用密码框；“自动”登录选项使用多选框；“登录”和“重填”按钮分别使用提交按钮和重置按钮；“合作账号”选择使用一组单选框。</p>
+      <p>修改后的代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>登录<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta name<span class="sh_symbol">=</span><span class="sh_string">"keywords"</span> content<span class="sh_symbol">=</span><span class="sh_string">"HTML,CSS,JS"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>h1<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/jd_logo.png"</span> <span class="sh_symbol">/&gt;</span></li><li>                欢迎登录</li><li><span class="sh_symbol">&lt;/</span>h1<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>form<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>table align<span class="sh_symbol">=</span><span class="sh_string">"center"</span> border<span class="sh_symbol">=</span><span class="sh_string">"1"</span> cellspacing<span class="sh_symbol">=</span><span class="sh_string">"0"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td rowspan<span class="sh_symbol">=</span><span class="sh_string">"8"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/login.png"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span> width<span class="sh_symbol">=</span><span class="sh_string">"300"</span><span class="sh_symbol">&gt;</span>用户名<span class="sh_regexp">/邮箱：&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span><span class="sh_symbol">&gt;&lt;</span>input name<span class="sh_symbol">=</span><span class="sh_string">"username"</span> type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> value<span class="sh_symbol">=</span><span class="sh_string">"mary@163.com"</span> <span class="sh_regexp">/&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span><span class="sh_symbol">&gt;</span>密码<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span><span class="sh_symbol">&gt;&lt;</span>input name<span class="sh_symbol">=</span><span class="sh_string">"pwd"</span> type<span class="sh_symbol">=</span><span class="sh_string">"password"</span> <span class="sh_regexp">/&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> name<span class="sh_symbol">=</span><span class="sh_string">"autologin"</span> value<span class="sh_symbol">=</span><span class="sh_string">"0"</span> <span class="sh_symbol">/&gt;</span>自动登录</li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"30"</span> align<span class="sh_symbol">=</span><span class="sh_string">"center"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"submit"</span> value<span class="sh_symbol">=</span><span class="sh_string">"登录"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"reset"</span> value<span class="sh_symbol">=</span><span class="sh_string">"重填"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>使用京东合作账号登录<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td align<span class="sh_symbol">=</span><span class="sh_string">"right"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"radio"</span> name<span class="sh_symbol">=</span><span class="sh_string">"rdOther"</span> value<span class="sh_symbol">=</span><span class="sh_string">"0"</span> <span class="sh_symbol">/&gt;</span>QQ</li><li class="bold_code"><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"radio"</span> name<span class="sh_symbol">=</span><span class="sh_string">"rdOther"</span> value<span class="sh_symbol">=</span><span class="sh_string">"1"</span> <span class="sh_symbol">/&gt;</span>京东钱包</li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td colspan<span class="sh_symbol">=</span><span class="sh_string">"2"</span> align<span class="sh_symbol">=</span><span class="sh_string">"right"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/btn_register.jpg"</span> <span class="sh_regexp">/&gt;&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>form<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>footer<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>table align<span class="sh_symbol">=</span><span class="sh_string">"center"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>关于我们<span class="sh_symbol">|&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>联系我们<span class="sh_symbol">|&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>人才招聘<span class="sh_symbol">|&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>商家入驻<span class="sh_symbol">|&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>广告服务<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>footer<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;登录&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;meta name="keywords" content="HTML,CSS,JS" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;
+&lt;h1&gt;
+&lt;img src="images/jd_logo.png" /&gt;
+                欢迎登录
+&lt;/h1&gt;
+&lt;/header&gt;
+&lt;section&gt;
+&lt;form&gt;
+&lt;table align="center" border="1" cellspacing="0"&gt;
+&lt;tr&gt;
+&lt;td rowspan="8"&gt;
+&lt;img src="images/login.png" /&gt;
+&lt;/td&gt;
+&lt;td height="50" width="300"&gt;用户名/邮箱：&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+#cold_bold&lt;td height="50"&gt;&lt;input name="username" type="text" value="mary@163.com" /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="50"&gt;密码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+#cold_bold&lt;td height="50"&gt;&lt;input name="pwd" type="password" /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="50"&gt;
+#cold_bold&lt;input type="checkbox" name="autologin" value="0" /&gt;自动登录
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="30" align="center"&gt;
+#cold_bold&lt;input type="submit" value="登录" /&gt;
+#cold_bold&lt;input type="reset" value="重填" /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;使用京东合作账号登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="right"&gt;
+#cold_bold&lt;input type="radio" name="rdOther" value="0" /&gt;QQ
+#cold_bold&lt;input type="radio" name="rdOther" value="1" /&gt;京东钱包
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan="2" align="right"&gt;
+&lt;a href="#"&gt;&lt;img src="images/btn_register.jpg" /&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/form&gt;
+&lt;/section&gt;
+&lt;footer&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;table align="center"&gt;
+&lt;tr&gt;
+&lt;td&gt;关于我们|&lt;/td&gt;
+&lt;td&gt;联系我们|&lt;/td&gt;
+&lt;td&gt;人才招聘|&lt;/td&gt;
+&lt;td&gt;商家入驻|&lt;/td&gt;
+&lt;td&gt;广告服务&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <h3>2.4 完整代码</h3>
+      <p>本案例的完整代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>登录<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta name<span class="sh_symbol">=</span><span class="sh_string">"keywords"</span> content<span class="sh_symbol">=</span><span class="sh_string">"HTML,CSS,JS"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>h1<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/jd_logo.png"</span> <span class="sh_symbol">/&gt;</span></li><li>                欢迎登录</li><li><span class="sh_symbol">&lt;/</span>h1<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>header<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>form<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>table align<span class="sh_symbol">=</span><span class="sh_string">"center"</span> border<span class="sh_symbol">=</span><span class="sh_string">"1"</span> cellspacing<span class="sh_symbol">=</span><span class="sh_string">"0"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td rowspan<span class="sh_symbol">=</span><span class="sh_string">"8"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/login.png"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span> width<span class="sh_symbol">=</span><span class="sh_string">"300"</span><span class="sh_symbol">&gt;</span>用户名<span class="sh_regexp">/邮箱：&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span><span class="sh_symbol">&gt;&lt;</span>input name<span class="sh_symbol">=</span><span class="sh_string">"username"</span> type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> value<span class="sh_symbol">=</span><span class="sh_string">"mary@163.com"</span> <span class="sh_regexp">/&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span><span class="sh_symbol">&gt;</span>密码<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span><span class="sh_symbol">&gt;&lt;</span>input name<span class="sh_symbol">=</span><span class="sh_string">"pwd"</span> type<span class="sh_symbol">=</span><span class="sh_string">"password"</span> <span class="sh_regexp">/&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"50"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> name<span class="sh_symbol">=</span><span class="sh_string">"autologin"</span> value<span class="sh_symbol">=</span><span class="sh_string">"0"</span> <span class="sh_symbol">/&gt;</span>自动登录</li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"30"</span> align<span class="sh_symbol">=</span><span class="sh_string">"center"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"submit"</span> value<span class="sh_symbol">=</span><span class="sh_string">"登录"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"reset"</span> value<span class="sh_symbol">=</span><span class="sh_string">"重填"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>使用京东合作账号登录<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td align<span class="sh_symbol">=</span><span class="sh_string">"right"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"radio"</span> name<span class="sh_symbol">=</span><span class="sh_string">"rdOther"</span> value<span class="sh_symbol">=</span><span class="sh_string">"0"</span> <span class="sh_symbol">/&gt;</span>QQ</li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"radio"</span> name<span class="sh_symbol">=</span><span class="sh_string">"rdOther"</span> value<span class="sh_symbol">=</span><span class="sh_string">"1"</span> <span class="sh_symbol">/&gt;</span>京东钱包</li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td colspan<span class="sh_symbol">=</span><span class="sh_string">"2"</span> align<span class="sh_symbol">=</span><span class="sh_string">"right"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>a href<span class="sh_symbol">=</span><span class="sh_string">"#"</span><span class="sh_symbol">&gt;&lt;</span>img src<span class="sh_symbol">=</span><span class="sh_string">"images/btn_register.jpg"</span> <span class="sh_regexp">/&gt;&lt;/</span>a<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>form<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>section<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>footer<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;&lt;</span><span class="sh_normal">br </span><span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>table align<span class="sh_symbol">=</span><span class="sh_string">"center"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>关于我们<span class="sh_symbol">|&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>联系我们<span class="sh_symbol">|&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>人才招聘<span class="sh_symbol">|&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>商家入驻<span class="sh_symbol">|&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>广告服务<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>footer<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;登录&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;meta name="keywords" content="HTML,CSS,JS" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;
+&lt;h1&gt;
+&lt;img src="images/jd_logo.png" /&gt;
+                欢迎登录
+&lt;/h1&gt;
+&lt;/header&gt;
+&lt;section&gt;
+&lt;form&gt;
+&lt;table align="center" border="1" cellspacing="0"&gt;
+&lt;tr&gt;
+&lt;td rowspan="8"&gt;
+&lt;img src="images/login.png" /&gt;
+&lt;/td&gt;
+&lt;td height="50" width="300"&gt;用户名/邮箱：&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="50"&gt;&lt;input name="username" type="text" value="mary@163.com" /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="50"&gt;密码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="50"&gt;&lt;input name="pwd" type="password" /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="50"&gt;
+&lt;input type="checkbox" name="autologin" value="0" /&gt;自动登录
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="30" align="center"&gt;
+&lt;input type="submit" value="登录" /&gt;
+&lt;input type="reset" value="重填" /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;使用京东合作账号登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="right"&gt;
+&lt;input type="radio" name="rdOther" value="0" /&gt;QQ
+&lt;input type="radio" name="rdOther" value="1" /&gt;京东钱包
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan="2" align="right"&gt;
+&lt;a href="#"&gt;&lt;img src="images/btn_register.jpg" /&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/form&gt;
+&lt;/section&gt;
+&lt;footer&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;table align="center"&gt;
+&lt;tr&gt;
+&lt;td&gt;关于我们|&lt;/td&gt;
+&lt;td&gt;联系我们|&lt;/td&gt;
+&lt;td&gt;人才招聘|&lt;/td&gt;
+&lt;td&gt;商家入驻|&lt;/td&gt;
+&lt;td&gt;广告服务&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <a name="case3">
+      </a>
+      <h2>3 创建复杂表单_1</h2>
+      <h3>3.1 问题</h3>
+      <p>创建复杂表单，实现如图－4所示的页面效果：</p>
+      <div class="image">
+        <img src="./CASE_files/image004.png">
+        <p>图－4</p>
+      </div>
+      <p>其中，对于页面上的单选框和复选框，需要做到，单击选择框后面的文本，就象单击选择框一样。比如，单击“不要公开我的个人信息”文本，则可以实现对该文本前面的选择框的选中或者取消选中。另外，页面上的列表框，需要能够实现多选。</p>
+      <h3>3.2 方案</h3>
+      <p>首先使用表格实现图－4所示的页面布局，表格布局形如图－5所示：</p>
+      <div class="image">
+        <img src="./CASE_files/image005.png">
+        <p>图－5</p>
+      </div>
+      <p>图－5所示的表格中，第一列用于显示文本信息，如“姓名”、“性别”等；第二列用于显示文本框、选择框等。</p>
+      <p>如果需要实现列表框的多选，需要为&lt;select&gt; 元素定义 multiple 属性，代码如下：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;</span>select size<span class="sh_symbol">=</span><span class="sh_string">"5"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sel2"</span> multiple<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>select<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;select size="5" name="sel2" multiple&gt;
+&lt;/select&gt;
+</pre></div></div>
+      <p>如果需要实现单击选择框后面的文本，就象单击选择框一样，需要使用 &lt;label&gt; 元素。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkPublic"</span> name<span class="sh_symbol">=</span><span class="sh_string">"chkHide"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>label <span class="sh_keyword">for</span><span class="sh_symbol">=</span><span class="sh_string">"chkPublic"</span><span class="sh_symbol">&gt;</span>不要公开我的个人信息<span class="sh_symbol">&lt;/</span>label<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;input type="checkbox" id="chkPublic" name="chkHide" /&gt;
+&lt;label for="chkPublic"&gt;不要公开我的个人信息&lt;/label&gt;
+</pre></div></div>
+      <h3>3.3 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：创建文件</p>
+      <p>首先创建一个纯文本文件，并修改名称为Day03_form.html；然后使用文本编辑工具，打开所创建的文件。</p>
+      <p>在此文件中，添加 HTML 代码，以创建一个标准结构的 HTML 文档。在 &lt;body&gt; 元素中使用 &lt;h2&gt; 元素定义文本标题，并添加 &lt;form&gt; 元素。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>复杂表单<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>h2<span class="sh_symbol">&gt;</span>修改个人信息<span class="sh_symbol">&lt;/</span>h2<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>form<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>form<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;复杂表单&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h2&gt;修改个人信息&lt;/h2&gt;
+&lt;form&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+      <p class="number">步骤二：定义页面布局</p>
+      <p>在 &lt;form&gt; 元素中添加代码，创建布局用的表格。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>复杂表单<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>h2<span class="sh_symbol">&gt;</span>修改个人信息<span class="sh_symbol">&lt;/</span>h2<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>form<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>table width<span class="sh_symbol">=</span><span class="sh_string">"700"</span> border<span class="sh_symbol">=</span><span class="sh_string">"1"</span> cellspacing<span class="sh_symbol">=</span><span class="sh_string">"0"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>form<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;复杂表单&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h2&gt;修改个人信息&lt;/h2&gt;
+&lt;form&gt;
+#cold_bold&lt;table width="700" border="1" cellspacing="0"&gt;
+#cold_bold&lt;/table&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+</pre></div></div>
+      <p class="number">步骤三：创建表格的第一行</p>
+      <p>为表格创建第一行的内容：修改姓名的行。定义两个单元格，并分别创建单元格中的内容。其中，文本框使用 &lt;input&gt; 元素创建，并使用 value 属性设置文本框中的初始值。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!--</span>其他部分代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>table width<span class="sh_symbol">=</span><span class="sh_string">"700"</span> border<span class="sh_symbol">=</span><span class="sh_string">"1"</span> cellspacing<span class="sh_symbol">=</span><span class="sh_string">"0"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td width<span class="sh_symbol">=</span><span class="sh_string">"20%"</span> height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span> 姓名：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td  width<span class="sh_symbol">=</span><span class="sh_string">"350"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> value<span class="sh_symbol">=</span><span class="sh_string">"mary"</span> name<span class="sh_symbol">=</span><span class="sh_string">"username"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>其他部分代码，略<span class="sh_symbol">--&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!--其他部分代码，略--&gt;
+&lt;table width="700" border="1" cellspacing="0"&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td width="20%" height="35"&gt; 姓名：&lt;/td&gt;
+#cold_bold&lt;td  width="350"&gt;
+#cold_bold&lt;input type="text" value="mary" name="username" /&gt;
+#cold_bold&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+&lt;/table&gt;
+&lt;!--其他部分代码，略--&gt;
+</pre></div></div>
+      <p class="number">步骤四：创建表格的第二行</p>
+      <p>为表格创建第二行的内容：修改性别选项的行。定义两个单元格，并分别创建单元格中的内容。其中，需要使用 &lt;lable&gt; 元素定义文本并和单选框关联。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!--</span>其他部分代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>table width<span class="sh_symbol">=</span><span class="sh_string">"700"</span> border<span class="sh_symbol">=</span><span class="sh_string">"1"</span> cellspacing<span class="sh_symbol">=</span><span class="sh_string">"0"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td width<span class="sh_symbol">=</span><span class="sh_string">"20%"</span> height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span> 姓名：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td  width<span class="sh_symbol">=</span><span class="sh_string">"350"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> value<span class="sh_symbol">=</span><span class="sh_string">"mary"</span> name<span class="sh_symbol">=</span><span class="sh_string">"username"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>性别：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"radio"</span> id<span class="sh_symbol">=</span><span class="sh_string">"rexFemal"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sex"</span> checked value<span class="sh_symbol">=</span><span class="sh_string">"0"</span> <span class="sh_regexp">/&gt;&lt;label for="rexFemal"&gt;女士&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"radio"</span> id<span class="sh_symbol">=</span><span class="sh_string">"rexMal"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sex"</span> value<span class="sh_symbol">=</span><span class="sh_string">"1"</span> <span class="sh_regexp">/&gt;&lt;label for="rexMal"&gt;男士&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>其他部分代码，略<span class="sh_symbol">--&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!--其他部分代码，略--&gt;
+&lt;table width="700" border="1" cellspacing="0"&gt;
+&lt;tr&gt;
+&lt;td width="20%" height="35"&gt; 姓名：&lt;/td&gt;
+&lt;td  width="350"&gt;
+&lt;input type="text" value="mary" name="username" /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td height="35"&gt;性别：&lt;/td&gt;
+#cold_bold&lt;td&gt;
+#cold_bold&lt;input type="radio" id="rexFemal" name="sex" checked value="0" /&gt;&lt;label for="rexFemal"&gt;女士&lt;/label&gt;
+#cold_bold&lt;input type="radio" id="rexMal" name="sex" value="1" /&gt;&lt;label for="rexMal"&gt;男士&lt;/label&gt;
+#cold_bold&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+&lt;/table&gt;
+&lt;!--其他部分代码，略--&gt;
+</pre></div></div>
+      <p class="number">步骤五：创建表格的第三行</p>
+      <p>为表格创建第三行的内容：选择学历的行。其中，下拉选择框使用 &lt;select&gt; 元素创建，代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!--</span>其他部分代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>table width<span class="sh_symbol">=</span><span class="sh_string">"700"</span> border<span class="sh_symbol">=</span><span class="sh_string">"1"</span> cellspacing<span class="sh_symbol">=</span><span class="sh_string">"0"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td width<span class="sh_symbol">=</span><span class="sh_string">"20%"</span> height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span> 姓名：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td  width<span class="sh_symbol">=</span><span class="sh_string">"350"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> value<span class="sh_symbol">=</span><span class="sh_string">"mary"</span> name<span class="sh_symbol">=</span><span class="sh_string">"username"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>性别：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"radio"</span> id<span class="sh_symbol">=</span><span class="sh_string">"rexFemal"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sex"</span> checked value<span class="sh_symbol">=</span><span class="sh_string">"0"</span> <span class="sh_regexp">/&gt;&lt;label for="rexFemal"&gt;女士&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"radio"</span> id<span class="sh_symbol">=</span><span class="sh_string">"rexMal"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sex"</span> value<span class="sh_symbol">=</span><span class="sh_string">"1"</span> <span class="sh_regexp">/&gt;&lt;label for="rexMal"&gt;男士&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>学历：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>select name<span class="sh_symbol">=</span><span class="sh_string">"sel1"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"1"</span><span class="sh_symbol">&gt;</span>其他<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"2"</span><span class="sh_symbol">&gt;</span>专科<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"3"</span><span class="sh_symbol">&gt;</span>本科<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"4"</span><span class="sh_symbol">&gt;</span>硕士及以上<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>select<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>其他部分代码，略<span class="sh_symbol">--&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!--其他部分代码，略--&gt;
+&lt;table width="700" border="1" cellspacing="0"&gt;
+&lt;tr&gt;
+&lt;td width="20%" height="35"&gt; 姓名：&lt;/td&gt;
+&lt;td  width="350"&gt;
+&lt;input type="text" value="mary" name="username" /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;性别：&lt;/td&gt;
+&lt;td&gt;
+&lt;input type="radio" id="rexFemal" name="sex" checked value="0" /&gt;&lt;label for="rexFemal"&gt;女士&lt;/label&gt;
+&lt;input type="radio" id="rexMal" name="sex" value="1" /&gt;&lt;label for="rexMal"&gt;男士&lt;/label&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td height="35"&gt;学历：&lt;/td&gt;
+#cold_bold&lt;td&gt;
+#cold_bold&lt;select name="sel1"&gt;
+#cold_bold&lt;option value="1"&gt;其他&lt;/option&gt;
+#cold_bold&lt;option value="2"&gt;专科&lt;/option&gt;
+#cold_bold&lt;option value="3"&gt;本科&lt;/option&gt;
+#cold_bold&lt;option value="4"&gt;硕士及以上&lt;/option&gt;
+#cold_bold&lt;/select&gt;
+#cold_bold&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+&lt;/table&gt;
+&lt;!--其他部分代码，略--&gt;
+</pre></div></div>
+      <p class="number">步骤六：创建表格的第四行</p>
+      <p>为表格创建第四行的内容：选择意向工作城市的行。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!--</span>其他部分代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>table width<span class="sh_symbol">=</span><span class="sh_string">"700"</span> border<span class="sh_symbol">=</span><span class="sh_string">"1"</span> cellspacing<span class="sh_symbol">=</span><span class="sh_string">"0"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td width<span class="sh_symbol">=</span><span class="sh_string">"20%"</span> height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span> 姓名：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td  width<span class="sh_symbol">=</span><span class="sh_string">"350"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> value<span class="sh_symbol">=</span><span class="sh_string">"mary"</span> name<span class="sh_symbol">=</span><span class="sh_string">"username"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>性别：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"radio"</span> id<span class="sh_symbol">=</span><span class="sh_string">"rexFemal"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sex"</span> checked value<span class="sh_symbol">=</span><span class="sh_string">"0"</span> <span class="sh_regexp">/&gt;&lt;label for="rexFemal"&gt;女士&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"radio"</span> id<span class="sh_symbol">=</span><span class="sh_string">"rexMal"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sex"</span> value<span class="sh_symbol">=</span><span class="sh_string">"1"</span> <span class="sh_regexp">/&gt;&lt;label for="rexMal"&gt;男士&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>学历：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>select name<span class="sh_symbol">=</span><span class="sh_string">"sel1"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"1"</span><span class="sh_symbol">&gt;</span>其他<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"2"</span><span class="sh_symbol">&gt;</span>专科<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"3"</span><span class="sh_symbol">&gt;</span>本科<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"4"</span><span class="sh_symbol">&gt;</span>硕士及以上<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>select<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>意向工作城市：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>select size<span class="sh_symbol">=</span><span class="sh_string">"5"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sel2"</span> multiple<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"1"</span><span class="sh_symbol">&gt;</span>北京<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"2"</span><span class="sh_symbol">&gt;</span>上海<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"3"</span><span class="sh_symbol">&gt;</span>南京<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"4"</span><span class="sh_symbol">&gt;</span>深圳<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>select<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>其他部分代码，略<span class="sh_symbol">--&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!--其他部分代码，略--&gt;
+&lt;table width="700" border="1" cellspacing="0"&gt;
+&lt;tr&gt;
+&lt;td width="20%" height="35"&gt; 姓名：&lt;/td&gt;
+&lt;td  width="350"&gt;
+&lt;input type="text" value="mary" name="username" /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;性别：&lt;/td&gt;
+&lt;td&gt;
+&lt;input type="radio" id="rexFemal" name="sex" checked value="0" /&gt;&lt;label for="rexFemal"&gt;女士&lt;/label&gt;
+&lt;input type="radio" id="rexMal" name="sex" value="1" /&gt;&lt;label for="rexMal"&gt;男士&lt;/label&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;学历：&lt;/td&gt;
+&lt;td&gt;
+&lt;select name="sel1"&gt;
+&lt;option value="1"&gt;其他&lt;/option&gt;
+&lt;option value="2"&gt;专科&lt;/option&gt;
+&lt;option value="3"&gt;本科&lt;/option&gt;
+&lt;option value="4"&gt;硕士及以上&lt;/option&gt;
+&lt;/select&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td height="35"&gt;意向工作城市：&lt;/td&gt;
+#cold_bold&lt;td&gt;
+#cold_bold&lt;select size="5" name="sel2" multiple&gt;
+#cold_bold&lt;option value="1"&gt;北京&lt;/option&gt;
+#cold_bold&lt;option value="2"&gt;上海&lt;/option&gt;
+#cold_bold&lt;option value="3"&gt;南京&lt;/option&gt;
+#cold_bold&lt;option value="4"&gt;深圳&lt;/option&gt;
+#cold_bold&lt;/select&gt;
+#cold_bold&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+&lt;/table&gt;
+&lt;!--其他部分代码，略--&gt;
+</pre></div></div>
+      <p class="number">步骤七：创建表格的第五行</p>
+      <p>为表格创建第五行的内容：录入个人描述的行。其中，多行文本框使用 &lt;textarea&gt; 元素创建，并通过 cols 和 rows 属性设置大小。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!--</span>其他部分代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>table width<span class="sh_symbol">=</span><span class="sh_string">"700"</span> border<span class="sh_symbol">=</span><span class="sh_string">"1"</span> cellspacing<span class="sh_symbol">=</span><span class="sh_string">"0"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td width<span class="sh_symbol">=</span><span class="sh_string">"20%"</span> height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span> 姓名：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td  width<span class="sh_symbol">=</span><span class="sh_string">"350"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> value<span class="sh_symbol">=</span><span class="sh_string">"mary"</span> name<span class="sh_symbol">=</span><span class="sh_string">"username"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>性别：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"radio"</span> id<span class="sh_symbol">=</span><span class="sh_string">"rexFemal"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sex"</span> checked value<span class="sh_symbol">=</span><span class="sh_string">"0"</span> <span class="sh_regexp">/&gt;&lt;label for="rexFemal"&gt;女士&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"radio"</span> id<span class="sh_symbol">=</span><span class="sh_string">"rexMal"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sex"</span> value<span class="sh_symbol">=</span><span class="sh_string">"1"</span> <span class="sh_regexp">/&gt;&lt;label for="rexMal"&gt;男士&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>学历：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>select name<span class="sh_symbol">=</span><span class="sh_string">"sel1"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"1"</span><span class="sh_symbol">&gt;</span>其他<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"2"</span><span class="sh_symbol">&gt;</span>专科<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"3"</span><span class="sh_symbol">&gt;</span>本科<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"4"</span><span class="sh_symbol">&gt;</span>硕士及以上<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>select<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>意向工作城市：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>select size<span class="sh_symbol">=</span><span class="sh_string">"5"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sel2"</span> multiple<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"1"</span><span class="sh_symbol">&gt;</span>北京<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"2"</span><span class="sh_symbol">&gt;</span>上海<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"3"</span><span class="sh_symbol">&gt;</span>南京<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"4"</span><span class="sh_symbol">&gt;</span>深圳<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>select<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td valign<span class="sh_symbol">=</span><span class="sh_string">"top"</span><span class="sh_symbol">&gt;</span>个人描述：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>textarea cols<span class="sh_symbol">=</span><span class="sh_string">"30"</span> rows<span class="sh_symbol">=</span><span class="sh_string">"5"</span> name<span class="sh_symbol">=</span><span class="sh_string">"description"</span><span class="sh_symbol">&gt;&lt;/</span>textarea<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>其他部分代码，略<span class="sh_symbol">--&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!--其他部分代码，略--&gt;
+&lt;table width="700" border="1" cellspacing="0"&gt;
+&lt;tr&gt;
+&lt;td width="20%" height="35"&gt; 姓名：&lt;/td&gt;
+&lt;td  width="350"&gt;
+&lt;input type="text" value="mary" name="username" /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;性别：&lt;/td&gt;
+&lt;td&gt;
+&lt;input type="radio" id="rexFemal" name="sex" checked value="0" /&gt;&lt;label for="rexFemal"&gt;女士&lt;/label&gt;
+&lt;input type="radio" id="rexMal" name="sex" value="1" /&gt;&lt;label for="rexMal"&gt;男士&lt;/label&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;学历：&lt;/td&gt;
+&lt;td&gt;
+&lt;select name="sel1"&gt;
+&lt;option value="1"&gt;其他&lt;/option&gt;
+&lt;option value="2"&gt;专科&lt;/option&gt;
+&lt;option value="3"&gt;本科&lt;/option&gt;
+&lt;option value="4"&gt;硕士及以上&lt;/option&gt;
+&lt;/select&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;意向工作城市：&lt;/td&gt;
+&lt;td&gt;
+&lt;select size="5" name="sel2" multiple&gt;
+&lt;option value="1"&gt;北京&lt;/option&gt;
+&lt;option value="2"&gt;上海&lt;/option&gt;
+&lt;option value="3"&gt;南京&lt;/option&gt;
+&lt;option value="4"&gt;深圳&lt;/option&gt;
+&lt;/select&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td valign="top"&gt;个人描述：&lt;/td&gt;
+#cold_bold&lt;td&gt;
+#cold_bold&lt;textarea cols="30" rows="5" name="description"&gt;&lt;/textarea&gt;
+#cold_bold&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+&lt;/table&gt;
+&lt;!--其他部分代码，略--&gt;
+</pre></div></div>
+      <p class="number">步骤八：创建表格的第六行</p>
+      <p>为表格创建第六行的内容。注意，需要使用 &lt;label&gt; 元素定义文本，以实现和复选框的关联。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!--</span>其他部分代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>table width<span class="sh_symbol">=</span><span class="sh_string">"700"</span> border<span class="sh_symbol">=</span><span class="sh_string">"1"</span> cellspacing<span class="sh_symbol">=</span><span class="sh_string">"0"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td width<span class="sh_symbol">=</span><span class="sh_string">"20%"</span> height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span> 姓名：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td  width<span class="sh_symbol">=</span><span class="sh_string">"350"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> value<span class="sh_symbol">=</span><span class="sh_string">"mary"</span> name<span class="sh_symbol">=</span><span class="sh_string">"username"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>性别：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"radio"</span> id<span class="sh_symbol">=</span><span class="sh_string">"rexFemal"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sex"</span> checked value<span class="sh_symbol">=</span><span class="sh_string">"0"</span> <span class="sh_regexp">/&gt;&lt;label for="rexFemal"&gt;女士&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"radio"</span> id<span class="sh_symbol">=</span><span class="sh_string">"rexMal"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sex"</span> value<span class="sh_symbol">=</span><span class="sh_string">"1"</span> <span class="sh_regexp">/&gt;&lt;label for="rexMal"&gt;男士&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>学历：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>select name<span class="sh_symbol">=</span><span class="sh_string">"sel1"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"1"</span><span class="sh_symbol">&gt;</span>其他<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"2"</span><span class="sh_symbol">&gt;</span>专科<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"3"</span><span class="sh_symbol">&gt;</span>本科<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"4"</span><span class="sh_symbol">&gt;</span>硕士及以上<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>select<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>意向工作城市：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>select size<span class="sh_symbol">=</span><span class="sh_string">"5"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sel2"</span> multiple<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"1"</span><span class="sh_symbol">&gt;</span>北京<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"2"</span><span class="sh_symbol">&gt;</span>上海<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"3"</span><span class="sh_symbol">&gt;</span>南京<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"4"</span><span class="sh_symbol">&gt;</span>深圳<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>select<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td valign<span class="sh_symbol">=</span><span class="sh_string">"top"</span><span class="sh_symbol">&gt;</span>个人描述：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>textarea cols<span class="sh_symbol">=</span><span class="sh_string">"30"</span> rows<span class="sh_symbol">=</span><span class="sh_string">"5"</span> name<span class="sh_symbol">=</span><span class="sh_string">"description"</span><span class="sh_symbol">&gt;&lt;/</span>textarea<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkPublic"</span> name<span class="sh_symbol">=</span><span class="sh_string">"chkHide"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>label <span class="sh_keyword">for</span><span class="sh_symbol">=</span><span class="sh_string">"chkPublic"</span><span class="sh_symbol">&gt;</span>不要公开我的个人信息<span class="sh_symbol">&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>其他部分代码，略<span class="sh_symbol">--&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!--其他部分代码，略--&gt;
+&lt;table width="700" border="1" cellspacing="0"&gt;
+&lt;tr&gt;
+&lt;td width="20%" height="35"&gt; 姓名：&lt;/td&gt;
+&lt;td  width="350"&gt;
+&lt;input type="text" value="mary" name="username" /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;性别：&lt;/td&gt;
+&lt;td&gt;
+&lt;input type="radio" id="rexFemal" name="sex" checked value="0" /&gt;&lt;label for="rexFemal"&gt;女士&lt;/label&gt;
+&lt;input type="radio" id="rexMal" name="sex" value="1" /&gt;&lt;label for="rexMal"&gt;男士&lt;/label&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;学历：&lt;/td&gt;
+&lt;td&gt;
+&lt;select name="sel1"&gt;
+&lt;option value="1"&gt;其他&lt;/option&gt;
+&lt;option value="2"&gt;专科&lt;/option&gt;
+&lt;option value="3"&gt;本科&lt;/option&gt;
+&lt;option value="4"&gt;硕士及以上&lt;/option&gt;
+&lt;/select&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;意向工作城市：&lt;/td&gt;
+&lt;td&gt;
+&lt;select size="5" name="sel2" multiple&gt;
+&lt;option value="1"&gt;北京&lt;/option&gt;
+&lt;option value="2"&gt;上海&lt;/option&gt;
+&lt;option value="3"&gt;南京&lt;/option&gt;
+&lt;option value="4"&gt;深圳&lt;/option&gt;
+&lt;/select&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td valign="top"&gt;个人描述：&lt;/td&gt;
+&lt;td&gt;
+&lt;textarea cols="30" rows="5" name="description"&gt;&lt;/textarea&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td height="35"&gt;&lt;/td&gt;
+#cold_bold&lt;td&gt;
+#cold_bold&lt;input type="checkbox" id="chkPublic" name="chkHide" /&gt;
+#cold_bold&lt;label for="chkPublic"&gt;不要公开我的个人信息&lt;/label&gt;
+#cold_bold&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+&lt;/table&gt;
+&lt;!--其他部分代码，略--&gt;
+</pre></div></div>
+      <p class="number">步骤九：创建表格的第七行</p>
+      <p>为表格创建第七行的内容：操作按钮的行。其中，保存按钮使用 &lt;input&gt; 元素创建，并设置 type 属性为 submit；重填按钮使用 &lt;input&gt; 元素创建，并设置 type 属性为 reset。代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!--</span>其他部分代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>table width<span class="sh_symbol">=</span><span class="sh_string">"700"</span> border<span class="sh_symbol">=</span><span class="sh_string">"1"</span> cellspacing<span class="sh_symbol">=</span><span class="sh_string">"0"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td width<span class="sh_symbol">=</span><span class="sh_string">"20%"</span> height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span> 姓名：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td  width<span class="sh_symbol">=</span><span class="sh_string">"350"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> value<span class="sh_symbol">=</span><span class="sh_string">"mary"</span> name<span class="sh_symbol">=</span><span class="sh_string">"username"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>性别：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"radio"</span> id<span class="sh_symbol">=</span><span class="sh_string">"rexFemal"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sex"</span> checked value<span class="sh_symbol">=</span><span class="sh_string">"0"</span> <span class="sh_regexp">/&gt;&lt;label for="rexFemal"&gt;女士&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"radio"</span> id<span class="sh_symbol">=</span><span class="sh_string">"rexMal"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sex"</span> value<span class="sh_symbol">=</span><span class="sh_string">"1"</span> <span class="sh_regexp">/&gt;&lt;label for="rexMal"&gt;男士&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>学历：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>select name<span class="sh_symbol">=</span><span class="sh_string">"sel1"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"1"</span><span class="sh_symbol">&gt;</span>其他<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"2"</span><span class="sh_symbol">&gt;</span>专科<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"3"</span><span class="sh_symbol">&gt;</span>本科<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"4"</span><span class="sh_symbol">&gt;</span>硕士及以上<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>select<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>意向工作城市：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>select size<span class="sh_symbol">=</span><span class="sh_string">"5"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sel2"</span> multiple<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"1"</span><span class="sh_symbol">&gt;</span>北京<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"2"</span><span class="sh_symbol">&gt;</span>上海<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"3"</span><span class="sh_symbol">&gt;</span>南京<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"4"</span><span class="sh_symbol">&gt;</span>深圳<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>select<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td valign<span class="sh_symbol">=</span><span class="sh_string">"top"</span><span class="sh_symbol">&gt;</span>个人描述：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>textarea cols<span class="sh_symbol">=</span><span class="sh_string">"30"</span> rows<span class="sh_symbol">=</span><span class="sh_string">"5"</span> name<span class="sh_symbol">=</span><span class="sh_string">"description"</span><span class="sh_symbol">&gt;&lt;/</span>textarea<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkPublic"</span> name<span class="sh_symbol">=</span><span class="sh_string">"chkHide"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>label <span class="sh_keyword">for</span><span class="sh_symbol">=</span><span class="sh_string">"chkPublic"</span><span class="sh_symbol">&gt;</span>不要公开我的个人信息<span class="sh_symbol">&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"submit"</span> value<span class="sh_symbol">=</span><span class="sh_string">"保存"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"reset"</span> value<span class="sh_symbol">=</span><span class="sh_string">"重填"</span> <span class="sh_symbol">/&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>其他部分代码，略<span class="sh_symbol">--&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!--其他部分代码，略--&gt;
+&lt;table width="700" border="1" cellspacing="0"&gt;
+&lt;tr&gt;
+&lt;td width="20%" height="35"&gt; 姓名：&lt;/td&gt;
+&lt;td  width="350"&gt;
+&lt;input type="text" value="mary" name="username" /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;性别：&lt;/td&gt;
+&lt;td&gt;
+&lt;input type="radio" id="rexFemal" name="sex" checked value="0" /&gt;&lt;label for="rexFemal"&gt;女士&lt;/label&gt;
+&lt;input type="radio" id="rexMal" name="sex" value="1" /&gt;&lt;label for="rexMal"&gt;男士&lt;/label&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;学历：&lt;/td&gt;
+&lt;td&gt;
+&lt;select name="sel1"&gt;
+&lt;option value="1"&gt;其他&lt;/option&gt;
+&lt;option value="2"&gt;专科&lt;/option&gt;
+&lt;option value="3"&gt;本科&lt;/option&gt;
+&lt;option value="4"&gt;硕士及以上&lt;/option&gt;
+&lt;/select&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;意向工作城市：&lt;/td&gt;
+&lt;td&gt;
+&lt;select size="5" name="sel2" multiple&gt;
+&lt;option value="1"&gt;北京&lt;/option&gt;
+&lt;option value="2"&gt;上海&lt;/option&gt;
+&lt;option value="3"&gt;南京&lt;/option&gt;
+&lt;option value="4"&gt;深圳&lt;/option&gt;
+&lt;/select&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td valign="top"&gt;个人描述：&lt;/td&gt;
+&lt;td&gt;
+&lt;textarea cols="30" rows="5" name="description"&gt;&lt;/textarea&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;input type="checkbox" id="chkPublic" name="chkHide" /&gt;
+&lt;label for="chkPublic"&gt;不要公开我的个人信息&lt;/label&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+#cold_bold&lt;tr&gt;
+#cold_bold&lt;td height="35"&gt;&lt;/td&gt;
+#cold_bold&lt;td&gt;
+#cold_bold&lt;input type="submit" value="保存" /&gt;
+#cold_bold&lt;input type="reset" value="重填" /&gt;
+#cold_bold&lt;/td&gt;
+#cold_bold&lt;/tr&gt;
+&lt;/table&gt;
+&lt;!--其他部分代码，略--&gt;
+</pre></div></div>
+      <h3>3.4 完整代码</h3>
+      <p>本案例的完整代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>复杂表单<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>h2<span class="sh_symbol">&gt;</span>修改个人信息<span class="sh_symbol">&lt;/</span>h2<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>form<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>table width<span class="sh_symbol">=</span><span class="sh_string">"700"</span> border<span class="sh_symbol">=</span><span class="sh_string">"1"</span> cellspacing<span class="sh_symbol">=</span><span class="sh_string">"0"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td width<span class="sh_symbol">=</span><span class="sh_string">"20%"</span> height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span> 姓名：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td  width<span class="sh_symbol">=</span><span class="sh_string">"350"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> value<span class="sh_symbol">=</span><span class="sh_string">"mary"</span> name<span class="sh_symbol">=</span><span class="sh_string">"username"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>性别：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"radio"</span> id<span class="sh_symbol">=</span><span class="sh_string">"rexFemal"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sex"</span> checked value<span class="sh_symbol">=</span><span class="sh_string">"0"</span> <span class="sh_regexp">/&gt;&lt;label for="rexFemal"&gt;女士&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"radio"</span> id<span class="sh_symbol">=</span><span class="sh_string">"rexMal"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sex"</span> value<span class="sh_symbol">=</span><span class="sh_string">"1"</span> <span class="sh_regexp">/&gt;&lt;label for="rexMal"&gt;男士&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>学历：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>select name<span class="sh_symbol">=</span><span class="sh_string">"sel1"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"1"</span><span class="sh_symbol">&gt;</span>其他<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"2"</span><span class="sh_symbol">&gt;</span>专科<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"3"</span><span class="sh_symbol">&gt;</span>本科<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"4"</span><span class="sh_symbol">&gt;</span>硕士及以上<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>select<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>意向工作城市：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>select size<span class="sh_symbol">=</span><span class="sh_string">"5"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sel2"</span> multiple<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"1"</span><span class="sh_symbol">&gt;</span>北京<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"2"</span><span class="sh_symbol">&gt;</span>上海<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"3"</span><span class="sh_symbol">&gt;</span>南京<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"4"</span><span class="sh_symbol">&gt;</span>深圳<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>select<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td valign<span class="sh_symbol">=</span><span class="sh_string">"top"</span><span class="sh_symbol">&gt;</span>个人描述：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>textarea cols<span class="sh_symbol">=</span><span class="sh_string">"30"</span> rows<span class="sh_symbol">=</span><span class="sh_string">"5"</span> name<span class="sh_symbol">=</span><span class="sh_string">"description"</span><span class="sh_symbol">&gt;&lt;/</span>textarea<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkPublic"</span> name<span class="sh_symbol">=</span><span class="sh_string">"chkHide"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>label <span class="sh_keyword">for</span><span class="sh_symbol">=</span><span class="sh_string">"chkPublic"</span><span class="sh_symbol">&gt;</span>不要公开我的个人信息<span class="sh_symbol">&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"submit"</span> value<span class="sh_symbol">=</span><span class="sh_string">"保存"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"reset"</span> value<span class="sh_symbol">=</span><span class="sh_string">"重填"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>form<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;复杂表单&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h2&gt;修改个人信息&lt;/h2&gt;
+&lt;form&gt;
+&lt;table width="700" border="1" cellspacing="0"&gt;
+&lt;tr&gt;
+&lt;td width="20%" height="35"&gt; 姓名：&lt;/td&gt;
+&lt;td  width="350"&gt;
+&lt;input type="text" value="mary" name="username" /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;性别：&lt;/td&gt;
+&lt;td&gt;
+&lt;input type="radio" id="rexFemal" name="sex" checked value="0" /&gt;&lt;label for="rexFemal"&gt;女士&lt;/label&gt;
+&lt;input type="radio" id="rexMal" name="sex" value="1" /&gt;&lt;label for="rexMal"&gt;男士&lt;/label&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;学历：&lt;/td&gt;
+&lt;td&gt;
+&lt;select name="sel1"&gt;
+&lt;option value="1"&gt;其他&lt;/option&gt;
+&lt;option value="2"&gt;专科&lt;/option&gt;
+&lt;option value="3"&gt;本科&lt;/option&gt;
+&lt;option value="4"&gt;硕士及以上&lt;/option&gt;
+&lt;/select&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;意向工作城市：&lt;/td&gt;
+&lt;td&gt;
+&lt;select size="5" name="sel2" multiple&gt;
+&lt;option value="1"&gt;北京&lt;/option&gt;
+&lt;option value="2"&gt;上海&lt;/option&gt;
+&lt;option value="3"&gt;南京&lt;/option&gt;
+&lt;option value="4"&gt;深圳&lt;/option&gt;
+&lt;/select&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td valign="top"&gt;个人描述：&lt;/td&gt;
+&lt;td&gt;
+&lt;textarea cols="30" rows="5" name="description"&gt;&lt;/textarea&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;input type="checkbox" id="chkPublic" name="chkHide" /&gt;
+&lt;label for="chkPublic"&gt;不要公开我的个人信息&lt;/label&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;input type="submit" value="保存" /&gt;
+&lt;input type="reset" value="重填" /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+      <a name="case4">
+      </a>
+      <h2>4 创建复杂表单_2</h2>
+      <h3>4.1 问题</h3>
+      <p>修改上一个案例中所创建的复杂表单，实现如图－6所示的页面效果：</p>
+      <div class="image">
+        <img src="./CASE_files/image006.png">
+        <p>图－6</p>
+      </div>
+      <p>其中，“各项技能指数”部分可以展开或者收起；鼠标移入“HTML”、“CSS3”和“AJAX”指示条时，提示信息分别为100％、90%和50％。</p>
+      <h3>4.2 方案</h3>
+      <p>首先需要修改页面布局所用的表格，为第一行添加一个单元格，且需要使用 rowspan 属性设置其跨行。</p>
+      <p>其次，需要使用 &lt;details&gt; 和 &lt;summary&gt; 元素为页面添加摘要和细节；指示条部分需要使用 &lt;meter&gt; 元素创建。</p>
+      <h3>4.3 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：修改布局用的表格</p>
+      <p>修改布局用的表格，为第一行添加一个单元格，且设置单元格中的内容在垂直方向上居顶端对齐。</p>
+      <p>修改后的表格代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>table width<span class="sh_symbol">=</span><span class="sh_string">"700"</span> border<span class="sh_symbol">=</span><span class="sh_string">"1"</span> cellspacing<span class="sh_symbol">=</span><span class="sh_string">"0"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td width<span class="sh_symbol">=</span><span class="sh_string">"20%"</span> height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span> 姓名：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td width<span class="sh_symbol">=</span><span class="sh_string">"350"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> value<span class="sh_symbol">=</span><span class="sh_string">"mary"</span> name<span class="sh_symbol">=</span><span class="sh_string">"username"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>td rowspan<span class="sh_symbol">=</span><span class="sh_string">"7"</span> valign<span class="sh_symbol">=</span><span class="sh_string">"top"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>其他表行的代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!--其他代码，略--&gt;
+&lt;table width="700" border="1" cellspacing="0"&gt;
+&lt;tr&gt;
+&lt;td width="20%" height="35"&gt; 姓名：&lt;/td&gt;
+&lt;td width="350"&gt;
+&lt;input type="text" value="mary" name="username" /&gt;
+&lt;/td&gt;
+#cold_bold&lt;td rowspan="7" valign="top"&gt;
+#cold_bold&lt;/td&gt;
+&lt;/tr&gt;
+&lt;!--其他表行的代码，略--&gt;
+&lt;/table&gt;
+&lt;!--其他代码，略--&gt;
+</pre></div></div>
+      <p class="number">步骤二：创建摘要和细节</p>
+      <p>在新添加的单元格中创建摘要和细节，并定义度量元素。</p>
+      <p>代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;</span>table width<span class="sh_symbol">=</span><span class="sh_string">"700"</span> border<span class="sh_symbol">=</span><span class="sh_string">"1"</span> cellspacing<span class="sh_symbol">=</span><span class="sh_string">"0"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td width<span class="sh_symbol">=</span><span class="sh_string">"20%"</span> height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span> 姓名：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td width<span class="sh_symbol">=</span><span class="sh_string">"350"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> value<span class="sh_symbol">=</span><span class="sh_string">"mary"</span> name<span class="sh_symbol">=</span><span class="sh_string">"username"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td rowspan<span class="sh_symbol">=</span><span class="sh_string">"7"</span> valign<span class="sh_symbol">=</span><span class="sh_string">"top"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>details<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>summary<span class="sh_symbol">&gt;</span>各项<span class="sh_symbol">&lt;</span>mark<span class="sh_symbol">&gt;</span>技能<span class="sh_symbol">&lt;</span><span class="sh_regexp">/mark&gt;指数&lt;/</span>summary<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>ul type<span class="sh_symbol">=</span><span class="sh_string">"none"</span><span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;</span>HTML：<span class="sh_symbol">&lt;</span>meter max<span class="sh_symbol">=</span><span class="sh_string">"100"</span> min<span class="sh_symbol">=</span><span class="sh_string">"0"</span> value<span class="sh_symbol">=</span><span class="sh_string">"100"</span> title<span class="sh_symbol">=</span><span class="sh_string">"100%"</span><span class="sh_symbol">&gt;&lt;</span><span class="sh_regexp">/meter&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;</span>CSS3：<span class="sh_symbol">&lt;</span>meter max<span class="sh_symbol">=</span><span class="sh_string">"100"</span> min<span class="sh_symbol">=</span><span class="sh_string">"0"</span> value<span class="sh_symbol">=</span><span class="sh_string">"90"</span> title<span class="sh_symbol">=</span><span class="sh_string">"90%"</span><span class="sh_symbol">&gt;&lt;</span><span class="sh_regexp">/meter&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;</span>AJAX：<span class="sh_symbol">&lt;</span>meter max<span class="sh_symbol">=</span><span class="sh_string">"100"</span> min<span class="sh_symbol">=</span><span class="sh_string">"0"</span> value<span class="sh_symbol">=</span><span class="sh_string">"50"</span> title<span class="sh_symbol">=</span><span class="sh_string">"50%"</span><span class="sh_symbol">&gt;&lt;</span><span class="sh_regexp">/meter&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>ul<span class="sh_symbol">&gt;</span></li><li class="bold_code"><span class="sh_symbol">&lt;/</span>details<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>其他表行的代码，略<span class="sh_symbol">--&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;!--</span>其他代码，略<span class="sh_symbol">--&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!--其他代码，略--&gt;
+&lt;table width="700" border="1" cellspacing="0"&gt;
+&lt;tr&gt;
+&lt;td width="20%" height="35"&gt; 姓名：&lt;/td&gt;
+&lt;td width="350"&gt;
+&lt;input type="text" value="mary" name="username" /&gt;
+&lt;/td&gt;
+&lt;td rowspan="7" valign="top"&gt;
+#cold_bold&lt;details&gt;
+#cold_bold&lt;summary&gt;各项&lt;mark&gt;技能&lt;/mark&gt;指数&lt;/summary&gt;
+#cold_bold&lt;ul type="none"&gt;
+#cold_bold&lt;li&gt;HTML：&lt;meter max="100" min="0" value="100" title="100%"&gt;&lt;/meter&gt;&lt;/li&gt;
+#cold_bold&lt;li&gt;CSS3：&lt;meter max="100" min="0" value="90" title="90%"&gt;&lt;/meter&gt;&lt;/li&gt;
+#cold_bold&lt;li&gt;AJAX：&lt;meter max="100" min="0" value="50" title="50%"&gt;&lt;/meter&gt;&lt;/li&gt;
+#cold_bold&lt;/ul&gt;
+#cold_bold&lt;/details&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;!--其他表行的代码，略--&gt;
+&lt;/table&gt;
+&lt;!--其他代码，略--&gt;
+</pre></div></div>
+      <h3>4.4 完整代码</h3>
+      <p>本案例的完整代码如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap" style="display: none;"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" style="display: none;">copy</a><a class="snippet-text sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">text</a><a class="snippet-window sh_url" href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#">pop-up</a></pre></div><pre class="hide sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE HTML<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>title<span class="sh_symbol">&gt;</span>复杂表单<span class="sh_symbol">&lt;/</span>title<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>meta http<span class="sh_symbol">-</span>equiv<span class="sh_symbol">=</span><span class="sh_string">"content-type"</span> content<span class="sh_symbol">=</span><span class="sh_string">"text/html;charset=utf-8"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>h2<span class="sh_symbol">&gt;</span>修改个人信息<span class="sh_symbol">&lt;/</span>h2<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>form<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>table width<span class="sh_symbol">=</span><span class="sh_string">"700"</span> border<span class="sh_symbol">=</span><span class="sh_string">"1"</span> cellspacing<span class="sh_symbol">=</span><span class="sh_string">"0"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td width<span class="sh_symbol">=</span><span class="sh_string">"20%"</span> height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span> 姓名：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td width<span class="sh_symbol">=</span><span class="sh_string">"350"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> value<span class="sh_symbol">=</span><span class="sh_string">"mary"</span> name<span class="sh_symbol">=</span><span class="sh_string">"username"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td rowspan<span class="sh_symbol">=</span><span class="sh_string">"7"</span> valign<span class="sh_symbol">=</span><span class="sh_string">"top"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>details<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>summary<span class="sh_symbol">&gt;</span>各项<span class="sh_symbol">&lt;</span>mark<span class="sh_symbol">&gt;</span>技能<span class="sh_symbol">&lt;</span><span class="sh_regexp">/mark&gt;指数&lt;/</span>summary<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>ul type<span class="sh_symbol">=</span><span class="sh_string">"none"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;</span>HTML：<span class="sh_symbol">&lt;</span>meter max<span class="sh_symbol">=</span><span class="sh_string">"100"</span> min<span class="sh_symbol">=</span><span class="sh_string">"0"</span> value<span class="sh_symbol">=</span><span class="sh_string">"100"</span> title<span class="sh_symbol">=</span><span class="sh_string">"100%"</span><span class="sh_symbol">&gt;&lt;</span><span class="sh_regexp">/meter&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;</span>CSS3：<span class="sh_symbol">&lt;</span>meter max<span class="sh_symbol">=</span><span class="sh_string">"100"</span> min<span class="sh_symbol">=</span><span class="sh_string">"0"</span> value<span class="sh_symbol">=</span><span class="sh_string">"90"</span> title<span class="sh_symbol">=</span><span class="sh_string">"90%"</span><span class="sh_symbol">&gt;&lt;</span><span class="sh_regexp">/meter&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>li<span class="sh_symbol">&gt;</span>AJAX：<span class="sh_symbol">&lt;</span>meter max<span class="sh_symbol">=</span><span class="sh_string">"100"</span> min<span class="sh_symbol">=</span><span class="sh_string">"0"</span> value<span class="sh_symbol">=</span><span class="sh_string">"50"</span> title<span class="sh_symbol">=</span><span class="sh_string">"50%"</span><span class="sh_symbol">&gt;&lt;</span><span class="sh_regexp">/meter&gt;&lt;/</span>li<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>ul<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>details<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>性别：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"radio"</span> id<span class="sh_symbol">=</span><span class="sh_string">"rexFemal"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sex"</span> checked value<span class="sh_symbol">=</span><span class="sh_string">"0"</span> <span class="sh_regexp">/&gt;&lt;label for="rexFemal"&gt;女士&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"radio"</span> id<span class="sh_symbol">=</span><span class="sh_string">"rexMal"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sex"</span> value<span class="sh_symbol">=</span><span class="sh_string">"1"</span> <span class="sh_regexp">/&gt;&lt;label for="rexMal"&gt;男士&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>学历：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>select name<span class="sh_symbol">=</span><span class="sh_string">"sel1"</span><span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"1"</span><span class="sh_symbol">&gt;</span>其他<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"2"</span><span class="sh_symbol">&gt;</span>专科<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"3"</span><span class="sh_symbol">&gt;</span>本科<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"4"</span><span class="sh_symbol">&gt;</span>硕士及以上<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>select<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;</span>意向工作城市：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>select size<span class="sh_symbol">=</span><span class="sh_string">"5"</span> name<span class="sh_symbol">=</span><span class="sh_string">"sel2"</span> multiple<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"1"</span><span class="sh_symbol">&gt;</span>北京<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"2"</span><span class="sh_symbol">&gt;</span>上海<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"3"</span><span class="sh_symbol">&gt;</span>南京<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>option value<span class="sh_symbol">=</span><span class="sh_string">"4"</span><span class="sh_symbol">&gt;</span>深圳<span class="sh_symbol">&lt;/</span>option<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>select<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td valign<span class="sh_symbol">=</span><span class="sh_string">"top"</span><span class="sh_symbol">&gt;</span>个人描述：<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>textarea cols<span class="sh_symbol">=</span><span class="sh_string">"30"</span> rows<span class="sh_symbol">=</span><span class="sh_string">"5"</span> name<span class="sh_symbol">=</span><span class="sh_string">"description"</span><span class="sh_symbol">&gt;&lt;/</span>textarea<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"checkbox"</span> id<span class="sh_symbol">=</span><span class="sh_string">"chkPublic"</span> name<span class="sh_symbol">=</span><span class="sh_string">"chkHide"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>label <span class="sh_keyword">for</span><span class="sh_symbol">=</span><span class="sh_string">"chkPublic"</span><span class="sh_symbol">&gt;</span>不要公开我的个人信息<span class="sh_symbol">&lt;/</span>label<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td height<span class="sh_symbol">=</span><span class="sh_string">"35"</span><span class="sh_symbol">&gt;&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"submit"</span> value<span class="sh_symbol">=</span><span class="sh_string">"保存"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"reset"</span> value<span class="sh_symbol">=</span><span class="sh_string">"重填"</span> <span class="sh_symbol">/&gt;</span></li><li><span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>table<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>form<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;复杂表单&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h2&gt;修改个人信息&lt;/h2&gt;
+&lt;form&gt;
+&lt;table width="700" border="1" cellspacing="0"&gt;
+&lt;tr&gt;
+&lt;td width="20%" height="35"&gt; 姓名：&lt;/td&gt;
+&lt;td width="350"&gt;
+&lt;input type="text" value="mary" name="username" /&gt;
+&lt;/td&gt;
+&lt;td rowspan="7" valign="top"&gt;
+&lt;details&gt;
+&lt;summary&gt;各项&lt;mark&gt;技能&lt;/mark&gt;指数&lt;/summary&gt;
+&lt;ul type="none"&gt;
+&lt;li&gt;HTML：&lt;meter max="100" min="0" value="100" title="100%"&gt;&lt;/meter&gt;&lt;/li&gt;
+&lt;li&gt;CSS3：&lt;meter max="100" min="0" value="90" title="90%"&gt;&lt;/meter&gt;&lt;/li&gt;
+&lt;li&gt;AJAX：&lt;meter max="100" min="0" value="50" title="50%"&gt;&lt;/meter&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;性别：&lt;/td&gt;
+&lt;td&gt;
+&lt;input type="radio" id="rexFemal" name="sex" checked value="0" /&gt;&lt;label for="rexFemal"&gt;女士&lt;/label&gt;
+&lt;input type="radio" id="rexMal" name="sex" value="1" /&gt;&lt;label for="rexMal"&gt;男士&lt;/label&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;学历：&lt;/td&gt;
+&lt;td&gt;
+&lt;select name="sel1"&gt;
+&lt;option value="1"&gt;其他&lt;/option&gt;
+&lt;option value="2"&gt;专科&lt;/option&gt;
+&lt;option value="3"&gt;本科&lt;/option&gt;
+&lt;option value="4"&gt;硕士及以上&lt;/option&gt;
+&lt;/select&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;意向工作城市：&lt;/td&gt;
+&lt;td&gt;
+&lt;select size="5" name="sel2" multiple&gt;
+&lt;option value="1"&gt;北京&lt;/option&gt;
+&lt;option value="2"&gt;上海&lt;/option&gt;
+&lt;option value="3"&gt;南京&lt;/option&gt;
+&lt;option value="4"&gt;深圳&lt;/option&gt;
+&lt;/select&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td valign="top"&gt;个人描述：&lt;/td&gt;
+&lt;td&gt;
+&lt;textarea cols="30" rows="5" name="description"&gt;&lt;/textarea&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;input type="checkbox" id="chkPublic" name="chkHide" /&gt;
+&lt;label for="chkPublic"&gt;不要公开我的个人信息&lt;/label&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height="35"&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;input type="submit" value="保存" /&gt;
+&lt;input type="reset" value="重填" /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><div class="sh_sourceCode snippet-hide"><pre><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" class="snippet-revealed snippet-toggle sh_url">隐藏</a></pre></div></div><div class="snippet-reveal sh_acid snippet-wrap"><pre class="sh_sourceCode"><a href="http://tts.tmooc.cn/ttsPage/VIP/VIP_WEB_GXZ_N_V004/HTML5BASIC/DAY03/CASE/01/index.html#" class="snippet-toggle sh_url">代码</a></pre></div></div>
+    </div>
+  
+</body></html>
